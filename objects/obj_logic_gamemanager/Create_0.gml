@@ -8,23 +8,30 @@
 function p_setRound (_roundIndex)
 {
 	obj_enemy_zombie.p_moveSpeed += (0.2 * _roundIndex);
-	//obj_player.p_moveSpeed += (0.2 * _roundIndex);
-	_powerPillTime -= _roundIndex * room_speed;
+	_POWERPILLTIME -= _roundIndex * room_speed;
+	_ELROYTIME += _roundIndex * 10;
 	
-	//setting the special pill
-	with (obj_pill_special) {
-		
+	//setting up the special pill
+	with (obj_pill_special) 
+	{
 		_VALUE += 500 * _roundIndex;  //changing a constant yeah yeah i know
 		
-		if(_roundIndex == 0) 
+		/*for some reason _roundIndex is really fucking weird here
+			this line causes obj_pill_special to become a carrot on round ONE,
+			not round ZERO, which is the first. It's fucked up */
+		if _roundIndex == 0 
 			object_set_sprite(obj_pill_special, spr_pill_special_carrot);
 	}
 }
 
-function _roomWinAdvance() {
+/*	Advances level via alarm[1]
+ *	Called in Step when game is won
+ */
+function _roomWinAdvance() 
+{
 	_gameIsWon = true;
 	obj_logic_soundplayer.p_stopAllSounds();
-	if (alarm[1] == -1) 
+	if alarm[1] == -1 
 		alarm[1] = 5 * room_speed;
 }
 
@@ -33,7 +40,6 @@ function _roomWinAdvance() {
  */
 function _roomDeathRestart() 
 {
-	
 	if alarm[2] == -1 
 		alarm[2] = 5 * room_speed;
 }
@@ -47,17 +53,18 @@ function _roomDeathRestart()
 */
 function p_powerPacman () 
 {
+	/*if pacman is already powered but ate a second power pill,
+		we dont need to do any of this shit. just restart the timer.*/
 	if !obj_player.p_isPowered 
 	{
 		obj_player.p_isPowered = true;
 	
-		if instance_exists(obj_enemy_zombie)
-			_toggleEnemyScared();
+		_toggleEnemyScared();
 			
 		obj_logic_soundplayer.p_toggleEnemyFearSound(true)
 	}
 	
-	alarm[0] = _powerPillTime;
+	alarm[0] = _POWERPILLTIME;
 }
 
 /*	Called by alarm[0] when pacman's power runs out.
@@ -68,8 +75,7 @@ function p_depowerPacman ()
 	if instance_exists(obj_player)
 		obj_player.p_isPowered = false;
 		
-	if instance_exists(obj_enemy_zombie)
-		_toggleEnemyScared();
+	_toggleEnemyScared();
 		
 	obj_logic_soundplayer.p_toggleEnemyFearSound(false)
 	
@@ -81,27 +87,36 @@ function p_depowerPacman ()
  */
 function _toggleEnemyScared()
 {
-	if obj_enemy_zombie.p_scared {
-		obj_enemy_zombie.p_moveSpeed *= 2;
-		obj_enemy_zombie.p_scared = false;
-		//the below line is an attempt to fix an issue related to enemies getting stuck on walls
-		//doesnt fix the issue, but seems to reduce how often it happens
-		//issue seems to occur at _moveSpeeds of 3.25 or higher
-		with obj_enemy_zombie p_snapToGrid();
-	} else {
-		obj_enemy_zombie.p_moveSpeed /= 2;
-		obj_enemy_zombie.p_scared = true;
+	if instance_exists(obj_enemy_zombie) 
+	{
+		if obj_enemy_zombie.p_scared 
+		{
+			obj_enemy_zombie.p_moveSpeed *= 2;
+			obj_enemy_zombie.p_scared = false;
+			//the below line is an attempt to fix an issue related to enemies getting stuck on walls
+			//doesnt fix the issue, but seems to reduce how often it happens
+			//issue seems to occur at _moveSpeeds of 3.25 or higher
+			with obj_enemy_zombie p_snapToGrid();
+		} 
+		else 
+		{
+			obj_enemy_zombie.p_moveSpeed /= 2;
+			obj_enemy_zombie.p_scared = true;
+		}
 	}
 }
 
-/* Speeds up all zombies after clock hits a magicnumber
- * The magicnumber is in this obj's Step
+/* Speeds up all zombies after clock hits _ELROYTIME
  * Called in this obj's Step
  */
 function _enemyBecomeElroy() {
-	if !obj_enemy_zombie.p_elroy {
-		obj_enemy_zombie.p_moveSpeed *= 1.25
-		obj_enemy_zombie.p_elroy = true;
+	with (obj_enemy_zombie)
+	{
+		if !obj_enemy_zombie.p_elroy 
+		{
+			obj_enemy_zombie.p_moveSpeed *= 1.25
+			obj_enemy_zombie.p_elroy = true;
+		}
 	}
 }
 

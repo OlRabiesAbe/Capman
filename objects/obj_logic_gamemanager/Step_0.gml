@@ -14,6 +14,6 @@ if !obj_player.p_isAlive {
 	_roomDeathRestart();
 }
 
-if p_getGameTimeSeconds() > 50 {
+if p_getGameTimeSeconds() > _ELROYTIME {
 	_enemyBecomeElroy();
 }
