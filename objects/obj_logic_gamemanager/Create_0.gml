@@ -1,5 +1,7 @@
 /// @description Functions
 
+//=====ROOM MANAGEMENT=====
+//==========================
 /*	Adjust game variables based on the round number.
  *	Called by obj_logic_supermanager at room-start
  */
@@ -9,17 +11,37 @@ function p_setRound (_roundIndex)
 	//obj_player.p_moveSpeed += (0.2 * _roundIndex);
 	_powerPillTime -= _roundIndex * room_speed;
 	
-	//setting the special pill's sprite
-	switch (_roundIndex) {
-		case 0:
+	//setting the special pill
+	with (obj_pill_special) {
+		
+		_VALUE += 500 * _roundIndex;  //changing a constant yeah yeah i know
+		
+		if(_roundIndex == 0) 
 			object_set_sprite(obj_pill_special, spr_pill_special_carrot);
-			break;
-		default:	
-			break;
 	}
-	with obj_pill_special _VALUE += 500 * _roundIndex; //changing a constant yeah yeah i know
 }
 
+function _roomWinAdvance() {
+	_gameIsWon = true;
+	obj_logic_soundplayer.p_stopAllSounds();
+	if (alarm[1] == -1) 
+		alarm[1] = 5 * room_speed;
+}
+
+/*	This is called by this obj when the player is dead.
+ *	Tells supermanager to restart the level
+ */
+function _roomDeathRestart() 
+{
+	
+	if alarm[2] == -1 
+		alarm[2] = 5 * room_speed;
+}
+
+
+
+//=====ENEMY MANAGEMENT=====
+//==========================
 /*	Enables pacman power invincibility
  *	Called by powerpills when pacman eats them
 */
@@ -39,6 +61,7 @@ function p_powerPacman ()
 }
 
 /*	Called by alarm[0] when pacman's power runs out.
+ *	Also called by alarm[1] & alarm[2] for roundend
 */
 function p_depowerPacman () 
 {
@@ -83,40 +106,28 @@ function _enemyBecomeElroy() {
 }
 
 
-/*	This is called by this obj when the game is won.
- *	Tells supermanager to advance the level
- */
-function _advanceLevel() 
-{
-	_gameIsWon = true;
-	
-	if alarm[1] == -1 
-		alarm[1] = 5 * room_speed;
-}
 
-/*	This is called by this obj when the player is dead.
- *	Tells supermanager to restart the level
- */
-function _roomRestart() 
-{
-	if alarm[2] == -1 
-		alarm[2] = 5 * room_speed;
-}
-
+//=====VAR GETTERS & SETTERS=====
+//==========================
 //_score Getter
 function p_getScore() 
 {
 	return _score;
 }
-//_gameIsWOn Getter
-function p_getGameWon() 
+//_score Setter
+function p_setScore(_amount) 
 {
-	return _gameIsWon;
+	_score = _amount;
 }
 //_score Setter
 function p_incrementScore(_value) 
 {
 	_score += _value;
+}
+//_gameIsWon Getter
+function p_getGameWon() 
+{
+	return _gameIsWon;
 }
 //_clock Getter, round timer in seconds
 function p_getTimerSeconds() 

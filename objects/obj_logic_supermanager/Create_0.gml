@@ -9,6 +9,7 @@ function _initializeGameplayLogicStructs()
 		instance_create_layer(0, 0, "Logic", obj_logic_gamemanager);
 	
 	obj_logic_gamemanager.p_setRound(_roundIndex);
+	obj_logic_gamemanager.p_setScore(_totalScore);
 	
 	if !instance_exists(obj_logic_screenwriter)
 		instance_create_layer(0, 0, "Logic", obj_logic_screenwriter);
@@ -29,23 +30,26 @@ function _initializeCutsceneLogicStructs()
  */
 function p_advanceLevel() 
 {
-	if instance_exists(obj_logic_gamemanager) {
-		_totalScore += obj_logic_gamemanager.p_getScore(); //add score
+	if instance_exists(obj_logic_gamemanager)
+	{
+		_totalScore = obj_logic_gamemanager.p_getScore(); //update total score
 		_totalScore += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
 		_totalClock += obj_logic_gamemanager.p_getGameTime();
 	}
 	
-	if _roundIndex >= _ROUNDMAX  || instance_exists(obj_logic_cutscenemanager) {
+	if _roundIndex >= _ROUNDMAX || instance_exists(obj_logic_cutscenemanager) 
+	{
 		_roundIndex = 0;
 		_roomIndex++;
 	
 		if room_exists(room_next(room))
-		{
-		    room_goto_next();
-		}
-	} else {
+			room_goto_next();
+	
+	} 
+	else 
+	{
 		_roundIndex++;
-		room_restart();
+		p_restartRoom();
 	}
 }
 
@@ -53,11 +57,31 @@ function p_advanceLevel()
  */
 function p_restartRoom() 
 {
-	if instance_exists(obj_logic_gamemanager) {
-		_totalScore += obj_logic_gamemanager.p_getScore(); //add score
-		_totalScore += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
-		_totalClock += obj_logic_gamemanager.p_getGameTime();
-	}
-	
 	room_restart();
+}
+
+
+
+
+
+/* _lives Getter
+ */
+function p_getLives() 
+{
+	return _lives;
+}
+
+/* _lives Incrementers & Decrementers
+ */
+function p_incrementLives() 
+{
+	_lives++;
+}
+function p_incrementLives(_amount) 
+{
+	_lives += _amount;
+}
+function p_decrementLives() 
+{
+	_lives--;
 }

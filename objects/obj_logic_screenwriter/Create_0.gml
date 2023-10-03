@@ -10,10 +10,28 @@ function _drawScore()
 
 function _drawClock() 
 {
-	draw_set_halign(fa_left);
+	draw_set_halign(fa_right);
 	draw_set_colour(c_white);
 	var _str = string(obj_logic_gamemanager.p_getTimerSeconds());
-	draw_text(16, 32, _str);
+	draw_text(room_width-16, 16, "TIME:" + _str);
+}
+
+function _drawLives() 
+{
+	draw_set_halign(fa_left);
+	draw_set_colour(c_white);
+	var _str = " ";
+	for (var i = 0; i < obj_logic_supermanager.p_getLives(); i++)
+		_str += " O";
+	draw_text(16, room_height-32, "LIVES:" + _str);
+}
+
+function _drawRoundNum() 
+{
+	draw_set_halign(fa_left);
+	draw_set_colour(c_white);
+	var _str = string(obj_logic_supermanager._roundIndex);
+	draw_text(16, room_height-16, "Round:" + _str);
 }
 
 function _drawGameWonScreen()
