@@ -16,11 +16,10 @@ function p_setRound (_roundIndex)
 	{
 		_VALUE += 500 * _roundIndex;  //changing a constant yeah yeah i know
 		
-		/*for some reason _roundIndex is really fucking weird here
-			this line causes obj_pill_special to become a carrot on round ONE,
-			not round ZERO, which is the first. It's fucked up */
-		if _roundIndex == 0 
+		if _roundIndex % 2 == 0 
 			object_set_sprite(obj_pill_special, spr_pill_special_carrot);
+		else if _roundIndex % 2 == 1 
+			object_set_sprite(obj_pill_special, spr_pill_special_bread);
 	}
 }
 
