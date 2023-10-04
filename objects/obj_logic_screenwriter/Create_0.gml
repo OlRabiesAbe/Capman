@@ -64,14 +64,26 @@ function _drawScoreScreen()
 	var _right = room_width - (room_width/4/2);
 	var _bottom = room_height - (room_height/4/2);
 	
+	//black background
 	draw_set_colour(c_black);
 	draw_rectangle(_left, _top, 
 		_right, _bottom, false);
 	
+	//headline text
 	draw_set_halign(fa_center);
 	draw_set_colour(c_yellow);
 	var _str = "AREA SURVIVED";
 	draw_text_transformed(room_width/2, _top+32, _str, 2, 2, 0);
 	_str = "YOUR QUEST PROGRESSES";
 	draw_text_transformed(room_width/2, _top+64, _str, 2, 2, 0);
+	
+	//total score
+	draw_set_halign(fa_center);
+	draw_set_colour(c_white);
+	_str = string(obj_logic_gamemanager.p_getScore());
+	draw_text_transformed(room_width/2, _top+(64*2), "LEVEL SCORE:" + _str, 1.5, 1.5, 0);
+	
+	//ingame time
+	_str = string(obj_logic_gamemanager.p_getGameTimeSeconds());
+	draw_text_transformed(room_width/2, _top+(64*3), "LEVEL TIME:" + _str, 1.5, 1.5, 0);
 }

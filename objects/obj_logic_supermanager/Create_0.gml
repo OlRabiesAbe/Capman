@@ -34,7 +34,7 @@ function p_advanceLevel()
 	{
 		_totalScore = obj_logic_gamemanager.p_getScore(); //update total score
 		_totalScore += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
-		_totalClock += obj_logic_gamemanager.p_getGameTime();
+		_totalClock += obj_logic_gamemanager.p_getGameTimeSeconds();
 	}
 	
 	if _roundIndex >= _ROUNDMAX || instance_exists(obj_logic_cutscenemanager) 
