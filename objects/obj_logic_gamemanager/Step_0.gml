@@ -1,6 +1,7 @@
 /// @description
 
-_clock++;
+if !p_getGameWon() 
+	_clock++;
 
 
 /*	This is called by this obj when the game is won.
@@ -10,7 +11,7 @@ if (!instance_exists(obj_pill) && !_gameIsWon) || keyboard_check(ord("A")){
 	_roomWinAdvance();
 }
 
-if !obj_player.p_isAlive {
+if !obj_player.p_isAlive && !p_getGameWon() {
 	_roomDeathRestart();
 }
 
