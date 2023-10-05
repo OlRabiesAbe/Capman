@@ -24,6 +24,7 @@
     {"name":"special pills","order":3,"path":"folders/Sprites/pill/special pills.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"gui_elements","order":20,"path":"folders/Sprites/gui_elements.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_light_green","order":13,"path":"sprites/spr_light_green/spr_light_green.yy",},

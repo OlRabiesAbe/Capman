@@ -65,9 +65,7 @@ function _drawScoreScreen()
 	var _bottom = room_height - (room_height/4/2);
 	
 	//black background
-	draw_set_colour(c_black);
-	draw_rectangle(_left, _top, 
-		_right, _bottom, false);
+	draw_sprite(spr_textbox_win, -1, _left, _top);
 	
 	//headline text
 	draw_set_halign(fa_center);
