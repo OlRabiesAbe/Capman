@@ -81,7 +81,7 @@ function _drawScoreScreen()
 	draw_set_halign(fa_center);
 	draw_set_colour(c_white);
 	_str = string(obj_logic_gamemanager.p_getScore());
-	draw_text_transformed(room_width/2, _top+(64*2), "LEVEL SCORE:" + _str, 1.5, 1.5, 0);
+	draw_text_transformed(room_width/2, _top+(64*2), "TOTAL SCORE:" + _str, 1.5, 1.5, 0);
 	
 	//ingame time
 	_str = string(obj_logic_gamemanager.p_getGameTimeSeconds());
