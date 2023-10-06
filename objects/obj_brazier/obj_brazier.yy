@@ -26,7 +26,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
+  "solid": false,
   "spriteId": {
     "name": "spr_brazier",
     "path": "sprites/spr_brazier/spr_brazier.yy",
