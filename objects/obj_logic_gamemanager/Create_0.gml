@@ -26,13 +26,11 @@ function p_setRound (_roundIndex)
 /*	Advances level via alarm[1]
  *	Called in Step when game is won
  */
-function _roomWinAdvance() 
+/*function _roomWinAdvance() 
 {
 	_gameIsWon = true;
 	obj_logic_soundplayer.p_stopAllSounds();
-	if alarm[1] == -1 
-		alarm[1] = 5 * room_speed;
-}
+}*/
 
 /*	This is called by this obj when the player is dead.
  *	Tells supermanager to restart the level
@@ -137,6 +135,16 @@ function p_setScore(_amount)
 function p_incrementScore(_value) 
 {
 	_score += _value;
+}
+//_totalScore Getter
+function p_getTotalScore() 
+{
+	return _totalScore;
+}
+//_totalScore Setter
+function p_setTotalScore(_amount) 
+{
+	_totalScore = _amount;
 }
 //_gameIsWon Getter
 function p_getGameWon() 

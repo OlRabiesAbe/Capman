@@ -1,6 +1,6 @@
 /// @description
 
-if !p_getGameWon() 
+if !_gameIsWon 
 	_clock++;
 
 
@@ -8,13 +8,18 @@ if !p_getGameWon()
  *	Tells supermanager to advance the level
  */
 if (!instance_exists(obj_pill) && !_gameIsWon) || keyboard_check(ord("A")){
-	_roomWinAdvance();
+	_gameIsWon = true;
+	obj_logic_soundplayer.p_stopAllSounds();
+} 
+else if (_gameIsWon && keyboard_check(vk_space)) {
+	if alarm[1] == -1 
+		alarm[1] = 2 * room_speed;
 }
 
-if !obj_player.p_isAlive && !p_getGameWon() {
+if !obj_player.p_isAlive && !_gameIsWon {
 	_roomDeathRestart();
 }
 
-if p_getGameTimeSeconds() > _ELROYTIME {
+if ceil(_clock/60) > _ELROYTIME {
 	_enemyBecomeElroy();
 }

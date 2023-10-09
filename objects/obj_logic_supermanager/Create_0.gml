@@ -9,7 +9,7 @@ function _initializeGameplayLogicStructs()
 		instance_create_layer(0, 0, "Logic", obj_logic_gamemanager);
 	
 	obj_logic_gamemanager.p_setRound(_roundIndex);
-	obj_logic_gamemanager.p_setScore(_totalScore);
+	obj_logic_gamemanager.p_setTotalScore(_totalScore);
 	
 	if !instance_exists(obj_logic_screenwriter)
 		instance_create_layer(0, 0, "Logic", obj_logic_screenwriter);
@@ -32,7 +32,7 @@ function p_advanceLevel()
 {
 	if instance_exists(obj_logic_gamemanager)
 	{
-		_totalScore = obj_logic_gamemanager.p_getScore(); //update total score
+		_totalScore += obj_logic_gamemanager.p_getScore(); //update total score
 		_totalScore += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
 		_totalClock += obj_logic_gamemanager.p_getGameTimeSeconds();
 	}

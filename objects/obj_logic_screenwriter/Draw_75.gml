@@ -12,8 +12,8 @@ _drawLives();
 
 //game won text
 if obj_logic_gamemanager.p_getGameWon() {
-	//_drawGameWonScreen();
 	_drawScoreScreen();
+	if keyboard_check(vk_space) _isScoreScreenProgressing = true;
 }
 
 //death text
