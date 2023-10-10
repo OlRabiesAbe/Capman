@@ -5,14 +5,14 @@
 */
 function p_playEnemyFootsteps() 
 {
-	if _gameplayMode
+	if obj_logic_gamemanager.p_getGameplayMode()
 		if !audio_is_playing(snd_enemy_walk04)
 			audio_play_sound(snd_enemy_walk04, 8, true);
 }
 
 function p_toggleEnemyFearSound(_toggle)
 {
-	if _gameplayMode 
+	if obj_logic_gamemanager.p_getGameplayMode() 
 	{
 		if _toggle
 		{
@@ -29,16 +29,19 @@ function p_toggleEnemyFearSound(_toggle)
 
 function p_playThud()
 {
-	if _gameplayMode 
-		if !audio_is_playing(snd_thud)
-			audio_play_sound(snd_thud, 10, false);
+	if !audio_is_playing(snd_thud)
+		audio_play_sound(snd_thud, 10, false);
 }
 
 function p_playCoinGet()
 {
-	if _gameplayMode 
-		if !audio_is_playing(snd_capman_coinget)
-			audio_play_sound(snd_capman_coinget, 9, false);
+	if !audio_is_playing(snd_capman_coinget)
+		audio_play_sound(snd_capman_coinget, 9, false, 2);
+}
+function p_playCoinGet(_pitch)
+{
+	if !audio_is_playing(snd_capman_coinget)
+		audio_play_sound(snd_capman_coinget, 9, false, 2, 0, _pitch);
 }
 
 function p_stopAllSounds()

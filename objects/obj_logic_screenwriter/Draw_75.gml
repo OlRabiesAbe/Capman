@@ -12,8 +12,14 @@ _drawLives();
 
 //game won text
 if obj_logic_gamemanager.p_getGameWon() {
+	
+	if alarm[0] == -1
+		alarm[0] = room_speed * 6;
+		
 	_drawScoreScreen();
-	if keyboard_check(vk_space) _isScoreScreenProgressing = true;
+	
+	if keyboard_check(vk_space) 
+		_isScoreScreenProgressing = true;
 }
 
 //death text

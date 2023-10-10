@@ -9,6 +9,7 @@ if !_gameIsWon
  */
 if (!instance_exists(obj_pill) && !_gameIsWon) || keyboard_check(ord("A")){
 	_gameIsWon = true;
+	_gameplayMode = false;
 	obj_logic_soundplayer.p_stopAllSounds();
 } 
 else if (_gameIsWon && keyboard_check(vk_space)) {

@@ -9,7 +9,6 @@ function _initializeGameplayLogicStructs()
 		instance_create_layer(0, 0, "Logic", obj_logic_gamemanager);
 	
 	obj_logic_gamemanager.p_setRound(_roundIndex);
-	obj_logic_gamemanager.p_setTotalScore(_totalScore);
 	
 	if !instance_exists(obj_logic_screenwriter)
 		instance_create_layer(0, 0, "Logic", obj_logic_screenwriter);
@@ -61,7 +60,10 @@ function p_restartRoom()
 }
 
 
-
+function p_getTotalScore()
+{
+	return _totalScore;
+}
 
 
 /* _lives Getter

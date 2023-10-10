@@ -136,21 +136,7 @@ function p_incrementScore(_value)
 {
 	_score += _value;
 }
-//_totalScore Getter
-function p_getTotalScore() 
-{
-	return _totalScore;
-}
-//_totalScore Setter
-function p_setTotalScore(_amount) 
-{
-	_totalScore = _amount;
-}
-//_gameIsWon Getter
-function p_getGameWon() 
-{
-	return _gameIsWon;
-}
+
 //_clock Getter, round timer in seconds
 function p_getTimerSeconds() 
 {
@@ -165,4 +151,20 @@ function p_getGameTime()
 function p_getGameTimeSeconds() 
 {
 	return ceil(_clock / 60);
+}
+
+//_gameIsWon Getter
+function p_getGameWon() 
+{
+	return _gameIsWon;
+}
+function p_setGameWon(_bool)
+{
+	_gameIsWon = _bool;
+	obj_logic_soundplayer.p_stopAllSounds();
+}
+//_gameIsWon Getter
+function p_getGameplayMode() 
+{
+	return _gameplayMode;
 }
