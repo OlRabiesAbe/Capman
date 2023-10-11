@@ -53,6 +53,7 @@
     {"id":{"name":"obj_wall_small","path":"objects/obj_wall_small/obj_wall_small.yy",},},
     {"id":{"name":"spr_capman_2","path":"sprites/spr_capman_2/spr_capman_2.yy",},},
     {"id":{"name":"spr_coin","path":"sprites/spr_coin/spr_coin.yy",},},
+    {"id":{"name":"spr_pill_special_leek","path":"sprites/spr_pill_special_leek/spr_pill_special_leek.yy",},},
     {"id":{"name":"snd_capman_coinget","path":"sounds/snd_capman_coinget/snd_capman_coinget.yy",},},
     {"id":{"name":"spr_cutscene_intro_00","path":"sprites/spr_cutscene_intro_00/spr_cutscene_intro_00.yy",},},
     {"id":{"name":"spr_enemy_zombie_orange_0","path":"sprites/spr_enemy_zombie_orange_0/spr_enemy_zombie_orange_0.yy",},},

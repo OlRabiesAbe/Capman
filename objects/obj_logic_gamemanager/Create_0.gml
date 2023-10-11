@@ -14,12 +14,21 @@ function p_setRound (_roundIndex)
 	//setting up the special pill
 	with (obj_pill_special) 
 	{
-		_VALUE += 500 * _roundIndex;  //changing a constant yeah yeah i know
 		
-		if _roundIndex % 2 == 0 
-			object_set_sprite(obj_pill_special, spr_pill_special_carrot);
-		else if _roundIndex % 2 == 1 
-			object_set_sprite(obj_pill_special, spr_pill_special_bread);
+		switch(_roundIndex) {
+			case 0:
+				object_set_sprite(obj_pill_special, spr_pill_special_bread);
+				_VALUE = 500;
+				break;
+			case 1:
+				object_set_sprite(obj_pill_special, spr_pill_special_carrot);
+				_VALUE = 1000;
+				break;
+			case 2: default:
+				object_set_sprite(obj_pill_special, spr_pill_special_leek);
+				_VALUE = 1500;
+				break;
+		}
 	}
 }
 
