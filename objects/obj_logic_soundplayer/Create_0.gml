@@ -32,6 +32,11 @@ function p_playThud()
 	if !audio_is_playing(snd_thud)
 		audio_play_sound(snd_thud, 10, false);
 }
+function p_playThud(_pitch)
+{
+	if !audio_is_playing(snd_thud)
+		audio_play_sound(snd_thud, 10, false, 1, 0, _pitch);
+}
 
 function p_playCoinGet()
 {

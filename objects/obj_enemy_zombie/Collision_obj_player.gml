@@ -2,6 +2,8 @@
 
 if p_scared {
 	
+	obj_logic_soundplayer.p_playThud(2);
+	
 	if alarm[4] <= 0
 		obj_logic_gamemanager.p_incrementScore(_VALUE);
 	
