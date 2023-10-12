@@ -32,7 +32,10 @@ function p_advanceLevel()
 	if instance_exists(obj_logic_gamemanager)
 	{
 		_totalScore += obj_logic_gamemanager.p_getScore(); //update total score
+		
 		_totalScore += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
+		_lives_1up_counter += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
+		
 		_totalClock += obj_logic_gamemanager.p_getGameTimeSeconds();
 	}
 	
@@ -87,3 +90,16 @@ function p_decrementLives()
 {
 	_lives--;
 }
+//_lives1upCounter is a bucket for doling out 1ups. obj_logic_gamemanager handles it.
+/*function p_getLives1upCounter()
+{
+	return _lives1upCounter;
+}
+function p_incLives1upCounter()
+{
+	return _lives1upCounter;
+}
+function p_resetLives1upCounter()
+{
+	_lives1upCounter -= 10000;
+}*/

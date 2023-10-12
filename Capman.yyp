@@ -70,6 +70,7 @@
     {"id":{"name":"spr_pill_special_carrot","path":"sprites/spr_pill_special_carrot/spr_pill_special_carrot.yy",},},
     {"id":{"name":"obj_logic_screenwriter","path":"objects/obj_logic_screenwriter/obj_logic_screenwriter.yy",},},
     {"id":{"name":"spr_capman_1","path":"sprites/spr_capman_1/spr_capman_1.yy",},},
+    {"id":{"name":"room_city_00","path":"rooms/room_city_00/room_city_00.yy",},},
     {"id":{"name":"spr_light_red","path":"sprites/spr_light_red/spr_light_red.yy",},},
     {"id":{"name":"spr_enemy_zombie_1","path":"sprites/spr_enemy_zombie_1/spr_enemy_zombie_1.yy",},},
     {"id":{"name":"room_catacombs_00","path":"rooms/room_catacombs_00/room_catacombs_00.yy",},},
@@ -106,6 +107,7 @@
     {"id":{"name":"obj_light_red","path":"objects/obj_light_red/obj_light_red.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"room_city_00","path":"rooms/room_city_00/room_city_00.yy",},},
     {"roomId":{"name":"room_forest_00","path":"rooms/room_forest_00/room_forest_00.yy",},},
     {"roomId":{"name":"room_catacombs_00","path":"rooms/room_catacombs_00/room_catacombs_00.yy",},},
     {"roomId":{"name":"room_cutscene_intro","path":"rooms/room_cutscene_intro/room_cutscene_intro.yy",},},

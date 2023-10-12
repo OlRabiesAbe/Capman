@@ -2,6 +2,6 @@
 
 obj_logic_gamemanager.p_incrementScore(_VALUE);
 obj_logic_gamemanager.p_powerPacman();
-audio_play_sound(snd_capman_coinget, 10, false);
+obj_logic_soundplayer.p_playCoinGet(2);
 instance_destroy(_myLight);
 instance_destroy();

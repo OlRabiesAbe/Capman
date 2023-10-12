@@ -1,10 +1,10 @@
 /// @description Room init
 
 switch(_roomIndex) {
-	case 0: case 1:
+	case 0: case 1: case 2: 
 		_initializeGameplayLogicStructs();
 		break;
-	case 2: default:
+	default:
 		_initializeCutsceneLogicStructs();
 		break;
 }

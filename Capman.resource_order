@@ -48,6 +48,7 @@
     {"name":"spr_pill_special_carrot","order":1,"path":"sprites/spr_pill_special_carrot/spr_pill_special_carrot.yy",},
     {"name":"obj_logic_screenwriter","order":4,"path":"objects/obj_logic_screenwriter/obj_logic_screenwriter.yy",},
     {"name":"spr_capman_1","order":1,"path":"sprites/spr_capman_1/spr_capman_1.yy",},
+    {"name":"room_city_00","order":4,"path":"rooms/room_city_00/room_city_00.yy",},
     {"name":"spr_light_red","order":18,"path":"sprites/spr_light_red/spr_light_red.yy",},
     {"name":"spr_enemy_zombie_1","order":1,"path":"sprites/spr_enemy_zombie_1/spr_enemy_zombie_1.yy",},
     {"name":"room_catacombs_00","order":1,"path":"rooms/room_catacombs_00/room_catacombs_00.yy",},
