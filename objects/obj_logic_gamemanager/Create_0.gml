@@ -131,30 +131,20 @@ function _enemyBecomeElroy() {
 //=====VAR GETTERS & SETTERS=====
 //==========================
 //_score Getter
-function p_getScore() 
+function p_getRoundScore() 
 {
-	return _score;
+	return obj_logic_supermanager.p_getRoundScore();
 }
 //_score Setter
-function p_setScore(_amount) 
+function p_incrementRoundScore(_value) 
 {
-	_score = _amount;
-}
-//_score Setter
-function p_incrementScore(_value) 
-{
-	_score += _value;
+	obj_logic_supermanager.p_incrementRoundScore(_value);
 }
 
 //_clock Getter, round timer in seconds
 function p_getTimerSeconds() 
 {
 	return _ROOMTIMER - ceil(_clock / 60);
-}
-//_clock Getter, raw ms
-function p_getGameTime() 
-{
-	return _clock;
 }
 //_clock Getter, raw seconds
 function p_getGameTimeSeconds() 

@@ -107,9 +107,9 @@
     {"id":{"name":"obj_light_red","path":"objects/obj_light_red/obj_light_red.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"room_city_00","path":"rooms/room_city_00/room_city_00.yy",},},
     {"roomId":{"name":"room_forest_00","path":"rooms/room_forest_00/room_forest_00.yy",},},
     {"roomId":{"name":"room_catacombs_00","path":"rooms/room_catacombs_00/room_catacombs_00.yy",},},
+    {"roomId":{"name":"room_city_00","path":"rooms/room_city_00/room_city_00.yy",},},
     {"roomId":{"name":"room_cutscene_intro","path":"rooms/room_cutscene_intro/room_cutscene_intro.yy",},},
   ],
   "TextureGroups": [

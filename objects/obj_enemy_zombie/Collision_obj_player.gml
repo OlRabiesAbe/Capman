@@ -5,7 +5,7 @@ if p_scared {
 	obj_logic_soundplayer.p_playThud(2);
 	
 	if alarm[4] <= 0
-		obj_logic_gamemanager.p_incrementScore(_VALUE);
+		obj_logic_gamemanager.p_incrementRoundScore(_VALUE);
 	
 	//disable all other logic
 	for (var i = 0; i < 12; i++) 

@@ -5,6 +5,7 @@
  */
 function _initializeGameplayLogicStructs() 
 {
+	
 	if !instance_exists(obj_logic_gamemanager)
 		instance_create_layer(0, 0, "Logic", obj_logic_gamemanager);
 	
@@ -16,6 +17,7 @@ function _initializeGameplayLogicStructs()
 	if !instance_exists(obj_logic_soundplayer)
 		instance_create_layer(0, 0, "Logic", obj_logic_soundplayer);
 }
+
 function _initializeCutsceneLogicStructs() 
 {
 	if !instance_exists(obj_logic_cutscenemanager)
@@ -31,10 +33,10 @@ function p_advanceLevel()
 {
 	if instance_exists(obj_logic_gamemanager)
 	{
-		_totalScore += obj_logic_gamemanager.p_getScore(); //update total score
+		_totalScore += _roundScore; //update total score
 		
 		_totalScore += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
-		_lives_1up_counter += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
+		_lives1upCounter += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
 		
 		_totalClock += obj_logic_gamemanager.p_getGameTimeSeconds();
 	}
@@ -63,11 +65,21 @@ function p_restartRoom()
 }
 
 
+//=====VAR GETTERS & SETTERS=====
+//==========================
 function p_getTotalScore()
 {
 	return _totalScore;
 }
-
+function p_getRoundScore()
+{
+	return _roundScore;
+}
+function p_incrementRoundScore(_value) 
+{
+	_roundScore += _value;
+	_lives1upCounter += _value;
+}
 
 /* _lives Getter
  */

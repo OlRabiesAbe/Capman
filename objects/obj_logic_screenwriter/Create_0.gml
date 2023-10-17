@@ -4,9 +4,8 @@ function _drawScore()
 {
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
-	var _str = string(obj_logic_supermanager.p_getTotalScore() + obj_logic_gamemanager.p_getScore());
+	var _str = string(obj_logic_supermanager.p_getRoundScore());
 	draw_text(16, 24, "SCORE " + _str);
-	draw_text(16, 8, "TOTAL ");
 }
 
 function _drawClock() 
@@ -59,7 +58,7 @@ function _drawScoreScreen()
 	var _right = room_width - (room_width/4/2);
 	var _bottom = room_height - (room_height/4/2);
 	
-	var _lvlScore = obj_logic_gamemanager.p_getScore();
+	var _lvlScore = obj_logic_supermanager.p_getRoundScore();
 	var _ttlScore = obj_logic_supermanager.p_getTotalScore();
 	var _timerScnds = obj_logic_gamemanager.p_getTimerSeconds();
 	
