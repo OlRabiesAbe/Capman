@@ -7,9 +7,10 @@
  */
 function p_setRound (_roundIndex)
 {
+	//roundbased gameplay variable adjustement
 	obj_enemy_zombie.p_moveSpeed += (0.2 * _roundIndex);
 	_POWERPILLTIME -= _roundIndex * room_speed;
-	_ELROYTIME += _roundIndex * 10;
+	_ELROYTIME -= _roundIndex * 10;
 	
 	//setting up the special pill
 	with (obj_pill_special) 
@@ -31,15 +32,6 @@ function p_setRound (_roundIndex)
 		}
 	}
 }
-
-/*	Advances level via alarm[1]
- *	Called in Step when game is won
- */
-/*function _roomWinAdvance() 
-{
-	_gameIsWon = true;
-	obj_logic_soundplayer.p_stopAllSounds();
-}*/
 
 /*	This is called by this obj when the player is dead.
  *	Tells supermanager to restart the level
@@ -156,11 +148,6 @@ function p_getGameTimeSeconds()
 function p_getGameWon() 
 {
 	return _gameIsWon;
-}
-function p_setGameWon(_bool)
-{
-	_gameIsWon = _bool;
-	obj_logic_soundplayer.p_stopAllSounds();
 }
 //_gameIsWon Getter
 function p_getGameplayMode() 

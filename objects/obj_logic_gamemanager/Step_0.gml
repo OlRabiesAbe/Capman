@@ -3,16 +3,6 @@
 if !_gameIsWon 
 	_clock++;
 
-/*	handling 1up logic. 
- *	obj_logic_supermanager.p_getLives1upCounter() is a bucket seperate from _totalScore 
- *	that handles 1ups.
- */
-/*if obj_logic_supermanager.p_getLives1upCounter() > 10000 {
-	obj_logic_supermanager.p_resetLives1upCounter();
-	obj_logic_supermanager.p_incrementLives();
-	
-}*/
-
 /*	This is called by this obj when the game is won.
  *	Tells supermanager to advance the level
  */
