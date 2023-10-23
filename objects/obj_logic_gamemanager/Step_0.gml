@@ -16,9 +16,12 @@ else if (_gameIsWon && keyboard_check(vk_space)) {
 		alarm[1] = 2 * room_speed;
 }
 
-if !obj_player.p_isAlive && !_gameIsWon {
-	_roomDeathRestart();
+if !obj_player.p_isAlive {
+	if obj_logic_supermanager.p_getLives() > 0 {
+		_roomDeathRestart();
+	}
 }
+
 
 if ceil(_clock/60) > _ELROYTIME {
 	_enemyBecomeElroy();

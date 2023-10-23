@@ -41,13 +41,31 @@ function _drawGameOverScreen()
 	var _top = room_height/4/2;
 	var _right = room_width - (room_width/4/2);
 	var _bottom = room_height - (room_height/4/2);
+	
+	var _lvlScore = obj_logic_supermanager.p_getRoundScore();
+	var _ttlScore = obj_logic_supermanager.p_getTotalScore();
+	var _timerScnds = obj_logic_gamemanager.p_getTimerSeconds();
+	
 						//background box
 	draw_sprite(spr_textbox_win, -1, _left, _top);
 	
+	//death message
 	draw_set_halign(fa_center);
 	draw_set_colour(_c_TEXTRED);
 	var _str = "YOU'VE JOINED THE DEAD";
 	draw_text_transformed(room_width/2, _top+32, _str, 2, 2, 0);
+	
+	//total score
+	draw_set_halign(fa_center);
+	draw_set_colour(_c_TEXTWHITE);
+	_str = string(_lvlScore);
+	draw_text_transformed( room_width/2, _top+(64*2), 
+							"LEVEL SCORE " + _str, 1.5, 1.5, 0);
+	
+	//total cum. score
+	_str = string(_ttlScore+_lvlScore);
+	draw_text_transformed( (room_width/2), _top+(64*6), 
+							"TOTAL SCORE " + _str, 2, 2, 0);
 }
 
 function _drawScoreScreen()
