@@ -5,7 +5,7 @@ function _drawScore()
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
 	var _str = string(obj_logic_supermanager.p_getRoundScore());
-	draw_text(16, 24, "SCORE " + _str);
+	draw_text(16, 16, "SCORE " + _str);
 }
 
 function _drawClock() 
@@ -13,7 +13,7 @@ function _drawClock()
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
 	var _str = string(obj_logic_gamemanager.p_getGameTimeSeconds());
-	draw_text(room_width-128, 16, "TIME " + _str);
+	draw_text(room_width-112, 16, "TIME " + _str);
 }
 
 function _drawLives() 
