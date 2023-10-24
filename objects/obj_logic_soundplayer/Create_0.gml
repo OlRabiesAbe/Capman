@@ -49,6 +49,17 @@ function p_playCoinGet(_pitch)
 		audio_play_sound(snd_capman_coinget, 9, false, 2, 0, _pitch);
 }
 
+function p_play1up()
+{
+	if !audio_is_playing(snd_capman_1up)
+		audio_play_sound(snd_capman_1up, 10, false);
+}
+function p_play1up(_pitch)
+{
+	if !audio_is_playing(snd_capman_1up)
+		audio_play_sound(snd_capman_1up, 10, false, 1, 0, _pitch);
+}
+
 function p_stopAllSounds()
 {
 	audio_stop_all();

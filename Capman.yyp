@@ -56,6 +56,7 @@
     {"id":{"name":"spr_pill_special_leek","path":"sprites/spr_pill_special_leek/spr_pill_special_leek.yy",},},
     {"id":{"name":"snd_capman_coinget","path":"sounds/snd_capman_coinget/snd_capman_coinget.yy",},},
     {"id":{"name":"spr_cutscene_intro_00","path":"sprites/spr_cutscene_intro_00/spr_cutscene_intro_00.yy",},},
+    {"id":{"name":"snd_capman_1up","path":"sounds/snd_capman_1up/snd_capman_1up.yy",},},
     {"id":{"name":"spr_enemy_zombie_orange_0","path":"sprites/spr_enemy_zombie_orange_0/spr_enemy_zombie_orange_0.yy",},},
     {"id":{"name":"spr_capman_lit_1","path":"sprites/spr_capman_lit_1/spr_capman_lit_1.yy",},},
     {"id":{"name":"obj_power_pill","path":"objects/obj_power_pill/obj_power_pill.yy",},},

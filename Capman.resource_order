@@ -38,6 +38,7 @@
     {"name":"spr_coin","order":1,"path":"sprites/spr_coin/spr_coin.yy",},
     {"name":"spr_pill_special_leek","order":2,"path":"sprites/spr_pill_special_leek/spr_pill_special_leek.yy",},
     {"name":"snd_capman_coinget","order":2,"path":"sounds/snd_capman_coinget/snd_capman_coinget.yy",},
+    {"name":"snd_capman_1up","order":6,"path":"sounds/snd_capman_1up/snd_capman_1up.yy",},
     {"name":"spr_enemy_zombie_orange_0","order":2,"path":"sprites/spr_enemy_zombie_orange_0/spr_enemy_zombie_orange_0.yy",},
     {"name":"spr_capman_lit_1","order":5,"path":"sprites/spr_capman_lit_1/spr_capman_lit_1.yy",},
     {"name":"obj_power_pill","order":16,"path":"objects/obj_power_pill/obj_power_pill.yy",},
