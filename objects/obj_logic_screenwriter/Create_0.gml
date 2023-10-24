@@ -41,15 +41,15 @@ function p_draw1up() {
 	
 	if alarm[1] == -1 
 	{
-		alarm[1] = 5 * room_speed;
+		alarm[1] = room_speed * 5;
 		obj_logic_soundplayer.p_play1up();
 	}
 	
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
 	
-	var _str = "+ 1 LIFE";
-	var _strY = (room_height-64) - ((5*room_speed)-alarm[1]);
+	var _str = "+1 LIFE";
+	var _strY = (room_height-64) - ((room_speed*5) - alarm[1]);
 	draw_text(16, _strY, _str);
 }
 
