@@ -166,7 +166,7 @@ function _drawScoreScreen()
 	//total cum. score
 	if alarm[0] < 1 * room_speed 
 	{
-		_str = string(_ttlScore+_lvlScore+(_timerScnds*100));
+		_str = string(_ttlScore);
 		draw_text_transformed( (room_width/2), _top+(64*6), 
 								"TOTAL SCORE " + _str, 2, 2, 0);
 	}

@@ -34,17 +34,7 @@ function _initializeCutsceneLogicStructs()
  */
 function p_advanceLevel() 
 {
-	//adding roundscore to total score, and updating per timer bonus
-	if instance_exists(obj_logic_gamemanager)//safety check might be unneeded
-	{
-		_totalScore += _roundScore; //update total score
-		
-		_totalScore += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
-		_lives1upCounter += obj_logic_gamemanager.p_getTimerSeconds() * 100; //add time bonus
-		
-		_totalClock += obj_logic_gamemanager.p_getGameTimeSeconds();
-	}
-	 //goto next room
+	 //goto next room if we hit the _ROUNDMAX
 	if _roundIndex >= _ROUNDMAX || instance_exists(obj_logic_cutscenemanager)
 	{
 		_roundIndex = 0;//reset round index
@@ -58,6 +48,19 @@ function p_advanceLevel()
 		_roundIndex++;
 		p_restartRoom();
 	}
+}
+
+/*	Update _totalClock, _totalScore, _lives1upCounter on round end.
+ *	I think Needs to be handled seperately from p_advanceLevel().
+ */
+function p_updateStatsOnRoundEnd() 
+{
+	_totalScore += _roundScore;
+	_totalClock += obj_logic_gamemanager.p_getGameTimeSeconds();
+	
+	var _timeBonus = obj_logic_gamemanager.p_getTimerSeconds() * 100;
+	_totalScore += _timeBonus;
+	_lives1upCounter += _timeBonus;
 }
 
 /*	Restart this room. Is this func needed?
