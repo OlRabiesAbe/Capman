@@ -10,6 +10,11 @@ _drawClock();
 _drawLives();
 //_drawRoundNum();
 
+
+///Should maybe move the below blocks out of here.
+///Don't want screenwriter deciding shit for itself.
+///gamemanager should call these funcs when IT wants them done.
+
 //game won text
 if obj_logic_gamemanager.p_getGameWon() {
 	
@@ -23,6 +28,8 @@ if obj_logic_gamemanager.p_getGameWon() {
 }
 
 //death text
-if !obj_player.p_isAlive {
+if !obj_player.p_isAlive && obj_logic_supermanager.p_getLives() == 0 {
 	_drawGameOverScreen();
+} else if !obj_player.p_isAlive {
+	_drawDeadScreen();
 }

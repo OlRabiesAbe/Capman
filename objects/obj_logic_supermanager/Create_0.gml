@@ -108,3 +108,8 @@ function p_decrementLives()
 {
 	_lives--;
 }
+//_lives1up getter
+function p_getLives1up() 
+{
+	return _lives1upCounter;
+}
