@@ -20,9 +20,18 @@ function _drawLives()
 {
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
-	var _str = " ";
-	for (var i = 0; i < obj_logic_supermanager.p_getLives(); i++)
-		_str += " O";
+	var _str = "";
+	
+	if obj_logic_supermanager.p_getLives() > 3 
+	{
+		_str = string(obj_logic_supermanager.p_getLives());
+	} 
+	else 
+	{
+		for (var i = 0; i < obj_logic_supermanager.p_getLives(); i++)
+			_str += " O";
+	}
+	
 	draw_text(16, room_height-32, "LIVES " + _str);
 }
 
