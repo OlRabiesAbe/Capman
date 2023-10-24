@@ -172,7 +172,6 @@ function _drawScoreScreen()
 	}
 	
 	//points til 1up
-	///BROKEN, DOESNT CALC CORRECTLY
 	if alarm[0] < 1 * room_speed 
 	{
 		_str = string(10000 - obj_logic_supermanager.p_getLives1up());
