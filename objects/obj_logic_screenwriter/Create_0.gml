@@ -118,7 +118,7 @@ function _drawScoreScreen()
 	{
 		_str = string(_timerScnds*100);
 		draw_text_transformed( (room_width/2), _top+(64*3.5), 
-								"TIME REMAINING BONUS " + _str, 1.5, 1.5, 0);
+								"TIME REMAINING BONUS " + _str, 1, 1, 0);
 	}
 	//level score + time bonus
 	if alarm[0] < 2 * room_speed 
@@ -135,6 +135,7 @@ function _drawScoreScreen()
 		draw_text_transformed( (room_width/2), _top+(64*6), 
 								"TOTAL SCORE " + _str, 2, 2, 0);
 	}
+	
 	
 	draw_set_colour(_c_TEXTYELLOW);
 	if (_isScoreScreenProgressing) draw_set_colour(_c_TEXTRED);
