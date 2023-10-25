@@ -1,5 +1,15 @@
 /// @description Functions
 
+/*
+_pSystem = part_system_create_layer("Instance_Layer", false);
+_particle1 = part_type_create();
+part_type_shape(_particle1, pt_shape_pixel);
+part_type_size(_particle1,1,1,-0.1,0);
+part_type_speed(_particle1,0.50,2,-0.10,0);
+part_type_life(_particle1,room_speed*10,room_speed*20); 
+part_particles_create(_pSystem, room_width/2, room_height/2, _particle1, 100);
+*/
+
 //=====ROOM MANAGEMENT=====
 //==========================
 /*	Adjust game variables based on the round number.
@@ -85,7 +95,7 @@ function p_depowerPacman ()
  */
 function _toggleEnemyScared()
 {
-	if instance_exists(obj_enemy_zombie) 
+	with (obj_enemy_zombie) 
 	{
 		if obj_enemy_zombie.p_scared 
 		{
@@ -94,7 +104,7 @@ function _toggleEnemyScared()
 			//the below line is an attempt to fix an issue related to enemies getting stuck on walls
 			//doesnt fix the issue, but seems to reduce how often it happens
 			//issue seems to occur at _moveSpeeds of 3.25 or higher
-			with obj_enemy_zombie p_snapToGrid();
+			obj_enemy_zombie.p_snapToGrid();
 		} 
 		else 
 		{
