@@ -25,6 +25,7 @@
     {"name":"special pills","order":3,"path":"folders/Sprites/pill/special pills.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"particles","order":21,"path":"folders/Sprites/particles.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_light_green","order":13,"path":"sprites/spr_light_green/spr_light_green.yy",},
@@ -55,7 +56,9 @@
     {"name":"room_catacombs_00","order":1,"path":"rooms/room_catacombs_00/room_catacombs_00.yy",},
     {"name":"song_Landof8Bits","order":3,"path":"sounds/song_Landof8Bits/song_Landof8Bits.yy",},
     {"name":"spr_capman_3","order":3,"path":"sprites/spr_capman_3/spr_capman_3.yy",},
+    {"name":"spr_bone02","order":2,"path":"sprites/spr_bone02/spr_bone02.yy",},
     {"name":"obj_logic_gamemanager","order":2,"path":"objects/obj_logic_gamemanager/obj_logic_gamemanager.yy",},
+    {"name":"spr_bone01","order":1,"path":"sprites/spr_bone01/spr_bone01.yy",},
     {"name":"spr_wall_small_collision","order":4,"path":"sprites/spr_wall_small_collision/spr_wall_small_collision.yy",},
     {"name":"spr_enemy_target","order":5,"path":"sprites/spr_enemy_target/spr_enemy_target.yy",},
     {"name":"obj_light_green","order":18,"path":"objects/obj_light_green/obj_light_green.yy",},
