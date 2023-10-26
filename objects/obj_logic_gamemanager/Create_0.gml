@@ -1,17 +1,5 @@
 /// @description Functions
 
-/*
-_pSystem = part_system_create_layer("Instance_Layer", false);
-_particleBone = part_type_create();
-part_type_shape(_particleBone, pt_shape_pixel);
-part_type_size(_particleBone,1,1,-0.1,0);
-part_type_speed(_particleBone,0.50,2,-0.10,0);
-part_type_life(_particleBone,room_speed*10,room_speed*20); 
-part_particles_create(_pSystem, room_width/2, room_height/2, _particleBone, 100);
-*/
-
-//_partSystem = part_system_create_layer("Instance_Layer", false);
-
 //=====ROOM MANAGEMENT=====
 //==========================
 /*	Adjust game variables based on the round number.
@@ -95,27 +83,6 @@ function p_depowerPacman ()
 /* Toggles enemy fear behavior when pacman eats a power pill or one runs out
  * Called by p_powerPacman & p_depowerPacman
  */
-function _toggleEnemyScared()
-{
-	with (obj_enemy_zombie) 
-	{
-		if obj_enemy_zombie.p_scared //become unscared
-		{
-			obj_enemy_zombie.p_moveSpeed *= 2;
-			obj_enemy_zombie.p_scared = false;
-			//the below line is an attempt to fix an issue related to enemies getting stuck on walls
-			//doesnt fix the issue, but seems to reduce how often it happens
-			//issue seems to occur at _moveSpeeds of 3.25 or higher
-			obj_enemy_zombie.p_snapToGrid();
-		} 
-		else //become scared
-		{
-			obj_enemy_zombie.p_moveSpeed /= 2;
-			obj_enemy_zombie.p_scared = true;
-		}
-	}
-}
-//	Paramaterized version of above func
 function _toggleEnemyScared(_bool)
 {
 	with (obj_enemy_zombie) 
@@ -124,25 +91,17 @@ function _toggleEnemyScared(_bool)
 		{
 			obj_enemy_zombie.p_moveSpeed *= 2;
 			obj_enemy_zombie.p_scared = false;
+			obj_logic_particlemanager.p_toggleEnemyParticles(false);
 			//the below line is an attempt to fix an issue related to enemies getting stuck on walls
 			//doesnt fix the issue, but seems to reduce how often it happens
 			//issue seems to occur at _moveSpeeds of 3.25 or higher
 			obj_enemy_zombie.p_snapToGrid();
-			
-			//part_type_destroy(obj_enemy_zombie._particleBone);
 		} 
 		else if _bool && !obj_enemy_zombie.p_scared //become scared
 		{
 			obj_enemy_zombie.p_moveSpeed /= 2;
 			obj_enemy_zombie.p_scared = true;
-			/*
-			_particleBone = part_type_create();
-			part_type_shape(_particleBone, pt_shape_pixel);
-			part_type_size(_particleBone,1,1,-0.1,0);
-			part_type_speed(_particleBone,0.50,2,-0.10,0);
-			part_type_life(_particleBone,room_speed*10,room_speed*20); 
-			part_particles_create(obj_logic_gamemanager._partSystem, obj_enemy_zombie.x, obj_enemy_zombie.y, _particleBone, 100);
-			*/
+			obj_logic_particlemanager.p_toggleEnemyParticles(true);
 		}
 	}
 }
