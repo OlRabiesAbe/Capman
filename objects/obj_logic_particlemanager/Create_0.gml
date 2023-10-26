@@ -25,7 +25,7 @@ function p_toggleEnemyParticles(_bool) {
 				part_type_life(_particleBone,room_speed*10,room_speed*20); 
 				part_particles_create(obj_logic_particlemanager._particleSystem, 
 										obj_enemy_zombie.x, obj_enemy_zombie.y,_particleBone, 100);
-				
+				//obj_logic_screenwriter.p_drawDebugText("particles are partifified!");
 			}
 		}
 		
