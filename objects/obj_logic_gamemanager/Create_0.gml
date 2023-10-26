@@ -67,7 +67,7 @@ function p_powerPacman ()
 	{
 		obj_player.p_isPowered = true;
 	
-		_toggleEnemyScared();
+		_toggleEnemyScared(true);
 			
 		obj_logic_soundplayer.p_toggleEnemyFearSound(true)
 	}
@@ -83,7 +83,7 @@ function p_depowerPacman ()
 	if instance_exists(obj_player)
 		obj_player.p_isPowered = false;
 		
-	_toggleEnemyScared();
+	_toggleEnemyScared(false);
 		
 	obj_logic_soundplayer.p_toggleEnemyFearSound(false)
 	
@@ -107,6 +107,27 @@ function _toggleEnemyScared()
 			obj_enemy_zombie.p_snapToGrid();
 		} 
 		else 
+		{
+			obj_enemy_zombie.p_moveSpeed /= 2;
+			obj_enemy_zombie.p_scared = true;
+		}
+	}
+}
+//	Paramaterized version of above func
+function _toggleEnemyScared(_bool)
+{
+	with (obj_enemy_zombie) 
+	{
+		if !_bool && obj_enemy_zombie.p_scared
+		{
+			obj_enemy_zombie.p_moveSpeed *= 2;
+			obj_enemy_zombie.p_scared = false;
+			//the below line is an attempt to fix an issue related to enemies getting stuck on walls
+			//doesnt fix the issue, but seems to reduce how often it happens
+			//issue seems to occur at _moveSpeeds of 3.25 or higher
+			obj_enemy_zombie.p_snapToGrid();
+		} 
+		else if _bool && !obj_enemy_zombie.p_scared
 		{
 			obj_enemy_zombie.p_moveSpeed /= 2;
 			obj_enemy_zombie.p_scared = true;
