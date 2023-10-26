@@ -8,8 +8,12 @@ _drawClock();
 
 //lives
 _drawLives();
-//_drawRoundNum();
 
+if _isDebugTextUp
+	p_drawDebugText(); //the error is in error. Doesnt need a param here.
+	
+if _is1upTextUp
+	p_draw1up();
 
 ///Should maybe move the below blocks out of here.
 ///Don't want screenwriter deciding shit for itself.

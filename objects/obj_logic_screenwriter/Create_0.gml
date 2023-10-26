@@ -35,13 +35,31 @@ function _drawLives()
 	draw_text(16, room_height-32, _str);
 }
 
+//draw debug messages at top of screen
+function p_drawDebugText(_message) 
+{
+	if alarm[2] == -1 {
+		alarm[2] = 5 * room_speed;
+		_debugMessage = _message;
+		_isDebugTextUp = true;
+	}
+	
+	draw_set_color(c_black);
+	draw_rectangle(0, 8, room_width, 40, false);
+	
+	draw_set_halign(fa_center);
+	draw_set_colour(c_green);
+	
+	draw_text(room_width/2, 16, _debugMessage);
+}
+
 //draw a little text on 1up. should float upwards.
-///TEXT NOT DISPLAYING
 function p_draw1up() {
 	
 	if alarm[1] == -1 
 	{
-		alarm[1] = room_speed * 5;
+		alarm[1] = room_speed * 2;
+		_is1upTextUp = true;
 		obj_logic_soundplayer.p_play1up();
 	}
 	
@@ -49,8 +67,8 @@ function p_draw1up() {
 	draw_set_colour(_c_TEXTWHITE);
 	
 	var _str = "+1 LIFE";
-	var _strY = (room_height-64) - ((room_speed*5) - alarm[1]);
-	draw_text(16, _strY, _str);
+	var _strY = (room_height-64) - ((room_speed*2) - alarm[1]);
+	draw_text(64, _strY, _str);
 }
 
 function _drawRoundNum() 
@@ -95,6 +113,7 @@ function _drawGameOverScreen()
 							
 }
 
+//dead, but not gameover
 function _drawDeadScreen() 
 {
 	//vars defining a box 528px by 576px

@@ -1,3 +1,3 @@
-/// @description Timer for 1up anim
+/// @description 1up anim timer
 
-p_draw1up();
+_is1upTextUp = false;
