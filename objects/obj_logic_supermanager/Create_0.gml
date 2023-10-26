@@ -18,6 +18,9 @@ function _initializeGameplayLogicStructs()
 		
 	if !instance_exists(obj_logic_soundplayer)
 		instance_create_layer(0, 0, "Logic", obj_logic_soundplayer);
+		
+	if !instance_exists(obj_logic_particlemanager)
+		instance_create_layer(0, 0, "Logic", obj_logic_particlemanager);
 }
  /*	Add to room and initialize objects neccessary for cutscene rooms
   */
