@@ -2,13 +2,15 @@
 
 /*
 _pSystem = part_system_create_layer("Instance_Layer", false);
-_particle1 = part_type_create();
-part_type_shape(_particle1, pt_shape_pixel);
-part_type_size(_particle1,1,1,-0.1,0);
-part_type_speed(_particle1,0.50,2,-0.10,0);
-part_type_life(_particle1,room_speed*10,room_speed*20); 
-part_particles_create(_pSystem, room_width/2, room_height/2, _particle1, 100);
+_particleBone = part_type_create();
+part_type_shape(_particleBone, pt_shape_pixel);
+part_type_size(_particleBone,1,1,-0.1,0);
+part_type_speed(_particleBone,0.50,2,-0.10,0);
+part_type_life(_particleBone,room_speed*10,room_speed*20); 
+part_particles_create(_pSystem, room_width/2, room_height/2, _particleBone, 100);
 */
+
+//_partSystem = part_system_create_layer("Instance_Layer", false);
 
 //=====ROOM MANAGEMENT=====
 //==========================
@@ -97,7 +99,7 @@ function _toggleEnemyScared()
 {
 	with (obj_enemy_zombie) 
 	{
-		if obj_enemy_zombie.p_scared 
+		if obj_enemy_zombie.p_scared //become unscared
 		{
 			obj_enemy_zombie.p_moveSpeed *= 2;
 			obj_enemy_zombie.p_scared = false;
@@ -106,7 +108,7 @@ function _toggleEnemyScared()
 			//issue seems to occur at _moveSpeeds of 3.25 or higher
 			obj_enemy_zombie.p_snapToGrid();
 		} 
-		else 
+		else //become scared
 		{
 			obj_enemy_zombie.p_moveSpeed /= 2;
 			obj_enemy_zombie.p_scared = true;
@@ -118,7 +120,7 @@ function _toggleEnemyScared(_bool)
 {
 	with (obj_enemy_zombie) 
 	{
-		if !_bool && obj_enemy_zombie.p_scared
+		if !_bool && obj_enemy_zombie.p_scared //become unscared
 		{
 			obj_enemy_zombie.p_moveSpeed *= 2;
 			obj_enemy_zombie.p_scared = false;
@@ -126,11 +128,21 @@ function _toggleEnemyScared(_bool)
 			//doesnt fix the issue, but seems to reduce how often it happens
 			//issue seems to occur at _moveSpeeds of 3.25 or higher
 			obj_enemy_zombie.p_snapToGrid();
+			
+			//part_type_destroy(obj_enemy_zombie._particleBone);
 		} 
-		else if _bool && !obj_enemy_zombie.p_scared
+		else if _bool && !obj_enemy_zombie.p_scared //become scared
 		{
 			obj_enemy_zombie.p_moveSpeed /= 2;
 			obj_enemy_zombie.p_scared = true;
+			/*
+			_particleBone = part_type_create();
+			part_type_shape(_particleBone, pt_shape_pixel);
+			part_type_size(_particleBone,1,1,-0.1,0);
+			part_type_speed(_particleBone,0.50,2,-0.10,0);
+			part_type_life(_particleBone,room_speed*10,room_speed*20); 
+			part_particles_create(obj_logic_gamemanager._partSystem, obj_enemy_zombie.x, obj_enemy_zombie.y, _particleBone, 100);
+			*/
 		}
 	}
 }
