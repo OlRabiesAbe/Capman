@@ -37,3 +37,24 @@ function p_toggleEnemyParticles(_bool) {
 	}
 	
 }
+
+function p_generateEnemyParticles() {
+	
+
+				_particleBone = part_type_create();
+				part_type_sprite(_particleBone, spr_bone00, true, true, true);
+				part_type_size(_particleBone, 1.5, 2.5, 0, 0);
+				part_type_speed(_particleBone, 1, 2, 0, 0);
+				part_type_direction(_particleBone, 45, 135, 0, 0);
+				part_type_gravity(_particleBone, 0.05, 270);
+				part_type_life(_particleBone, room_speed, room_speed*1.5); 
+				
+				
+				part_type_orientation(_particleBone, 0, 0, 0, 0, 0)
+				
+				part_particles_create(obj_logic_particlemanager._particleSystem, 
+										room_width/2, room_height/2, _particleBone, 1);
+				obj_logic_screenwriter.p_drawDebugText("p_generateEnemyParticles() activated!");
+
+	
+}
