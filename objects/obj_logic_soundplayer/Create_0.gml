@@ -1,5 +1,8 @@
 /// @description Functions
 
+///=====FUNCTIONS
+///===============
+
 /*	Called by obj_enemy_zombies to play start playing their footstep sounds.
  *	Prevents overlap.
 */

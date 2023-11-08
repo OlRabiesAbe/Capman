@@ -1,5 +1,8 @@
 /// @description Functions
 
+
+///=====FUNCTIONS
+///===============
 function _drawScore() 
 {
 	draw_set_halign(fa_left);
