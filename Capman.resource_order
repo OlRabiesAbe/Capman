@@ -21,11 +21,11 @@
     {"name":"enemy_zombie","order":15,"path":"folders/Sprites/enemy_zombie.yy",},
     {"name":"enemy_zombie_orange","order":4,"path":"folders/Sprites/enemy_zombie/enemy_zombie_orange.yy",},
     {"name":"gui_elements","order":20,"path":"folders/Sprites/gui_elements.yy",},
+    {"name":"particles","order":21,"path":"folders/Sprites/particles.yy",},
     {"name":"pill","order":12,"path":"folders/Sprites/pill.yy",},
     {"name":"special pills","order":3,"path":"folders/Sprites/pill/special pills.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"particles","order":21,"path":"folders/Sprites/particles.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_light_green","order":13,"path":"sprites/spr_light_green/spr_light_green.yy",},
