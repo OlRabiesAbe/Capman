@@ -26,7 +26,3 @@ if !obj_player.p_isAlive {
 		_roomDeathRestart();
 	}
 }
-
-if keyboard_check_released(ord("D")) {
-	obj_logic_particlemanager.p_generateEnemyParticles();
-}
