@@ -1,7 +1,7 @@
 /// @description Eaten by player
 
-if p_scared {
-	
+if p_scared && image_alpha != 0 { 
+	//maybe i should implement a p_isAlive bool for enemies? using image_alpha is jank
 	obj_logic_soundplayer.p_playThud(2);
 	
 	if alarm[4] <= 0
@@ -14,10 +14,9 @@ if p_scared {
 	//go invisible
 	image_alpha = 0;
 	
-	//tele to waiting room
-	var _nearest_door =  instance_nearest(x, y, obj_enemy_door);
-	x = _nearest_door.x;
-	y = _nearest_door.y;
+	//tele to OOB waiting room
+	x = 16;
+	y = 16;
 	
 	//start Re-Alive sequence in 5 seconds
 	alarm[4] = 5 * room_speed;
