@@ -1,4 +1,4 @@
-/// @description Movement decision logic
+/// @description Movement AI
 //runs every step when active
 
 //init coords. Never actually tries to path here

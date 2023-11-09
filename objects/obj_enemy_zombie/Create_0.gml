@@ -107,20 +107,19 @@ function _moveInDirection (_dir)
 			break;
 	}
 	
-	_useLitSpriteIfPowerpilled();
+	if (p_scared) _applyScaredVFX();
 }
 
-/*	needa change the sprite to the scared one if pacman is powerpilled.
+/*	Runs whenever _moveInDirection() is called && p_scared.
+ *	needa change the sprite to the scared one if pacman is powerpilled.
  *	obj_logic_gamemanager.alarm[0] handles deactivating pacman's power,
  *	so we check its value here to figure out what sprite we should use.
- *	TODO: REFACTOR TO USE _scared
  *	@uses: obj_logic_gamemanager.alarm[0]
  *	@changes: sprite_index
  *	@returns: void
  */
-function _useLitSpriteIfPowerpilled() 
+function _applyScaredVFX() 
 {
-	
 	if obj_logic_gamemanager.alarm[0] > room_speed
 	{ 
 		//pacman is powered, use the lit sprite
@@ -132,6 +131,9 @@ function _useLitSpriteIfPowerpilled()
 			//if there's one second left on the power pill, flash the sprite
 			sprite_index = spr_enemy_zombie_lit;
 	}
+	
+	if (obj_logic_gamemanager.alarm[0] % room_speed == room_speed - 1)
+		obj_logic_particlemanager.p_genBoneParticle(x, y);
 }
 
 /*	parsing movearray-index to directional-string

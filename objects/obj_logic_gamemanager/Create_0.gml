@@ -91,18 +91,13 @@ function _toggleEnemyScared(_bool)
 		{
 			obj_enemy_zombie.p_moveSpeed *= 2;
 			obj_enemy_zombie.p_scared = false;
-			obj_logic_particlemanager.p_toggleEnemyParticles(false);
-			/*	the below line is an attempt to fix an issue related to enemies getting stuck on walls
-			 *	doesnt fix the issue, but seems to reduce how often it happens
-			 *	issue seems to occur at _moveSpeeds of 3.25 or higher
-			 */
+			// below line intended to help with issue#1
 			obj_enemy_zombie.p_snapToGrid();
 		} 
 		else if _bool && !obj_enemy_zombie.p_scared //become scared
 		{
 			obj_enemy_zombie.p_moveSpeed /= 2;
 			obj_enemy_zombie.p_scared = true;
-			obj_logic_particlemanager.p_toggleEnemyParticles(true);
 		}
 	}
 }
