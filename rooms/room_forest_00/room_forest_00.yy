@@ -920,10 +920,7 @@
 76,-23,0,8,93,94,94,95,0,0,62,63,-27,0,3,45,0,46,-4,0,1,93,-4,94,5,95,0,0,126,127,-27,0,3,125,0,126,-4,0,1,93,-4,94,5,95,
 0,0,126,127,-34,0,1,93,-4,94,1,95,-38,0,1,93,-4,94,1,95,-23,0,1,95,-14,0,1,93,-4,94,1,95,-10,0,1,93,-135,0,],"TileDataFormat":1,},"tilesetId":{"name":"ts_stone","path":"tilesets/ts_stone/ts_stone.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"TilesUnderPlayer","depth":1200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
-        {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_3","depth":1300,"effectEnabled":true,"effectType":"_filter_contrast","gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
-            {"name":"g_ContrastIntensity","type":0,"value":"1.05",},
-            {"name":"g_ContrastBrightness","type":0,"value":"0.95",},
-          ],"tiles":{"SerialiseHeight":48,"SerialiseWidth":44,"TileCompressedData":[
+        {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_3","depth":1300,"effectEnabled":true,"effectType":"none","gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":48,"SerialiseWidth":44,"TileCompressedData":[
 -31,0,4,90,91,90,91,-40,0,4,106,107,106,107,-40,0,4,90,91,90,91,-40,0,4,106,107,106,107,-12,0,32,90,91,90,91,90,91,90,91,90,91,90,91,90,
 91,90,91,90,91,90,91,90,91,90,91,90,91,90,91,90,91,90,91,-12,0,32,106,107,106,107,106,107,106,107,106,107,106,107,106,107,106,107,106,107,106,107,106,107,
 106,107,106,107,106,107,106,107,106,107,-12,0,32,90,91,90,91,90,91,90,90,91,90,91,90,91,90,91,90,91,90,91,90,91,90,91,90,91,90,91,90,91,90,91,

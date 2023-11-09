@@ -1132,10 +1132,7 @@
 -2147483648,4,54,-2147483648,-2147483648,54,-11,-2147483648,2,40,19,-42,-2147483648,-2,19,-16,28,4,29,67,68,27,-16,28,-7,-2147483648,1,27,-15,41,-2,9,-2,67,-2,9,-15,41,1,19,-6,-2147483648,1,41,
 -15,19,6,9,10,82,67,8,9,-15,19,-23,-2147483648,6,8,9,67,67,8,9,-19,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"ts_stone","path":"tilesets/ts_stone/ts_stone.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"TilesUnderPlayer","depth":1200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
-        {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_3","depth":1300,"effectEnabled":true,"effectType":"_filter_contrast","gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
-            {"name":"g_ContrastIntensity","type":0,"value":"1.05",},
-            {"name":"g_ContrastBrightness","type":0,"value":"0.95",},
-          ],"tiles":{"SerialiseHeight":48,"SerialiseWidth":44,"TileCompressedData":[
+        {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_3","depth":1300,"effectEnabled":true,"effectType":"none","gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":48,"SerialiseWidth":44,"TileCompressedData":[
 -3,-2147483648,-8,0,-6,-2147483648,-3,0,4,104,105,88,89,-23,-2147483648,-8,0,-6,-2147483648,-3,0,-2,88,2,104,105,-23,-2147483648,-8,0,-6,-2147483648,-3,0,-3,104,1,105,-23,-2147483648,-2,88,36,89,
 88,89,88,89,88,89,88,89,88,89,88,89,88,89,88,89,88,89,88,89,88,89,88,89,88,89,88,88,89,88,89,88,89,88,89,-6,-2147483648,-2,104,36,105,104,105,104,
 105,104,105,104,105,104,105,104,105,104,105,104,105,104,105,104,105,104,105,104,105,104,105,104,104,105,104,105,104,105,104,105,-6,-2147483648,-2,88,36,89,88,89,88,89,88,89,
