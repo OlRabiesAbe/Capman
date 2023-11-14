@@ -1,11 +1,17 @@
 /// @description initialization
 
-
+///=====INIT
+///=========
 //capman's sprites are stored in this array for ease of access
+/*	TODO: Maybe devise a different system for this, 
+	or else implement this system for other objs, namely enemies*/
 _spriteArray = [spr_capman_0, spr_capman_1, spr_capman_2, spr_capman_3,
 				spr_capman_lit_0, spr_capman_lit_1, spr_capman_lit_2, spr_capman_lit_3];
 alarm_set(5, room_speed);
 
+
+///=====FUNCTIONS
+///===============
 /*	move player in a  direction
 	@uses: _MOVESPEED
 	@param: string like up down left right

@@ -1,7 +1,7 @@
 /// @description player movement logic
 
 //no moving if not alive
-if p_isAlive && !obj_logic_gamemanager.p_getGameWon() 
+if (p_isAlive && !obj_logic_gamemanager.p_getGameWon())
 {
 	/*convert key presses to a string 
 	represeting the direction the player wants to move.*/

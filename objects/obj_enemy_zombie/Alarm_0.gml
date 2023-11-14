@@ -8,7 +8,7 @@ var _idealMoveArray = [0, 0, 0, 0];
 
 
 //setting up our pathfinging structs
-if p_chase && !p_scared
+if (p_chase && !p_scared)
 {
 	_targetCoords = _getPlayerLocation();
 } 
@@ -23,7 +23,6 @@ _validMoveArray = _getValidMoveArray();
 _idealMoveArray = _getIdealMoveArray(_targetCoords);
 
 var _directionFound = false;
-
 
 /*	use our two movearrays to figure out which way we want to go
 	first we look for move that we like and is valid */

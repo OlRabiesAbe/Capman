@@ -5,7 +5,7 @@
 
 /*	Called by obj_enemy_zombies to play start playing their footstep sounds.
  *	Prevents overlap.
-*/
+ */
 function p_playEnemyFootsteps() 
 {
 	if obj_logic_gamemanager.p_getGameplayMode()
@@ -13,6 +13,9 @@ function p_playEnemyFootsteps()
 			audio_play_sound(snd_enemy_walk04, 8, true);
 }
 
+/*	Toggles enemy footsteps and enemy fear. One to the other.
+ *	True = fear sound on; False = footstep sound on
+ */
 function p_toggleEnemyFearSound(_toggle)
 {
 	if obj_logic_gamemanager.p_getGameplayMode() 
@@ -30,6 +33,7 @@ function p_toggleEnemyFearSound(_toggle)
 	}
 }
 
+//Play a thud sound
 function p_playThud()
 {
 	if !audio_is_playing(snd_thud)
@@ -41,6 +45,7 @@ function p_playThud(_pitch)
 		audio_play_sound(snd_thud, 10, false, 1, 0, _pitch);
 }
 
+//play a coin sound
 function p_playCoinGet()
 {
 	if !audio_is_playing(snd_capman_coinget)
@@ -52,6 +57,7 @@ function p_playCoinGet(_pitch)
 		audio_play_sound(snd_capman_coinget, 9, false, 2, 0, _pitch);
 }
 
+//play a 1up sound
 function p_play1up()
 {
 	if !audio_is_playing(snd_capman_1up)
@@ -63,6 +69,7 @@ function p_play1up(_pitch)
 		audio_play_sound(snd_capman_1up, 10, false, 1, 0, _pitch);
 }
 
+//stop all sounds
 function p_stopAllSounds()
 {
 	audio_stop_all();

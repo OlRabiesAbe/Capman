@@ -67,6 +67,7 @@ function p_updateStatsOnRoundEnd()
 }
 
 /*	Restart this room. Is this func needed?
+ *	Currently exists just to keep the room restarting under supermanager's control
  */
 function p_restartRoom() 
 {

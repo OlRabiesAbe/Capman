@@ -1,6 +1,7 @@
 /// @description Eaten by player
 
-if p_scared && image_alpha != 0 { 
+if p_scared && image_alpha != 0 
+{ 
 	//maybe i should implement a p_isAlive bool for enemies? using image_alpha is jank
 	obj_logic_soundplayer.p_playThud(2);
 	

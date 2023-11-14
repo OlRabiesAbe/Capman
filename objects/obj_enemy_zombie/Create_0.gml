@@ -1,13 +1,15 @@
 /// @description enemy initialization and functions
 
-
+///=====INIT
+///================
 //randomize _WAITTIME
 _WAITTIME += irandom(6) * room_speed;
 //begin entering level in _WAITTIME frames
 alarm_set(3, _WAITTIME);
 
 
-//FUNCTIONS
+///=====FUNCTIONS
+///================
 /*	check if this inst is able to move in the provided direction
  *	Not very good, buggy.
  *	Contains a magicnumber, _checkdist
@@ -80,6 +82,7 @@ function _getIdealMoveArray (_targetCoords)
 
 /*	move this inst in a direction.
  *	Also changes the sprite_index to match the movement
+ *	Called by alarm[1] every step
  *	@uses: p_moveSpeed
  *	@changes: x, y, sprite_index
  *	@param: string like up down left or right

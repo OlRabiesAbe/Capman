@@ -11,6 +11,7 @@ function _drawScore()
 	draw_text(16, 16, _str);
 }
 
+//draws clock in top right
 function _drawClock() 
 {
 	draw_set_halign(fa_left);
@@ -19,6 +20,7 @@ function _drawClock()
 	draw_text(room_width-112, 16, _str);
 }
 
+//draws lives text in the bottom left
 function _drawLives() 
 {
 	draw_set_halign(fa_left);
@@ -74,6 +76,7 @@ function p_draw1up() {
 	draw_text(64, _strY, _str);
 }
 
+//draw round #, currently unused
 function _drawRoundNum() 
 {
 	draw_set_halign(fa_left);
@@ -82,17 +85,18 @@ function _drawRoundNum()
 	draw_text(16, room_height-16, _str);
 }
 
+//gameover screen. Should make it look more visually distinct from deadScreen
 function _drawGameOverScreen() 
 {
 	//vars defining a box 528px by 576px
 	var _left = room_width/4/2;
 	var _top = room_height/4/2;
-	var _right = room_width - (room_width/4/2);
-	var _bottom = room_height - (room_height/4/2);
+	//var _right = room_width - (room_width/4/2);
+	//var _bottom = room_height - (room_height/4/2);
 	
-	var _lvlScore = obj_logic_supermanager.p_getRoundScore();
+	//var _lvlScore = obj_logic_supermanager.p_getRoundScore();
 	var _ttlScore = obj_logic_supermanager.p_getTotalScore();
-	var _timerScnds = obj_logic_gamemanager.p_getTimerSeconds();
+	//var _timerScnds = obj_logic_gamemanager.p_getTimerSeconds();
 	
 						//background box
 	draw_sprite(spr_textbox_win, -1, _left, _top);
@@ -122,12 +126,12 @@ function _drawDeadScreen()
 	//vars defining a box 528px by 576px
 	var _left = room_width/4/2;
 	var _top = room_height/4/2;
-	var _right = room_width - (room_width/4/2);
-	var _bottom = room_height - (room_height/4/2);
+	//var _right = room_width - (room_width/4/2);
+	//var _bottom = room_height - (room_height/4/2);
 	
 	var _lvlScore = obj_logic_supermanager.p_getRoundScore();
 	var _ttlScore = obj_logic_supermanager.p_getTotalScore();
-	var _timerScnds = obj_logic_gamemanager.p_getTimerSeconds();
+	//var _timerScnds = obj_logic_gamemanager.p_getTimerSeconds();
 	
 						//background box
 	draw_sprite(spr_textbox_win, -1, _left, _top);
@@ -152,12 +156,13 @@ function _drawDeadScreen()
 	draw_text_transformed( (room_width/2), _top+(64*7), _str, 1.5, 1.5, 0);
 }
 
+//round win screen
 function _drawScoreScreen()
 {
 	//vars defining a box 528px by 576px
 	var _left = room_width/4/2;
 	var _top = room_height/4/2;
-	var _right = room_width - (room_width/4/2);
+	//var _right = room_width - (room_width/4/2);
 	var _bottom = room_height - (room_height/4/2);
 	
 	var _lvlScore = obj_logic_supermanager.p_getRoundScore();
