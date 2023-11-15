@@ -3,11 +3,14 @@
 if (!_gameIsWon) 
 	_clock++;
 
+// Speeds up all zombies after clock hits _ELROYTIME
 if (ceil(_clock/60) > _ELROYTIME) 
 {
-	_enemyBecomeElroy();
+	with (obj_enemy_zombie)
+		p_becomeElroy();
 }
 
+// Handles roundwon screen
 if ((!instance_exists(obj_pill) && !_gameIsWon) || (keyboard_check(ord("A")) && !_gameIsWon)) 
 {					//round is won, so we exit gameplay mode for score screen
 	_gameIsWon = true;

@@ -43,8 +43,6 @@ function _roomDeathRestart()
 		alarm[2] = 5 * room_speed;
 }
 
-
-
 //=====ENEMY MANAGEMENT=====
 //==========================
 /*	Enables pacman power invincibility
@@ -82,22 +80,6 @@ function p_depowerPacman ()
 	
 	alarm[0] = -1;
 }
-
-/* Speeds up all zombies after clock hits _ELROYTIME
- * Called in this obj's Step
- */
-function _enemyBecomeElroy() {
-	with (obj_enemy_zombie)
-	{
-		if !obj_enemy_zombie.p_elroy 
-		{
-			obj_enemy_zombie.p_moveSpeed *= 1.25
-			obj_enemy_zombie.p_elroy = true;
-		}
-	}
-}
-
-
 
 //=====VAR GETTERS & SETTERS=====
 //==========================

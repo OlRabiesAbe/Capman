@@ -162,6 +162,15 @@ function p_toggleScared(_bool)
 	}
 }
 
+function p_becomeElroy() 
+{
+	if !p_elroy 
+	{
+		p_moveSpeed *= 1.25
+		p_elroy = true;
+	}
+}
+
 /*	parsing movearray-index to directional-string
  *	@param: int between 0 and 3 inclusive
  *	@return: string like up down left or right
