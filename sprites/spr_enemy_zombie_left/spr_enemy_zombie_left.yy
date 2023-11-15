@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_enemy_zombie_0",
+  "name": "spr_enemy_zombie_left",
   "bbox_bottom": 30,
   "bbox_left": 1,
   "bbox_right": 30,
@@ -13,16 +13,16 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a5a52000-731f-4b3e-be64-2b342f64b674",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"45d16c04-d0ca-4993-8ddc-d7e8759e1a15",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bbd3c2c0-60a4-41a6-8563-1d285994f820",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a47d437-7dc5-4a31-90ca-4c189796449d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8a8dea9e-b38c-4b0b-9afd-5b55e36d0f91",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"972c5295-1725-4a46-9a14-e7ac4fedc7a5",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1ba23138-2d22-4c2c-b55b-37d269b18449","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cef5c647-5a7b-45da-88d5-87bc9e1bdcdf","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -34,7 +34,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_enemy_zombie_0",
+    "name": "spr_enemy_zombie_left",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -56,9 +56,9 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a5a52000-731f-4b3e-be64-2b342f64b674","path":"sprites/spr_enemy_zombie_0/spr_enemy_zombie_0.yy",},},},"Disabled":false,"id":"b4b69ff8-37f4-45f3-826d-9044fcaf8cf9","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"45d16c04-d0ca-4993-8ddc-d7e8759e1a15","path":"sprites/spr_enemy_zombie_0/spr_enemy_zombie_0.yy",},},},"Disabled":false,"id":"a4aeb207-4ca3-456c-b2b9-3db0dee69351","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bbd3c2c0-60a4-41a6-8563-1d285994f820","path":"sprites/spr_enemy_zombie_0/spr_enemy_zombie_0.yy",},},},"Disabled":false,"id":"7eccb2da-018a-4e48-9aa5-3322609aa65e","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2a47d437-7dc5-4a31-90ca-4c189796449d","path":"sprites/spr_enemy_zombie_left/spr_enemy_zombie_left.yy",},},},"Disabled":false,"id":"7740fb63-aff3-4f52-a470-6a1a11bb11d4","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8a8dea9e-b38c-4b0b-9afd-5b55e36d0f91","path":"sprites/spr_enemy_zombie_left/spr_enemy_zombie_left.yy",},},},"Disabled":false,"id":"854552fe-43d9-4eea-b4ff-61b5b10aa470","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"972c5295-1725-4a46-9a14-e7ac4fedc7a5","path":"sprites/spr_enemy_zombie_left/spr_enemy_zombie_left.yy",},},},"Disabled":false,"id":"dcd65301-32d1-4cb2-835f-f45ab9a06e9b","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

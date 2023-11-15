@@ -2,6 +2,10 @@
 
 ///=====INIT
 ///================
+_spriteArray = [spr_enemy_zombie_left, spr_enemy_zombie_up, 
+					 spr_enemy_zombie_right, spr_enemy_zombie_right, spr_enemy_zombie_lit];
+
+
 //randomize _WAITTIME
 _WAITTIME += irandom(6) * room_speed;
 //begin entering level in _WAITTIME frames
@@ -93,19 +97,19 @@ function _moveInDirection (_dir)
 	switch (_dir) 
 	{
 		case "left":
-			sprite_index = spr_enemy_zombie_1;
+			sprite_index = _spriteArray[0];
 			x = x - p_moveSpeed;
 			break;
-		case "right":
-			sprite_index = spr_enemy_zombie_0;
-			x = x + p_moveSpeed;
-			break;
 		case "up":
-			sprite_index = spr_enemy_zombie_2;
+			sprite_index = _spriteArray[1];
 			y = y - p_moveSpeed;
 			break;
+		case "right":
+			sprite_index = _spriteArray[2];
+			x = x + p_moveSpeed;
+			break;
 		case "down":
-			sprite_index = spr_enemy_zombie_0;
+			sprite_index = _spriteArray[3]; //same sprite as _spriteArray[2]
 			y = y + p_moveSpeed;
 			break;
 	}
@@ -126,7 +130,7 @@ function _applyScaredVFX()
 	if obj_logic_gamemanager.alarm[0] > room_speed
 	{ 
 		//pacman is powered, use the lit sprite
-		sprite_index = spr_enemy_zombie_lit;
+		sprite_index = _spriteArray[4];
 	}
 	else if obj_logic_gamemanager.alarm[0] > 0 && obj_logic_gamemanager.alarm[0] < room_speed
 	{
@@ -160,6 +164,29 @@ function _parseMoveArrayIndexToDirectionalString (_index)
 			break;
 		default: 
 			return "";
+	}
+}
+/*	parsing directional-string to movearray-index
+ *	@param: string like left up right or down
+ *	@return: int between 0 and 3 inclusive, or -1 if invalid
+*/
+function _parseDirectionalStringToMoveArrayIndex (_string) 
+{
+	switch(_string) { 
+		case "left":
+			return 0;
+			break;
+		case "up":
+			return 1;
+			break;
+		case "right":
+			return 2;
+			break;
+		case "down":
+			return 3;
+			break;
+		default: 
+			return -1;
 	}
 }
 
