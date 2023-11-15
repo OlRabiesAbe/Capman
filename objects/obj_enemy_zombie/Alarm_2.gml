@@ -8,5 +8,5 @@ if p_chase
 else if !p_chase 
 {
 	p_chase = true;
-	alarm_set(2, _SCATTERTIME * 3);
+	alarm_set(2, _CHASETIME);
 }

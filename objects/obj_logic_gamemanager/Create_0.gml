@@ -9,6 +9,7 @@ function p_setRound (_roundIndex)
 {
 	//roundbased gameplay variable adjustement
 	obj_enemy_zombie.p_moveSpeed += (0.2 * _roundIndex);
+	obj_enemy_zombie._CHASETIME += (2 * _roundIndex * room_speed);
 	_POWERPILLTIME -= _roundIndex * room_speed;
 	_ELROYTIME -= _roundIndex * 10;
 	

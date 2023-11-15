@@ -39,6 +39,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"p_elroy","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":3,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_direction","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"left","varType":2,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_WAITTIME","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"7 *room_speed","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_CHASETIME","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"12 * room_speed","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_SCATTERTIME","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"5 * room_speed","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_VALUE","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"300","varType":1,},
   ],
