@@ -5,7 +5,6 @@
 _spriteArray = [spr_enemy_zombie_left, spr_enemy_zombie_up, 
 					 spr_enemy_zombie_right, spr_enemy_zombie_right, spr_enemy_zombie_lit];
 
-
 //randomize _WAITTIME
 _WAITTIME += irandom(6) * room_speed;
 //begin entering level in _WAITTIME frames
@@ -141,6 +140,26 @@ function _applyScaredVFX()
 	
 	if (obj_logic_gamemanager.alarm[0] % room_speed == room_speed - 1)
 		obj_logic_particlemanager.p_genBoneParticle(x, y);
+}
+
+/*	Toggle this inst's scared behavior
+ *	@param Boolean
+ *	@changes: p_scared, p_movespeed, calls p_snapToGrid
+ */
+function p_toggleScared(_bool) 
+{
+	if (!_bool && p_scared) //become unscared
+	{
+		p_moveSpeed *= 2;
+		p_scared = false;
+		// below line intended to help with issue#1
+		p_snapToGrid();
+	} 
+	else if (_bool && !p_scared) //become scared
+	{
+		p_moveSpeed /= 2;
+		p_scared = true;
+	}
 }
 
 /*	parsing movearray-index to directional-string

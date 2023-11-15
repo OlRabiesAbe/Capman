@@ -87,20 +87,7 @@ function p_depowerPacman ()
 function _toggleEnemyScared(_bool)
 {
 	with (obj_enemy_zombie) 
-	{
-		if !_bool && obj_enemy_zombie.p_scared //become unscared
-		{
-			obj_enemy_zombie.p_moveSpeed *= 2;
-			obj_enemy_zombie.p_scared = false;
-			// below line intended to help with issue#1
-			obj_enemy_zombie.p_snapToGrid();
-		} 
-		else if _bool && !obj_enemy_zombie.p_scared //become scared
-		{
-			obj_enemy_zombie.p_moveSpeed /= 2;
-			obj_enemy_zombie.p_scared = true;
-		}
-	}
+		p_toggleScared(_bool);
 }
 
 /* Speeds up all zombies after clock hits _ELROYTIME
