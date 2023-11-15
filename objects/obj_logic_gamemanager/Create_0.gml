@@ -58,7 +58,8 @@ function p_powerPacman ()
 	{
 		obj_player.p_isPowered = true;
 	
-		_toggleEnemyScared(true);
+		with (obj_enemy_zombie) 
+			p_toggleScared(true);
 			
 		obj_logic_soundplayer.p_toggleEnemyFearSound(true)
 	}
@@ -74,20 +75,12 @@ function p_depowerPacman ()
 	if instance_exists(obj_player)
 		obj_player.p_isPowered = false;
 		
-	_toggleEnemyScared(false);
+	with (obj_enemy_zombie) 
+		p_toggleScared(false);
 		
 	obj_logic_soundplayer.p_toggleEnemyFearSound(false)
 	
 	alarm[0] = -1;
-}
-
-/* Toggles enemy fear behavior when pacman eats a power pill or one runs out
- * Called by p_powerPacman & p_depowerPacman
- */
-function _toggleEnemyScared(_bool)
-{
-	with (obj_enemy_zombie) 
-		p_toggleScared(_bool);
 }
 
 /* Speeds up all zombies after clock hits _ELROYTIME
