@@ -1,12 +1,12 @@
 /// @description Eaten by player
 
-if p_scared && image_alpha != 0 
+if p_scared && p_isAlive 
 { 
+	p_isAlive = false;
 	//maybe i should implement a p_isAlive bool for enemies? using image_alpha is jank
 	obj_logic_soundplayer.p_playThud(2);
 	
-	if alarm[4] <= 0
-		obj_logic_gamemanager.p_incrementRoundScore(_VALUE);
+	obj_logic_gamemanager.p_incrementRoundScore(_VALUE);
 	
 	//disable all other logic
 	for (var i = 0; i < 12; i++) 

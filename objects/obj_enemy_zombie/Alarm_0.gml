@@ -28,17 +28,15 @@ var _directionFound = false;
 	first we look for move that we like and is valid */
 for (i = 0; i < array_length(_idealMoveArray); i++) 
 {
-	
 	if _idealMoveArray[i] && _validMoveArray[i] 
 	{
-		
 		_direction = _parseMoveArrayIndexToDirectionalString(i);
 		
 		_directionFound = true;
 		break;
 	}
-	
 }
+
 /*	if !_directionFound, we didnt find a move we liked that we could take. 
 	So, we just need to find a move that's valid. */
 if !_directionFound 
