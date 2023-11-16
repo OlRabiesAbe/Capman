@@ -16,7 +16,6 @@ function p_setRound (_roundIndex)
 	//setting up the special pill
 	with (obj_pill_special) 
 	{
-		
 		switch(_roundIndex) {
 			case 0:
 				object_set_sprite(obj_pill_special, spr_pill_special_bread);
