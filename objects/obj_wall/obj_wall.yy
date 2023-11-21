@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Col. and Pathing",
-    "path": "folders/Objects/Col. and Pathing.yy",
+    "path": "folders/Objects/Game Stuff/Col. and Pathing.yy",
   },
   "parentObjectId": null,
   "persistent": false,

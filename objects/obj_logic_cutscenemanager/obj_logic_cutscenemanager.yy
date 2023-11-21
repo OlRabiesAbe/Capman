@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Logic",
-    "path": "folders/Objects/Logic.yy",
+    "name": "Cutscene Logic",
+    "path": "folders/Objects/Cutscene Logic.yy",
   },
   "parentObjectId": null,
   "persistent": false,
