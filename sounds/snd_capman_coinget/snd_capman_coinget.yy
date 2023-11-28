@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.145918,
+  "duration": 0.293991,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snd_capman_coinget.wav",
   "type": 0,
-  "volume": 0.61,
+  "volume": 1.0,
 }
