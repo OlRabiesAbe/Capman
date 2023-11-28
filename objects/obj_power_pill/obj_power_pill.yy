@@ -31,8 +31,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "spr_power_pill",
-    "path": "sprites/spr_power_pill/spr_power_pill.yy",
+    "name": "spr_powerpill",
+    "path": "sprites/spr_powerpill/spr_powerpill.yy",
   },
   "spriteMaskId": null,
   "visible": true,
