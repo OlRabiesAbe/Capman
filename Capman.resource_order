@@ -48,6 +48,7 @@
     {"name":"obj_power_pill","order":7,"path":"objects/obj_power_pill/obj_power_pill.yy",},
     {"name":"obj_wall","order":2,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"spr_brazier","order":17,"path":"sprites/spr_brazier/spr_brazier.yy",},
+    {"name":"obj_menu_button_start","order":1,"path":"objects/obj_menu_button_start/obj_menu_button_start.yy",},
     {"name":"spr_pill_special_carrot","order":1,"path":"sprites/spr_pill_special_carrot/spr_pill_special_carrot.yy",},
     {"name":"obj_logic_screenwriter","order":1,"path":"objects/obj_logic_screenwriter/obj_logic_screenwriter.yy",},
     {"name":"spr_capman_1","order":1,"path":"sprites/spr_capman_1/spr_capman_1.yy",},
