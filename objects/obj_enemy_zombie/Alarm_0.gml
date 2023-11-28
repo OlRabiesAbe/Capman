@@ -10,22 +10,23 @@ var _idealMoveArray = [0, 0, 0, 0];
 //setting up our pathfinging structs
 if (p_chase && !p_scared)
 {
-	_targetCoords = _getPlayerLocation();
+	_targetCoords = _getPlayerLocation(); //target the player\
 } 
 else 
-{
+{											//dont target the player: scatter logic
 	var _randomTarget = instance_find(obj_enemy_target, irandom(instance_number(obj_enemy_target) - 1));
 	_targetCoords = [_randomTarget.x, _randomTarget.y];
 }
 
-//regenerating pathing arrays
+//generating pathing decision arrays
 _validMoveArray = _getValidMoveArray();
 _idealMoveArray = _getIdealMoveArray(_targetCoords);
 
-var _directionFound = false;
 
 /*	use our two movearrays to figure out which way we want to go
 	first we look for move that we like and is valid */
+var _directionFound = false;
+
 for (i = 0; i < array_length(_idealMoveArray); i++) 
 {
 	if _idealMoveArray[i] && _validMoveArray[i] 

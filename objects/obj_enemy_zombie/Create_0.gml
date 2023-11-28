@@ -229,7 +229,7 @@ function _getPlayerLocation ()
 /*	returns the location the player is going based on its direction
 	@return: coordinate array like [x, y]
 */
-function _getPlayerAnticipatedLocation () 
+function _getPlayerLocationAnticipated () 
 {
 	var _xy = [0,0];
 	var _anticipation = 4 * 32;
@@ -248,6 +248,18 @@ function _getPlayerAnticipatedLocation ()
 			_xy = [obj_player.x, obj_player.y + _anticipation];
 			break;
 	}
+	return _xy;
+}
+
+/*	returns a location diagonally opposite the player
+	@return: coordinate array like [x, y]
+*/
+function _getPlayerLocationDiagonalOpposite ()
+{
+	var _playerDist = [obj_player.x - x, 
+						obj_player.y - y];
+	var _xy = [obj_player.x + _playerDist[0], 
+				obj_player.y + _playerDist[1]];
 	return _xy;
 }
 
