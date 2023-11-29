@@ -1,8 +1,9 @@
 /// @description Functions
 
+_playCoinGetSwap = false;
+
 ///=====FUNCTIONS
 ///===============
-
 /*	Called by obj_enemy_zombies to play start playing their footstep sounds.
  *	Prevents overlap.
  */
@@ -48,13 +49,23 @@ function p_playThud(_pitch)
 //play a coin sound
 function p_playCoinGet()
 {
-	if !audio_is_playing(snd_capman_coinget)
-		audio_play_sound(snd_capman_coinget, 9, false, 2);
+	if !audio_is_playing(snd_capman_coinget00) && !audio_is_playing(snd_capman_coinget01)
+	{
+		if (!_playCoinGetSwap)
+			_playCoinGetSwap = true;
+		else if (_playCoinGetSwap)
+			_playCoinGetSwap = false;
+			
+		if (_playCoinGetSwap)
+			audio_play_sound(snd_capman_coinget00, 9, false);
+		else 
+			audio_play_sound(snd_capman_coinget01, 9, false);
+	}
 }
 function p_playCoinGet(_pitch)
 {
-	if !audio_is_playing(snd_capman_coinget)
-		audio_play_sound(snd_capman_coinget, 9, false, 2, 0, _pitch);
+	if !audio_is_playing(snd_capman_coinget00)
+		audio_play_sound(snd_capman_coinget00, 9, false, 2, 0, _pitch);
 }
 
 //play a 1up sound
