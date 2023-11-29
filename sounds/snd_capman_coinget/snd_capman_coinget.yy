@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_capman_coinget01",
+  "name": "snd_capman_coinget",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_capman_coinget01.wav",
+  "soundFile": "snd_capman_coinget.wav",
   "type": 0,
   "volume": 1.0,
 }
