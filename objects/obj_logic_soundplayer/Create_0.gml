@@ -64,6 +64,18 @@ function p_playCoinGet(_pitch)
 		audio_play_sound(snd_capman_coinget, 9, false, 2, 0, _pitch);
 }
 
+//play an electrick shock sound
+function p_playShock()
+{
+	if !audio_is_playing(snd_shock)
+		audio_play_sound(snd_shock, 10, false);
+}
+function p_playShock(_pitch)
+{
+	if !audio_is_playing(snd_shock)
+		audio_play_sound(snd_shock, 10, false, 1, 0, _pitch);
+}
+
 //play a 1up sound
 function p_play1up()
 {
