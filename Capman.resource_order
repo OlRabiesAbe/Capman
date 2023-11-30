@@ -63,6 +63,7 @@
     {"name":"obj_light_green","order":2,"path":"objects/obj_light_green/obj_light_green.yy",},
     {"name":"spr_enemy_zombie_orange_2","order":1,"path":"sprites/spr_enemy_zombie_orange_2/spr_enemy_zombie_orange_2.yy",},
     {"name":"room_forest_00","order":3,"path":"rooms/room_forest_00/room_forest_00.yy",},
+    {"name":"snd_shock","order":8,"path":"sounds/snd_shock/snd_shock.yy",},
     {"name":"snd_enemy_fear","order":7,"path":"sounds/snd_enemy_fear/snd_enemy_fear.yy",},
     {"name":"obj_logic_supermanager","order":2,"path":"objects/obj_logic_supermanager/obj_logic_supermanager.yy",},
     {"name":"spr_ts_stone","order":2,"path":"sprites/spr_ts_stone/spr_ts_stone.yy",},

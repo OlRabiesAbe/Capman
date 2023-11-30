@@ -93,6 +93,7 @@
     {"id":{"name":"path_enemy_door","path":"paths/path_enemy_door/path_enemy_door.yy",},},
     {"id":{"name":"spr_enemy_zombie_orange_2","path":"sprites/spr_enemy_zombie_orange_2/spr_enemy_zombie_orange_2.yy",},},
     {"id":{"name":"room_forest_00","path":"rooms/room_forest_00/room_forest_00.yy",},},
+    {"id":{"name":"snd_shock","path":"sounds/snd_shock/snd_shock.yy",},},
     {"id":{"name":"snd_enemy_fear","path":"sounds/snd_enemy_fear/snd_enemy_fear.yy",},},
     {"id":{"name":"obj_logic_supermanager","path":"objects/obj_logic_supermanager/obj_logic_supermanager.yy",},},
     {"id":{"name":"spr_ts_stone","path":"sprites/spr_ts_stone/spr_ts_stone.yy",},},
