@@ -79,6 +79,7 @@
     {"id":{"name":"room_city_00","path":"rooms/room_city_00/room_city_00.yy",},},
     {"id":{"name":"spr_light_red","path":"sprites/spr_light_red/spr_light_red.yy",},},
     {"id":{"name":"spr_enemy_zombie_left","path":"sprites/spr_enemy_zombie_left/spr_enemy_zombie_left.yy",},},
+    {"id":{"name":"spr_embers","path":"sprites/spr_embers/spr_embers.yy",},},
     {"id":{"name":"room_catacombs_00","path":"rooms/room_catacombs_00/room_catacombs_00.yy",},},
     {"id":{"name":"spr_pill_special_bread","path":"sprites/spr_pill_special_bread/spr_pill_special_bread.yy",},},
     {"id":{"name":"spr_capman_3","path":"sprites/spr_capman_3/spr_capman_3.yy",},},

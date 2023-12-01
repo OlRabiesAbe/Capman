@@ -56,6 +56,7 @@
     {"name":"room_city_00","order":1,"path":"rooms/room_city_00/room_city_00.yy",},
     {"name":"spr_light_red","order":18,"path":"sprites/spr_light_red/spr_light_red.yy",},
     {"name":"spr_enemy_zombie_left","order":1,"path":"sprites/spr_enemy_zombie_left/spr_enemy_zombie_left.yy",},
+    {"name":"spr_embers","order":22,"path":"sprites/spr_embers/spr_embers.yy",},
     {"name":"spr_capman_3","order":3,"path":"sprites/spr_capman_3/spr_capman_3.yy",},
     {"name":"spr_bone02","order":2,"path":"sprites/spr_bone02/spr_bone02.yy",},
     {"name":"spr_bone01","order":1,"path":"sprites/spr_bone01/spr_bone01.yy",},
