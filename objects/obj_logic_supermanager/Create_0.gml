@@ -11,8 +11,6 @@ function _initializeGameplayLogicStructs()
 	if !instance_exists(obj_logic_gamemanager)
 		instance_create_layer(0, 0, "Logic", obj_logic_gamemanager);
 	
-	obj_logic_gamemanager.p_setRound(_roundIndex);
-	
 	if !instance_exists(obj_logic_screenwriter)
 		instance_create_layer(0, 0, "Logic", obj_logic_screenwriter);
 		
@@ -21,6 +19,8 @@ function _initializeGameplayLogicStructs()
 		
 	if !instance_exists(obj_logic_particlemanager)
 		instance_create_layer(0, 0, "Logic", obj_logic_particlemanager);
+	
+	obj_logic_gamemanager.p_setRound(_roundIndex);
 }
  /*	Add to room and initialize objects neccessary for cutscene rooms
   */
