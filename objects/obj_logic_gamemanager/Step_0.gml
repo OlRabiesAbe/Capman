@@ -1,5 +1,6 @@
 /// @description
 
+//inc clock
 if (!_gameIsWon) 
 	_clock++;
 

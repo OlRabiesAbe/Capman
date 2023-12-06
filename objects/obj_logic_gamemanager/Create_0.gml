@@ -8,30 +8,34 @@
  */
 function p_setRound (_roundIndex)
 {
-	//roundbased gameplay variable adjustement
-	obj_enemy_zombie.p_moveSpeed += (0.2 * _roundIndex);
-	obj_enemy_zombie._CHASETIME += (2 * _roundIndex * room_speed);
-	_POWERPILLTIME -= _roundIndex * room_speed;
-	_ELROYTIME -= _roundIndex * 10;
+	if (_roundIndex < 2) {
+		obj_enemy_zombie.p_moveSpeed += (0.2 * _roundIndex);
+		obj_enemy_zombie._CHASETIME += (2 * _roundIndex * room_speed);
+	}
+	
+	_POWERPILLTIME -= _roundIndex * room_speed; //p_powerPacman() just returns if powerpilltime is zero or negative
+	_ELROYTIME -= _roundIndex * 10; //it's fine if elroytime is negative
 	
 	//setting up the special pill
-	with (obj_pill_special) 
-	{
-		switch(_roundIndex) {
-			case 0:
-				object_set_sprite(obj_pill_special, spr_pill_special_bread);
-				_VALUE = 500;
-				break;
-			case 1:
-				object_set_sprite(obj_pill_special, spr_pill_special_carrot);
-				_VALUE = 1000;
-				break;
-			case 2: default:
-				object_set_sprite(obj_pill_special, spr_pill_special_leek);
-				_VALUE = 1500;
-				break;
-		}
+	//I love modifying constants lmao
+	switch(_roundIndex % 3) {
+		case 0:
+			obj_pill_special.sprite_index = spr_pill_special_bread;
+			obj_pill_special._VALUE = 500;
+			obj_pill_special._LIFESPAN = 15;
+			break;
+		case 1:
+			obj_pill_special.sprite_index = spr_pill_special_carrot;
+			obj_pill_special._VALUE = 1000;
+			obj_pill_special._LIFESPAN = 11;
+			break;
+		case 2: default:
+			obj_pill_special.sprite_index = spr_pill_special_leek;
+			obj_pill_special._VALUE = 1500;
+			obj_pill_special._LIFESPAN = 8;
+			break;
 	}
+	//obj_logic_screenwriter.p_drawDebugText("round is " + string(_roundIndex));
 }
 
 /*	This is called by this obj when the player is dead.
@@ -50,19 +54,22 @@ function _roomDeathRestart()
 */
 function p_powerPacman () 
 {
-	/*if pacman is already powered but ate a second power pill,
-		we dont need to do any of this shit. just restart the timer.*/
-	if !obj_player.p_isPowered 
+	if (_POWERPILLTIME > 0) //round might progress to a point powerpilltime is negative
 	{
-		obj_player.p_isPowered = true;
+		/*if pacman is already powered but ate a second power pill,
+			we dont need to do any of this shit. just restart the timer.*/
+		if (!obj_player.p_isPowered) 
+		{
+			obj_player.p_isPowered = true;
 	
-		with (obj_enemy_zombie) 
-			p_toggleScared(true);
+			with (obj_enemy_zombie) 
+				p_toggleScared(true);
 			
-		obj_logic_soundplayer.p_toggleEnemyFearSound(true)
-	}
+			obj_logic_soundplayer.p_toggleEnemyFearSound(true)
+		}
 	
-	alarm[0] = _POWERPILLTIME;
+		alarm[0] = _POWERPILLTIME;
+	}
 }
 
 /*	Called by alarm[0] when pacman's power runs out.
@@ -103,6 +110,11 @@ function p_getTimerSeconds()
 function p_getGameTimeSeconds() 
 {
 	return ceil(_clock / 60);
+}
+//_clock Getter, raw 
+function p_getGameTimeSteps() 
+{
+	return _clock;
 }
 
 //_gameIsWon Getter
