@@ -11,6 +11,17 @@ function _drawScore()
 	draw_text(16, 16, _str);
 }
 
+function _drawTotalScore() 
+{
+	draw_set_halign(fa_left);
+	draw_set_colour(_c_TEXTWHITE);
+	if (obj_logic_gamemanager.p_getGameWon())
+		var _str = "TOTAL SCORE " + string(obj_logic_supermanager.p_getTotalScore());
+	else
+		var _str = "TOTAL SCORE " + string(obj_logic_supermanager.p_getCurTotalScore());
+	draw_text(64+64+16, 16, _str);
+}
+
 //draws clock in top right
 function _drawClock() 
 {

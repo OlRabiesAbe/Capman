@@ -3,6 +3,8 @@
 //score counter
 _drawScore();
 
+_drawTotalScore() 
+
 //clock
 _drawClock();
 
