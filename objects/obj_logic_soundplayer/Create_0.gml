@@ -39,11 +39,6 @@ function p_playThud()
 	if !audio_is_playing(snd_thud)
 		audio_play_sound(snd_thud, 10, false);
 }
-function p_playThud(_pitch)
-{
-	if !audio_is_playing(snd_thud)
-		audio_play_sound(snd_thud, 10, false, 1, 0, _pitch);
-}
 
 //play a coin sound
 function p_playCoinGet()
@@ -55,10 +50,12 @@ function p_playCoinGet()
 		if (_playCoinGetSwap)
 			audio_play_sound(snd_capman_coinget, 9, false);
 		else 
-			audio_play_sound(snd_capman_coinget, 9, false, 2, 0, 2);
+			p_playCoinGetPitched(2);
 	}
 }
-function p_playCoinGet(_pitch)
+
+//play a coin sound with a pitch modifier
+function p_playCoinGetPitched(_pitch)
 {
 	if !audio_is_playing(snd_capman_coinget)
 		audio_play_sound(snd_capman_coinget, 9, false, 2, 0, _pitch);
@@ -70,22 +67,12 @@ function p_playShock()
 	if !audio_is_playing(snd_shock)
 		audio_play_sound(snd_shock, 10, false);
 }
-function p_playShock(_pitch)
-{
-	if !audio_is_playing(snd_shock)
-		audio_play_sound(snd_shock, 10, false, 1, 0, _pitch);
-}
 
 //play a 1up sound
 function p_play1up()
 {
 	if !audio_is_playing(snd_capman_1up)
 		audio_play_sound(snd_capman_1up, 10, false);
-}
-function p_play1up(_pitch)
-{
-	if !audio_is_playing(snd_capman_1up)
-		audio_play_sound(snd_capman_1up, 10, false, 1, 0, _pitch);
 }
 
 //stop all sounds
