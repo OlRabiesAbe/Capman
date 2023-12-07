@@ -2,6 +2,6 @@
 
 if _lives1upCounter >= 10000 {
 	_lives1upCounter -= 10000;
-	_lives += 1;
+	p_incrementLives();
 	obj_logic_screenwriter.p_draw1up();
 }

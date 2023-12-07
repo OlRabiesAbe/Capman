@@ -104,16 +104,10 @@ function p_getLives()
 {
 	return _lives;
 }
-
 //_lives setter
 function p_incrementLives() 
 {
 	_lives++;
-}
-//_lives setter
-function p_incrementLives(_amount) 
-{
-	_lives += _amount;
 }
 //_lives setter
 function p_decrementLives() 
