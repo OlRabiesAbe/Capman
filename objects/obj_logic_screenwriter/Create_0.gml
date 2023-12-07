@@ -8,7 +8,7 @@ function _drawScore()
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
 	var _str = "SCORE " + string(obj_logic_supermanager.p_getRoundScore());
-	draw_text(16, 16, _str);
+	draw_text(16, 24, _str);
 }
 
 function _drawTotalScore() 
@@ -16,10 +16,10 @@ function _drawTotalScore()
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
 	if (obj_logic_gamemanager.p_getGameWon())
-		var _str = "TOTAL SCORE " + string(obj_logic_supermanager.p_getTotalScore());
+		var _str = "T.SCORE " + string(obj_logic_supermanager.p_getTotalScore());
 	else
-		var _str = "TOTAL SCORE " + string(obj_logic_supermanager.p_getCurTotalScore());
-	draw_text(64+64+16, 16, _str);
+		var _str = "T.SCORE " + string(obj_logic_supermanager.p_getCurTotalScore());
+	draw_text(16, 8, _str);
 }
 
 //draws clock in top right
@@ -70,7 +70,8 @@ function p_drawDebugText(_message)
 }
 
 //draw a little text on 1up. should float upwards.
-function p_draw1up() {
+function p_draw1up() 
+{
 	
 	if alarm[1] == -1 
 	{
