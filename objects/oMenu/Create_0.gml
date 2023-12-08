@@ -97,14 +97,14 @@ blah blah blah
 		col: {
 			// Color used when an item is selected
 			selected: {
-				normal:		c_orange,	// Default color
-				intense:	c_red		// More intense color
+				normal:		$003323B0,	// Default color
+				intense:	$002CB8E0		// More intense color
 			},
 			
 			// Color used when an item is not selected
 			unselected:	{
-				normal: 	c_white,	// Default color
-				dark:		c_gray		// More dark color
+				normal: 	$00EBE4C3,	// Default color
+				dark:		$00EBE4C3		// More dark color
 			}
 		},
 		
@@ -286,17 +286,22 @@ blah blah blah
 
 
 	menu = [
-		["Start", new ScriptRunner(function() { room = room_forest_00})],
+		
+		["Start", new ScriptRunner( function() { 
+										menuModePause(); 
+										menuSetPreset(e_menu_presets.pause_menu);
+										room = room_forest_00
+										}),
+
+		"Resume", new ScriptRunner(resumeGame)],
 		
 		["Settings", [
 	        ["Audio", [
-	            ["Master",      new Slider([0, 1], 0.3,         "audio_master")],
 	            ["Sounds",      new Slider([0, 1], 1,           "audio_sounds")],
 	            ["Music",       new Slider([0, 1], 1,           "audio_music")]
 	        ]],
 
 	        ["Graphics", [
-	            ["Quality",         new Shift(["Low", "Medium", "High", "Ultra"], 2, "quality")],
 	            ["Window Mode", new Shift(["Windowed", "Fullscreen"], 1, "window_mode")]
 	        ]],
 
