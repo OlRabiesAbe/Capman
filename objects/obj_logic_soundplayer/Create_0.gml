@@ -10,7 +10,7 @@ function p_playEnemyFootsteps()
 {
 	if obj_logic_gamemanager.p_getGameplayMode()
 		if !audio_is_playing(snd_enemy_walk04)
-			audio_play_sound(snd_enemy_walk04, 8, true);
+			audio_play_sound(snd_enemy_walk04, 8, true, global.settings.audio_sounds);
 }
 
 /*	Toggles enemy footsteps and enemy fear. One to the other.
@@ -22,7 +22,7 @@ function p_toggleEnemyFearSound(_toggle)
 	{
 		if _toggle
 		{
-			audio_play_sound(snd_enemy_fear, 8, true);
+			audio_play_sound(snd_enemy_fear, 8, true, global.settings.audio_sounds);
 			audio_pause_sound(snd_enemy_walk04);
 		} 
 		else 
@@ -37,7 +37,7 @@ function p_toggleEnemyFearSound(_toggle)
 function p_playThud()
 {
 	if !audio_is_playing(snd_thud)
-		audio_play_sound(snd_thud, 10, false);
+		audio_play_sound(snd_thud, 10, false, global.settings.audio_sounds);
 }
 
 //play a coin sound
@@ -48,7 +48,7 @@ function p_playCoinGet()
 	if !audio_is_playing(snd_capman_coinget)
 	{
 		if (_playCoinGetSwap)
-			audio_play_sound(snd_capman_coinget, 9, false);
+			audio_play_sound(snd_capman_coinget, 9, false, global.settings.audio_sounds);
 		else 
 			p_playCoinGetPitched(2);
 	}
@@ -58,21 +58,21 @@ function p_playCoinGet()
 function p_playCoinGetPitched(_pitch)
 {
 	if !audio_is_playing(snd_capman_coinget)
-		audio_play_sound(snd_capman_coinget, 9, false, 2, 0, _pitch);
+		audio_play_sound(snd_capman_coinget, 9, false, global.settings.audio_sounds, 0, _pitch);
 }
 
 //play an electrick shock sound
 function p_playShock()
 {
 	if !audio_is_playing(snd_shock)
-		audio_play_sound(snd_shock, 10, false);
+		audio_play_sound(snd_shock, 10, false, global.settings.audio_sounds);
 }
 
 //play a 1up sound
 function p_play1up()
 {
 	if !audio_is_playing(snd_capman_1up)
-		audio_play_sound(snd_capman_1up, 10, false);
+		audio_play_sound(snd_capman_1up, 10, false, global.settings.audio_sounds);
 }
 
 //stop all sounds
