@@ -28,7 +28,7 @@ function _drawClock()
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
 	var _str = "TIME " + string(obj_logic_gamemanager.p_getGameTimeSeconds());
-	draw_text(room_width-112, 16, _str);
+	draw_text(room_width-112, 8, _str);
 }
 
 //draws lives text in the bottom left
@@ -48,7 +48,7 @@ function _drawLives()
 			_str += " O";
 	}
 	
-	draw_text(16, room_height-32, _str);
+	draw_text(16, room_height-40, _str);
 }
 
 //draw debug messages at top of screen
