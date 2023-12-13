@@ -22,23 +22,13 @@ function _initializeGameplayLogicStructs()
 	
 	obj_logic_gamemanager.p_setRound(_roundIndex);
 }
- /*	Add to room and initialize objects neccessary for cutscene rooms
-  */
-function _initializeCutsceneLogicStructs() 
-{
-	if !instance_exists(obj_logic_cutscenemanager)
-		instance_create_layer(0, 0, "Logic", obj_logic_cutscenemanager);
-	
-	if !instance_exists(obj_logic_soundplayer)
-		instance_create_layer(0, 0, "Logic", obj_logic_soundplayer);
-}
 
 /*	Advance to the next level or next round depending on _roundIndex
  */
 function p_advanceLevel() 
 {
 	 //goto next room if we hit the _ROUNDMAX
-	if _roundIndex >= _ROUNDMAX || instance_exists(obj_logic_cutscenemanager)
+	if _roundIndex >= _ROUNDMAX 
 	{
 		_roundIndex = 0;//reset round index
 		_roomIndex++;
