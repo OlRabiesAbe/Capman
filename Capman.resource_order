@@ -158,6 +158,7 @@
     {"name":"chance","order":2,"path":"scripts/chance/chance.yy",},
     {"name":"print","order":13,"path":"scripts/print/print.yy",},
     {"name":"arrayFind","order":1,"path":"scripts/arrayFind/arrayFind.yy",},
+    {"name":"obj_enemy_crosser","order":11,"path":"objects/obj_enemy_crosser/obj_enemy_crosser.yy",},
     {"name":"obj_pill","order":4,"path":"objects/obj_pill/obj_pill.yy",},
     {"name":"spr_capman_lit_2","order":6,"path":"sprites/spr_capman_lit_2/spr_capman_lit_2.yy",},
     {"name":"sInpGamepadButtonY","order":7,"path":"sprites/sInpGamepadButtonY/sInpGamepadButtonY.yy",},

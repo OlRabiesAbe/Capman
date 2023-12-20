@@ -202,6 +202,7 @@
     {"id":{"name":"chance","path":"scripts/chance/chance.yy",},},
     {"id":{"name":"print","path":"scripts/print/print.yy",},},
     {"id":{"name":"arrayFind","path":"scripts/arrayFind/arrayFind.yy",},},
+    {"id":{"name":"obj_enemy_crosser","path":"objects/obj_enemy_crosser/obj_enemy_crosser.yy",},},
     {"id":{"name":"obj_pill","path":"objects/obj_pill/obj_pill.yy",},},
     {"id":{"name":"spr_capman_lit_2","path":"sprites/spr_capman_lit_2/spr_capman_lit_2.yy",},},
     {"id":{"name":"sInpGamepadButtonY","path":"sprites/sInpGamepadButtonY/sInpGamepadButtonY.yy",},},
