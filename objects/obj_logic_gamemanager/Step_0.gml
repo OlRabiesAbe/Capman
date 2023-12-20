@@ -7,7 +7,7 @@ if (!_gameIsWon)
 // Speeds up all zombies after clock hits _ELROYTIME
 if (ceil(_clock/60) > _ELROYTIME) 
 {
-	with (obj_enemy_zombie)
+	with (obj_enemy_zombie_chaser)
 		p_becomeElroy();
 }
 

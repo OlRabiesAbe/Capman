@@ -46,8 +46,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "spr_enemy_zombie_right",
-    "path": "sprites/spr_enemy_zombie_right/spr_enemy_zombie_right.yy",
+    "name": "spr_enemy_zombie_up",
+    "path": "sprites/spr_enemy_zombie_up/spr_enemy_zombie_up.yy",
   },
   "spriteMaskId": null,
   "visible": true,

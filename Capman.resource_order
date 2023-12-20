@@ -39,6 +39,7 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
     {"name":"zombie_ambusher","order":1,"path":"folders/Sprites/enemy_zombie/zombie_ambusher.yy",},
+    {"name":"zombie_crosser","order":2,"path":"folders/Sprites/enemy_zombie/zombie_crosser.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_light_green","order":13,"path":"sprites/spr_light_green/spr_light_green.yy",},
@@ -119,6 +120,7 @@
     {"name":"Controls","order":1,"path":"scripts/Controls/Controls.yy",},
     {"name":"sInpGamepadRightTrigger","order":12,"path":"sprites/sInpGamepadRightTrigger/sInpGamepadRightTrigger.yy",},
     {"name":"sInpGamepadButtonB","order":5,"path":"sprites/sInpGamepadButtonB/sInpGamepadButtonB.yy",},
+    {"name":"spr_enemy_zombie_crosser_right","order":1,"path":"sprites/spr_enemy_zombie_crosser_right/spr_enemy_zombie_crosser_right.yy",},
     {"name":"getRange","order":9,"path":"scripts/getRange/getRange.yy",},
     {"name":"fPixelBig","order":1,"path":"fonts/fPixelBig/fPixelBig.yy",},
     {"name":"obj_light_green","order":2,"path":"objects/obj_light_green/obj_light_green.yy",},
@@ -149,6 +151,7 @@
     {"name":"obj_player","order":6,"path":"objects/obj_player/obj_player.yy",},
     {"name":"sInpButton","order":1,"path":"sprites/sInpButton/sInpButton.yy",},
     {"name":"spr_capman_lit_3","order":7,"path":"sprites/spr_capman_lit_3/spr_capman_lit_3.yy",},
+    {"name":"spr_enemy_zombie_crosser_up","order":2,"path":"sprites/spr_enemy_zombie_crosser_up/spr_enemy_zombie_crosser_up.yy",},
     {"name":"drawSetText","order":5,"path":"scripts/drawSetText/drawSetText.yy",},
     {"name":"spr_enemy_zombie_ambusher_right","order":1,"path":"sprites/spr_enemy_zombie_ambusher_right/spr_enemy_zombie_ambusher_right.yy",},
     {"name":"Credits","order":2,"path":"scripts/Credits/Credits.yy",},
