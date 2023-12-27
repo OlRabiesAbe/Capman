@@ -126,20 +126,23 @@ function _moveInDirection (_dir)
  */
 function _applyScaredVFX() 
 {
-	if obj_logic_gamemanager.alarm[0] > room_speed
-	{ 
-		//pacman is powered, use the lit sprite
-		sprite_index = _spriteArray[4];
-	}
-	else if obj_logic_gamemanager.alarm[0] > 0 && obj_logic_gamemanager.alarm[0] < room_speed
+	if (p_scared) 
 	{
-		if ceil(obj_logic_gamemanager.alarm[0] / 3 ) % 2 == 0
-			//if there's one second left on the power pill, flash the sprite
-			sprite_index = spr_enemy_zombie_lit;
-	}
+		if obj_logic_gamemanager.alarm[0] > room_speed
+		{ 
+			//pacman is powered, use the lit sprite
+			sprite_index = _spriteArray[4];
+		}
+		else if obj_logic_gamemanager.alarm[0] > 0 && obj_logic_gamemanager.alarm[0] < room_speed
+		{
+			if ceil(obj_logic_gamemanager.alarm[0] / 3 ) % 2 == 0
+				//if there's one second left on the power pill, flash the sprite
+				sprite_index = spr_enemy_zombie_lit;
+		}
 	
-	if (obj_logic_gamemanager.alarm[0] % room_speed == room_speed - 1)
-		obj_logic_particlemanager.p_genBoneParticle(x, y);
+		if (obj_logic_gamemanager.alarm[0] % room_speed == room_speed - 1)
+			obj_logic_particlemanager.p_genBoneParticle(x, y);
+	}
 }
 
 /*	Toggle this inst's scared behavior
@@ -148,6 +151,9 @@ function _applyScaredVFX()
  */
 function p_toggleScared(_bool) 
 {
+	if (_bool == p_scared)
+		return;
+	
 	if (!_bool && p_scared) //become unscared
 	{
 		p_moveSpeed *= 2;

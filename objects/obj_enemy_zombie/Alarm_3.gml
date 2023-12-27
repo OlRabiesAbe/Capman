@@ -8,4 +8,6 @@ alarm_set(2, _SCATTERTIME);
 alarm_set(3, -1);
 alarm_set(5, room_speed);
 
+p_toggleScared(false);
+
 obj_logic_soundplayer.p_playEnemyFootsteps();
