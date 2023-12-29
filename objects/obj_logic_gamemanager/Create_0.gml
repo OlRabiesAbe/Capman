@@ -102,6 +102,10 @@ function p_depowerPacman ()
 	alarm[0] = -1;
 }
 
+
+
+
+
 //=====VAR GETTERS & SETTERS=====
 //==========================
 //_score Getter
