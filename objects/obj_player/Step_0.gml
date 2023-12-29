@@ -1,7 +1,7 @@
 /// @description player movement logic
 
 //no moving if not alive
-if (p_isAlive && !obj_logic_gamemanager.p_getGameWon())
+if (p_isAlive && obj_logic_gamemanager.p_getGameplayMode())
 {
 	/*convert key presses to a string 
 	represeting the direction the player wants to move.*/
@@ -19,4 +19,12 @@ if (p_isAlive && !obj_logic_gamemanager.p_getGameWon())
 	//Out of Bounds only triggers once I think.
 	move_wrap(true, true, sprite_width);
 
+} 
+else if (!p_isAlive) 
+{//set sprite anim speed to 0 if dead. PLHOLDER, SHOULD HAVE DEATH SPRITE OR ANIM
+	sprite_set_speed(sprite_index, 0, spritespeed_framespersecond);
+} 
+else if (!obj_logic_gamemanager.p_getGameplayMode())
+{//set sprite anim speed to 0 if game is over
+	sprite_set_speed(sprite_index, 0, spritespeed_framespersecond);
 }

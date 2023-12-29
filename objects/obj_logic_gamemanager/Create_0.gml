@@ -25,8 +25,6 @@ function p_setRound (_roundIndex)
 		}
 	}
 	
-	
-	
 	_POWERPILLTIME -= _roundIndex * room_speed; //p_powerPacman() just returns if powerpilltime is zero or negative
 	_ELROYTIME -= _roundIndex * 10; //it's fine if elroytime is negative
 	
@@ -49,16 +47,7 @@ function p_setRound (_roundIndex)
 			obj_pill_special._LIFESPAN = 8;
 			break;
 	}
-	//obj_logic_screenwriter.p_drawDebugText("round is " + string(_roundIndex));
-}
-
-/*	This is called by this obj when the player is dead.
- *	Tells supermanager to restart the level
- */
-function _roomDeathRestart() 
-{
-	if alarm[2] == -1 
-		alarm[2] = 5 * room_speed;
+	//obj_logic_screenwriter.p_drawDebugText("round# is " + string(_roundIndex));
 }
 
 //=====ENEMY MANAGEMENT=====
@@ -139,6 +128,11 @@ function p_getGameTimeSteps()
 function p_getGameWon() 
 {
 	return _gameIsWon;
+}
+//_gameIsOver Getter
+function p_getGameOver() 
+{
+	return _gameIsOver;
 }
 //_gameIsWon Getter
 function p_getGameplayMode() 

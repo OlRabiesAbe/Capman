@@ -28,6 +28,7 @@ function _initializeGameplayLogicStructs()
 function p_advanceLevel() 
 {
 	 //goto next room if we hit the _ROUNDMAX
+	 //the first if handles advancing out of a room. kinda Not used in current build.
 	if _roundIndex >= _ROUNDMAX 
 	{
 		_roundIndex = 0;//reset round index
@@ -39,12 +40,28 @@ function p_advanceLevel()
 	else 
 	{  //goto next round
 		_roundIndex++;
-		p_restartRoom();
+		room_restart();
 	}
 }
 
+/*	Restart level when player dies
+ */
+function p_restartLevel()
+{
+	obj_logic_gamemanager.p_depowerPacman();
+
+	audio_stop_sound(snd_enemy_walk04);
+
+	if (_lives > 0)
+	{
+		p_decrementLives();
+		room_restart();
+	}
+	else throw ("OUT OF LIVES");
+}
+
 /*	Update _totalClock, _totalScore, _lives1upCounter on round end.
- *	I think Needs to be handled seperately from p_advanceLevel().
+ *	handled seperately from p_advanceLevel().
  */
 function p_updateStatsOnRoundEnd() 
 {
@@ -55,15 +72,6 @@ function p_updateStatsOnRoundEnd()
 	_totalScore += _timeBonus;
 	_lives1upCounter += _timeBonus;
 }
-
-/*	Restart this room. Is this func needed?
- *	Currently exists just to keep the room restarting under supermanager's control
- */
-function p_restartRoom() 
-{
-	room_restart();
-}
-
 
 
 

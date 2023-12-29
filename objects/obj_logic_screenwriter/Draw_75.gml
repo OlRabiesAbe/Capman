@@ -22,7 +22,8 @@ if (_is1upTextUp)
 ///gamemanager should call these funcs when IT wants them done.
 
 //game won text
-if (obj_logic_gamemanager.p_getGameWon())
+if (!obj_logic_gamemanager.p_getGameplayMode() 
+		&& !obj_logic_gamemanager.p_getGameOver())
 {
 	if alarm[0] == -1
 		alarm[0] = room_speed * 6;
@@ -34,11 +35,12 @@ if (obj_logic_gamemanager.p_getGameWon())
 }
 
 //death text
-if (!obj_player.p_isAlive && obj_logic_supermanager.p_getLives() == 0) 
+if (obj_logic_gamemanager.p_getGameOver() 
+		&& obj_logic_supermanager.p_getLives() == 0) 
 {
 	_drawGameOverScreen();
 } 
-else if (!obj_player.p_isAlive)
+/*else if (obj_logic_gamemanager.p_getGameOver())
 {
 	_drawDeadScreen();
-}
+}*/

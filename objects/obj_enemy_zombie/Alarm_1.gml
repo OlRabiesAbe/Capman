@@ -1,7 +1,7 @@
 /// @description Moving by calling _moveInDirection
 //@uses p_direction
 
-if !obj_logic_gamemanager.p_getGameWon() 
+if obj_logic_gamemanager.p_getGameplayMode() 
 {
 	//outside room wrapping behavior
 	move_wrap(true, true, sprite_width);

@@ -1,3 +1,2 @@
-/// @description deactivate powerpill effect
-
+/// @description call p_depowerPacman()
 p_depowerPacman();
