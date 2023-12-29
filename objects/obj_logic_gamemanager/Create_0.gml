@@ -4,7 +4,7 @@
 //=====ROOM MANAGEMENT=====
 //==========================
 /*	Adjust game variables based on the round number.
- *	Called by obj_logic_supermanager at room-start
+ *	Called by obj_logic_supermanager in Room Start
  */
 function p_setRound (_roundIndex)
 {
@@ -48,6 +48,29 @@ function p_setRound (_roundIndex)
 			break;
 	}
 	//obj_logic_screenwriter.p_drawDebugText("round# is " + string(_roundIndex));
+}
+
+/*	Restart level after player death
+ *	Called within supermanager.restartLevel()
+ */
+function p_restartLevel ()
+{
+	_gameIsWon = false;
+	_gameIsOver = false;
+	_gameplayMode = true;
+	obj_player.p_reset();
+	with (obj_enemy_zombie)
+	{
+		//disable all logic
+		for (var i = 0; i < 12; i++) 
+			alarm[i] = -1;
+		//go invisible
+		image_alpha = 0;
+		//tele to OOB waiting room
+		x = -16; y = -16;
+		//start Re-Alive sequence in 5 seconds
+		alarm[4] = irandom(6) * room_speed 
+	}
 }
 
 //=====ENEMY MANAGEMENT=====

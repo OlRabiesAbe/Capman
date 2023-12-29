@@ -101,6 +101,17 @@ function _updateDirectionStored ()
 	}
 }
 
+/* resets this obj after dying.
+*/
+function p_reset () 
+{
+	p_isAlive = true;
+	obj_logic_gamemanager.p_depowerPacman();
+	
+	var _playerStart = instance_find(obj_player_start, 0);
+	x = _playerStart.x;
+	y = _playerStart.y;
+}
 
 //_direction Getter
 function p_getDirection ()

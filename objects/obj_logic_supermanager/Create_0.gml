@@ -48,16 +48,15 @@ function p_advanceLevel()
  */
 function p_restartLevel()
 {
-	obj_logic_gamemanager.p_depowerPacman();
-
 	audio_stop_sound(snd_enemy_walk04);
 
 	if (_lives > 0)
 	{
 		p_decrementLives();
-		room_restart();
+		obj_logic_gamemanager.p_restartLevel();
 	}
 	else throw ("OUT OF LIVES");
+	
 }
 
 /*	Update _totalClock, _totalScore, _lives1upCounter on round end.

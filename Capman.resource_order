@@ -107,6 +107,7 @@
     {"name":"sInpGamepadButtonA","order":4,"path":"sprites/sInpGamepadButtonA/sInpGamepadButtonA.yy",},
     {"name":"spr_capman_3","order":3,"path":"sprites/spr_capman_3/spr_capman_3.yy",},
     {"name":"spr_bone02","order":2,"path":"sprites/spr_bone02/spr_bone02.yy",},
+    {"name":"obj_player_start","order":4,"path":"objects/obj_player_start/obj_player_start.yy",},
     {"name":"sInpGamepadRightBumper","order":11,"path":"sprites/sInpGamepadRightBumper/sInpGamepadRightBumper.yy",},
     {"name":"pauseGame","order":5,"path":"scripts/pauseGame/pauseGame.yy",},
     {"name":"spr_enemy_zombie_ambusher_up","order":2,"path":"sprites/spr_enemy_zombie_ambusher_up/spr_enemy_zombie_ambusher_up.yy",},
