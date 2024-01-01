@@ -11,8 +11,3 @@ if obj_logic_gamemanager.p_getGameWon()
 {
 	p_advanceLevel();
 }
-
-if obj_logic_gamemanager.p_getGameOver()
-{
-	p_restartLevel();
-}

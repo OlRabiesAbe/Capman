@@ -44,21 +44,6 @@ function p_advanceLevel()
 	}
 }
 
-/*	Restart level when player dies
- */
-function p_restartLevel()
-{
-	audio_stop_sound(snd_enemy_walk04);
-
-	if (_lives > 0)
-	{
-		p_decrementLives();
-		obj_logic_gamemanager.p_restartLevel();
-	}
-	else throw ("OUT OF LIVES");
-	
-}
-
 /*	Update _totalClock, _totalScore, _lives1upCounter on round end.
  *	handled seperately from p_advanceLevel().
  */
@@ -71,9 +56,6 @@ function p_updateStatsOnRoundEnd()
 	_totalScore += _timeBonus;
 	_lives1upCounter += _timeBonus;
 }
-
-
-
 
 
 //=====VAR GETTERS & SETTERS=====

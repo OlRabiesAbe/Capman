@@ -27,8 +27,7 @@ else if (!_gameplayMode && keyboard_check(vk_space))
 		alarm[1] = 2 * room_speed;
 }
 
-//player is dead, so call alarm[2] to set gameIsOver true, 
-//		flagging supermanager to restart room.
+//player is dead, so call alarm[2] to reset room
 if (!obj_player.p_isAlive) 
 {
 	if (alarm[2] == -1) 

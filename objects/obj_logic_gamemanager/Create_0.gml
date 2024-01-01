@@ -55,6 +55,14 @@ function p_setRound (_roundIndex)
  */
 function p_restartLevel ()
 {
+	if (obj_logic_supermanager.p_getLives() > 0)
+	{
+		obj_logic_supermanager.p_decrementLives();
+	}
+	else 
+	{
+		throw ("OUT OF LIVES");
+	}
 	_gameIsWon = false;
 	_gameIsOver = false;
 	_gameplayMode = true;
