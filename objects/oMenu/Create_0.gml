@@ -40,24 +40,10 @@
 
 var credits_string = 
 	@"
-Menu System Made By:
+A Beam Brain Production
+
+Menu System Made By
 Milan Varady
-
-
-Gameplay Programming
-Johnny The Red Giraffe
-
-
-Story Writing
-Tom The 2 feet tall hippo
-
-
-Music
-Lily The T-Rex
-
-
-More very important text
-blah blah blah
 "
 
 #endregion
@@ -136,12 +122,12 @@ blah blah blah
 			w:			auto,		// (A) Button width
 			h:			auto,		// (A) Button height
 			y_buffer:	auto,		// (A) Space between buttons
-			roundness:	auto,		// (A) Corner roundness
+			roundness:	0,		// (A) Corner roundness
 			cir_prec:	24,			// Circle precision (Must be divisible by 4!)
 			alpha:		0.6,		// Button's alpha
 			
 			text_only:	false,		// (bool) If set to true no background and outline will be drawn
-			nine_slice:	false		// (sprite) If sprite is set it will be used for the button's background
+			nine_slice:	spr_menu_button_small		// (sprite) If sprite is set it will be used for the button's background
 		},
 			
 		// Toggle
