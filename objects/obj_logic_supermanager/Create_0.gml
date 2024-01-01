@@ -83,11 +83,6 @@ function p_getTotalScore()
 {
 	return _totalScore;
 }
-//_totalScore + _roundScore getter
-function p_getCurTotalScore()
-{
-	return _totalScore + _roundScore;
-}
 //_roundScore getter
 function p_getRoundScore()
 {

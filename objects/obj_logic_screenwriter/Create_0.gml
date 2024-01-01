@@ -15,10 +15,7 @@ function _drawTotalScore()
 {
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
-	if (obj_logic_gamemanager.p_getGameWon())
-		var _str = "T.SCORE " + string(obj_logic_supermanager.p_getTotalScore());
-	else
-		var _str = "T.SCORE " + string(obj_logic_supermanager.p_getCurTotalScore());
+	var _str = "T.SCORE " + string(obj_logic_supermanager.p_getTotalScore());
 	draw_text(16, 8, _str);
 }
 
@@ -132,7 +129,7 @@ function _drawGameOverScreen()
 							
 }
 
-//dead, but not gameover
+//dead, but not gameover CURRENTLY DISABLED 
 function _drawDeadScreen() 
 {
 	//vars defining a box 528px by 576px
