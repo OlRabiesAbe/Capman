@@ -37,6 +37,8 @@ function _moveInDirection (direction)
 			_spriteArrayIndex = 3;
 			y = y + p_moveSpeed;
 			break;
+		case "neutral": default: 
+			break;
 	}
 	if p_isPowered
 		_spriteArrayIndex += 4;
@@ -108,8 +110,8 @@ function p_reset ()
 	p_isAlive = true;
 	obj_logic_gamemanager.p_depowerPacman();
 	
-	_directionStored = "left";
-	_direction = "left";
+	_directionStored = "neutral";
+	_direction = "neutral";
 	
 	var _playerStart = instance_find(obj_player_start, 0);
 	x = _playerStart.x;
