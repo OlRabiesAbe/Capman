@@ -108,6 +108,9 @@ function p_reset ()
 	p_isAlive = true;
 	obj_logic_gamemanager.p_depowerPacman();
 	
+	_directionStored = "left";
+	_direction = "left";
+	
 	var _playerStart = instance_find(obj_player_start, 0);
 	x = _playerStart.x;
 	y = _playerStart.y;
