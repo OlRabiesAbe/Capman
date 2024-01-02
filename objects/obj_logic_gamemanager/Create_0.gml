@@ -55,6 +55,8 @@ function p_setRound (_roundIndex)
  */
 function p_restartLevel ()
 {
+	obj_logic_soundplayer.p_stopAllSounds()
+	
 	if (obj_logic_supermanager.p_getLives() > 0)
 	{
 		obj_logic_supermanager.p_decrementLives();
@@ -63,19 +65,25 @@ function p_restartLevel ()
 	{
 		throw ("OUT OF LIVES");
 	}
+	
 	_gameIsWon = false;
 	_gameIsOver = false;
 	_gameplayMode = true;
+	
 	obj_player.p_reset();
+	
 	with (obj_enemy_zombie)
 	{
 		//disable all logic
 		for (var i = 0; i < 12; i++) 
+		{
 			alarm[i] = -1;
+		}
 		//go invisible
 		image_alpha = 0;
 		//tele to OOB waiting room
-		x = -16; y = -16;
+		x = -16; 
+		y = -16;
 		//start Re-Alive sequence in 5 seconds
 		alarm[4] = irandom(6) * room_speed 
 	}
