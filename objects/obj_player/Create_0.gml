@@ -114,9 +114,6 @@ function p_reset ()
 	var _playerStart = instance_find(obj_player_start, 0);
 	x = _playerStart.x;
 	y = _playerStart.y;
-	
-	//obj_logic_screenwriter.p_drawDebugText("xy = " + string(x) + "," + string(y));
-	obj_logic_screenwriter.p_drawDebugText("xy = " + string(_playerStart.x) + "," + string(_playerStart.y));
 }
 
 //_direction Getter
