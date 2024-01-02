@@ -109,6 +109,7 @@ function p_reset ()
 {
 	p_isAlive = true;
 	obj_logic_gamemanager.p_depowerPacman();
+	sprite_set_speed(sprite_index, 7, spritespeed_framespersecond);
 	
 	_directionStored = "neutral";
 	_direction = "neutral";
