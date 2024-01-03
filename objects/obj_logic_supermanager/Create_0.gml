@@ -70,6 +70,11 @@ function p_getRoundScore()
 {
 	return _roundScore;
 }
+//_totalScore + _roundScore getter
+function p_getCurTotalScore()
+{
+	return _totalScore + _roundScore;
+}
 //_roundScore setter
 function p_incrementRoundScore(_value) 
 {

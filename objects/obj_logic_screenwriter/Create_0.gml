@@ -15,7 +15,14 @@ function _drawTotalScore()
 {
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
-	var _str = "T.SCORE " + string(obj_logic_supermanager.p_getTotalScore());
+	if (obj_logic_gamemanager.p_getGameplayMode()) //if we're in gameplay, we need roundscore + totalscore
+	{
+		var _str = "T.SCORE " + string(obj_logic_supermanager.p_getCurTotalScore());
+	}
+	else //if we're not in gameplay (in score menu), totalscore has been updated so we can just use it
+	{
+		var _str = "T.SCORE " + string(obj_logic_supermanager.p_getTotalScore());
+	}
 	draw_text(16, 8, _str);
 }
 
