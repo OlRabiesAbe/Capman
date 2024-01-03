@@ -40,7 +40,3 @@ if (obj_logic_gamemanager.p_getGameOver()
 {
 	_drawGameOverScreen();
 } 
-/*else if (obj_logic_gamemanager.p_getGameOver())
-{
-	_drawDeadScreen();
-}*/
