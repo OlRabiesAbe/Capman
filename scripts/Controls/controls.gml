@@ -205,17 +205,17 @@ function Input(in_sys, name) : MenuElement() constructor {
 			
 			// Inner rectange
 			if (selected and oMenu.in_column == i) {
-				draw_set_alpha(rect_look.alpha.selected);
+				//draw_set_alpha(rect_look.alpha.selected);
 				draw_set_color(oMenu.inputting ? oMenu.look.col.selected.intense : oMenu.look.col.selected.normal);
 				draw_roundrect_ext(rect.x1, rect.y1, rect.x2, rect.y2, rect_look.roundness, rect_look.roundness, false);
 			} else {
-				draw_set_alpha(rect_look.alpha.unselected);
+				//draw_set_alpha(rect_look.alpha.unselected);
 				draw_set_color(rect_look.col);
 				draw_roundrect_ext(rect.x1, rect.y1, rect.x2, rect.y2, rect_look.roundness, rect_look.roundness, false);
 			}
 			
 			// Outline
-			draw_set_alpha(1);
+			//draw_set_alpha(1);
 			draw_set_color(oMenu.look.col.selected.normal);
 			draw_roundrect_ext(rect.x1, rect.y1, rect.x2, rect.y2, rect_look.roundness, rect_look.roundness, true);
 			

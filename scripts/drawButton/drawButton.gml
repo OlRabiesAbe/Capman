@@ -19,7 +19,7 @@ function drawButton(x, y, name) {
 	var col = oMenu.col.unsel_sel;
 		
 	draw_set_color(col.c1);
-	draw_set_alpha(look.alpha);
+	//draw_set_alpha(look.alpha);
 		
 	
 	if (!look.text_only) {
@@ -36,7 +36,7 @@ function drawButton(x, y, name) {
 	
 			draw_roundrect_ext(x1, y1, x2, y2, rad, rad, false);	// Button
 		
-			draw_set_alpha(1);
+			//draw_set_alpha(1);
 		
 			// Outline
 			draw_set_color(col.c2);

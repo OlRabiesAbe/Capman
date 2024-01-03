@@ -32,10 +32,10 @@ if (!surface_exists(pause_surf)) {
     draw_surface(pause_surf, 0, 0);
 	
 	// Rectangle
-    draw_set_alpha(sett.rect.alpha);
+    //draw_set_alpha(sett.rect.alpha);
     draw_set_color(sett.rect.col);
     draw_rectangle(0, 0, gui_w, gui_h, false);
-    draw_set_alpha(1);
+    //draw_set_alpha(1);
     
     // Game paused text
     var txt_y = gui_h / 5;

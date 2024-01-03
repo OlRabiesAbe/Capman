@@ -35,9 +35,9 @@ function Credits(str) : MenuElement() constructor {
 		var bg_look = oMenu.item_look.credits.bg;
 		
 		draw_set_color(bg_look.col);
-		draw_set_alpha(bg_look.alpha);
+		//draw_set_alpha(bg_look.alpha);
 		draw_rectangle(0, 0, gui_w, gui_h, false);
-		draw_set_alpha(1);
+		//draw_set_alpha(1);
 		
 		// Draw credits text
 		var look = oMenu.item_look.credits.txt;
