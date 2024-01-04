@@ -1,4 +1,4 @@
-/// @description Eaten by player
+/// @description Eaten by player logic
 
 if p_scared && p_isAlive 
 { 

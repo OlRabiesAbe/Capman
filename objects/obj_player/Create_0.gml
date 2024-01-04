@@ -1,4 +1,4 @@
-/// @description initialization
+/// @description Functions
 
 ///=====INIT
 ///=========

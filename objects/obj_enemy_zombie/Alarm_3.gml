@@ -1,4 +1,4 @@
-/// @description Script to enter maze
+/// @description Script to enter maze, runs once
 
 path_start(path_enemy_door, 1, path_action_stop, true);
 

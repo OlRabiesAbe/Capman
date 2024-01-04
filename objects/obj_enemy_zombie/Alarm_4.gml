@@ -1,4 +1,4 @@
-/// @description Re-Alive after being eaten
+/// @description Re-Alive after being eaten, runs once
 
 image_alpha = 1;
 alarm[3] = 1;

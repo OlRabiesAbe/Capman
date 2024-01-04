@@ -1,4 +1,4 @@
-/// @description player movement logic
+/// @description Player movement logic
 
 //no moving if not alive
 if (p_isAlive && obj_logic_gamemanager.p_getGameplayMode())

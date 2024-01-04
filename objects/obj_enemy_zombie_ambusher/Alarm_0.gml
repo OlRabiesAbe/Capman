@@ -1,5 +1,4 @@
-/// @description Movement AI
-//runs every step when active
+/// @description Movement decision AI, runs every step when active
 
 //init coords. Never actually tries to path here
 var _targetCoords = [0, 0];

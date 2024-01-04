@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Movement decision AI, runs every step when active
 
 
 if (abs(x - obj_player.x) + abs(y - obj_player.y) < 256) 

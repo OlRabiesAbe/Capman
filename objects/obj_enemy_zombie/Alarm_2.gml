@@ -1,4 +1,4 @@
-/// @description Toggle _chase to start Scatter logic
+/// @description Toggle _chase to start/end Scatter logic, runs every _CHASETIMER/_SCATTERTIMER when active
 
 if p_chase 
 {

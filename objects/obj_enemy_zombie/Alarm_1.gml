@@ -1,5 +1,4 @@
-/// @description Moving by calling _moveInDirection
-//@uses p_direction
+/// @description Moving by calling _moveInDirection, runs every step when active
 
 if obj_logic_gamemanager.p_getGameplayMode() 
 {

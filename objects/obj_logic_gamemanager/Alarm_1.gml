@@ -1,2 +1,2 @@
-/// @description set _gameIsWon to true
+/// @description Player Won Game: set _gameIsWon to true
 _gameIsWon = true;

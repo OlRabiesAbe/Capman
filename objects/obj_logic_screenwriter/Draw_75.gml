@@ -1,4 +1,4 @@
-/// @description screen text
+/// @description Draw all needed screen text
 
 //score counter
 _drawScore();

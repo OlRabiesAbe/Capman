@@ -1,4 +1,4 @@
-/// @description Snap to grid, issue#1 fix
+/// @description Snap to grid, issue#1 fix, runs every room_speed steps
 //runs once a second
 //prevents enemy getting stuck on corners at high speeds.
 //lowest speed I noticed the stucking happening is 3.25
