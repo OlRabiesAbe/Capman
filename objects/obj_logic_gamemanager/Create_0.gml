@@ -12,16 +12,16 @@ function p_setRound (_roundIndex)
 	{
 		obj_enemy_zombie.p_moveSpeed += (0.2 * _roundIndex);
 		obj_enemy_zombie._CHASETIME += (2 * _roundIndex * room_speed);
-		obj_enemy_zombie._SCATTERTIME -= (0.5 * _roundIndex * room_speed);
+		obj_enemy_zombie._scattertime -= (0.5 * _roundIndex * room_speed);
 	}
 	else //if (_roundIndex > 3)
 	{
 		obj_enemy_zombie.p_moveSpeed += (0.2 * 3);
 		obj_enemy_zombie._CHASETIME += (2 * 3 * room_speed);
-		obj_enemy_zombie._SCATTERTIME -= (0.5 * 3 * room_speed);
+		obj_enemy_zombie._scattertime -= (0.5 * 3 * room_speed);
 		if (_roundIndex > 4)
 		{	
-			obj_enemy_zombie._SCATTERTIME = 1;//no more scattering after round 5
+			obj_enemy_zombie._scattertime = 1;//no more scattering after round 5
 		}
 	}
 	
