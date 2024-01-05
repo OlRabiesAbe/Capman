@@ -16,4 +16,6 @@ if keyboard_check(ord("D"))
 	draw_text_transformed(x, y, _str, 0.8, 0.8, 0);
 	
 	draw_text_transformed(x, y+8, "p_movespeed " + string(p_moveSpeed), 0.5, 0.5, 0);
+	
+	draw_text_transformed(x, y+16, "object_index " + string(object_index), 0.6, 0.6, 0);
 }
