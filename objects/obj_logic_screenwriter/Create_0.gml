@@ -7,7 +7,7 @@ function _drawScore()
 {
 	draw_set_halign(fa_left);
 	draw_set_colour(_c_TEXTWHITE);
-	var _str = "SCORE " + string(obj_logic_supermanager.p_getRoundScore());
+	var _str = "Score " + string(obj_logic_supermanager.p_getRoundScore());
 	draw_text(16, 24, _str);
 }
 
@@ -17,11 +17,11 @@ function _drawTotalScore()
 	draw_set_colour(_c_TEXTWHITE);
 	if (obj_logic_gamemanager.p_getGameplayMode()) //if we're in gameplay, we need roundscore + totalscore
 	{
-		var _str = "T.SCORE " + string(obj_logic_supermanager.p_getCurTotalScore());
+		var _str = "T.Score " + string(obj_logic_supermanager.p_getCurTotalScore());
 	}
 	else //if we're not in gameplay (in score menu), totalscore has been updated so we can just use it
 	{
-		var _str = "T.SCORE " + string(obj_logic_supermanager.p_getTotalScore());
+		var _str = "T.Score " + string(obj_logic_supermanager.p_getTotalScore());
 	}
 	draw_text(16, 8, _str);
 }
@@ -192,6 +192,8 @@ function _drawScoreScreen()
 	
 		//background box
 		draw_sprite(spr_textbox_win, -1, _left, _top);
+		
+		_top += 16;
 	
 		//headline text
 		draw_set_halign(fa_center);
@@ -200,7 +202,7 @@ function _drawScoreScreen()
 	
 		var _str = "AREA SURVIVED";
 		draw_text_transformed(room_width/2, _top+32, _str, 2, 2, 0);
-		_str = "YOUR QUEST PROGRESSES";
+		_str = "Your quest progresses.";
 		draw_text_transformed(room_width/2, _top+64, _str, 2, 2, 0);
 	
 
@@ -215,42 +217,43 @@ function _drawScoreScreen()
 		if alarm[0] < 5 * room_speed 
 		{
 		
-			_str = "LEVEL SCORE " + string(_lvlScore);
-			draw_text_transformed( room_width/2, _top+(64*2), _str, 1.5, 1.5, 0);
+			_str = "Level score " + string(_lvlScore);
+			draw_text_transformed( room_width/2, _top+(64*2.5), _str, 1.5, 1.5, 0);
 		}
 	
 		//ingame time
 		if alarm[0] < 4 * room_speed 
 		{
-			_str = "TIME REMAINING " + string(_timerScnds);
+			_str = "Time remaining " + string(_timerScnds);
 			draw_text_transformed( room_width/2, _top+(64*3), _str, 1.5, 1.5, 0);
 		}
 	
 		//time bonus
 		if alarm[0] < 3 * room_speed 
 		{
-			_str = "TIME REMAINING BONUS " + string(_timerScnds*100);
-			draw_text_transformed( (room_width/2), _top+(64*3.5), _str, 1, 1, 0);
+			_str = "Time remaining bonus " + string(_timerScnds*100);
+			draw_text_transformed( (room_width/2), _top+(64*3.5), _str, 1.5, 1.5, 0);
 		}
 		//level score + time bonus
 		if alarm[0] < 2 * room_speed 
 		{
-			_str = "SUM LEVEL SCORE " + string(_lvlScore+(_timerScnds*100));
+			draw_text_transformed( (room_width/2), _top+(64*4), "____________", 1.5, 1.5, 0);
+			_str = "Sum level score " + string(_lvlScore+(_timerScnds*100));
 			draw_text_transformed( (room_width/2), _top+(64*4.5), _str, 1.5, 1.5, 0);
 		}
 	
 		//total cum. score
 		if alarm[0] < 1 * room_speed 
 		{
-			_str = "TOTAL SCORE " + string(_ttlScore);
+			_str = "== TOTAL SCORE " + string(_ttlScore) + " ==";
 			draw_text_transformed( (room_width/2), _top+(64*6), _str, 2, 2, 0);
 		}
 	
 		//points til 1up
 		if alarm[0] < 1 * room_speed 
 		{
-			_str = "POINTS TIL 1UP " + string(10000 - obj_logic_supermanager.p_getLives1up());
-			draw_text_transformed( (room_width/2), _top+(64*7), _str, 1, 1, 0);
+			_str = "Points til next 1up " + string(10000 - obj_logic_supermanager.p_getLives1up());
+			draw_text_transformed( (room_width/2), _top+(64*6.5), _str, 1, 1, 0);
 		}
 	
 		draw_set_colour(_c_TEXTYELLOW);
