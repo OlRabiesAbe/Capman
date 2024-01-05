@@ -65,7 +65,7 @@ Milan Varady
 		txt: {
 			// Used when drawing most of the things
 			normal: {
-				font:			fPixelBig,	// Text font
+				font:			font_alagard,	// Text font
 				scale:			auto,		// (A) Text scale
 				right_scale:	auto,		// (A) Right side text scale (slider, toggle...)
 				outline_on:		true		// (bool) Whether the text should be outlined or not
@@ -73,7 +73,7 @@ Milan Varady
 			
 			// Used when drawing smaller things (e.g. Input icons, information text at the bottom)
 			small: {
-				font:		fPixel,		// Text font
+				font:		font_alagard,		// Text font
 				scale:		auto,		// (A) Text scale
 				outline_on:	true		// (bool) Whether the text should be outlined or not
 			}

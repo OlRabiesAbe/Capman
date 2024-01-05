@@ -169,6 +169,7 @@
     {"id":{"name":"fPixelBig","path":"fonts/fPixelBig/fPixelBig.yy",},},
     {"id":{"name":"obj_light_green","path":"objects/obj_light_green/obj_light_green.yy",},},
     {"id":{"name":"snMenuPageShift","path":"sounds/snMenuPageShift/snMenuPageShift.yy",},},
+    {"id":{"name":"font_alagard","path":"fonts/font_alagard/font_alagard.yy",},},
     {"id":{"name":"path_enemy_door","path":"paths/path_enemy_door/path_enemy_door.yy",},},
     {"id":{"name":"pageFind","path":"scripts/pageFind/pageFind.yy",},},
     {"id":{"name":"sInpGamepadButtonX","path":"sprites/sInpGamepadButtonX/sInpGamepadButtonX.yy",},},
