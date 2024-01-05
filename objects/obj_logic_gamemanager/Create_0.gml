@@ -35,7 +35,7 @@ function p_setRound (_roundIndex)
 		_enemy.alarm[3] = _enemy._waittime;
 	}
 	
-	_POWERPILLTIME -= _roundIndex * room_speed; //p_powerPacman() just returns if powerpilltime is zero or negative
+	_POWERPILLTIME -= _roundIndex / 2 * room_speed; //p_powerPacman() just returns if powerpilltime is zero or negative
 	_ELROYTIME -= _roundIndex * 10; //it's fine if elroytime is negative
 	
 	//modifying the special pill according to round#	//I love modifying constants lmao
