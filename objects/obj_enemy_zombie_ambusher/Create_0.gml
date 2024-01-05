@@ -5,11 +5,6 @@
 _spriteArray = [spr_enemy_zombie_ambusher_left, spr_enemy_zombie_ambusher_up, 
 					 spr_enemy_zombie_ambusher_right, spr_enemy_zombie_ambusher_right, spr_enemy_zombie_lit];
 
-//randomize _WAITTIME
-_WAITTIME += irandom(6) * room_speed;
-//begin entering level in _WAITTIME frames
-alarm_set(3, _WAITTIME);
-
 
 ///=====FUNCTIONS
 ///================

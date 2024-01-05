@@ -5,32 +5,41 @@
 //==========================
 /*	Adjust game variables based on the round number.
  *	Called by obj_logic_supermanager in Room Start
+ *	This func probably due for some work. Ugly af.
  */
 function p_setRound (_roundIndex)
 {
+	//modifying enemy vars according to round#
 	if (_roundIndex <= 3) 
 	{
 		obj_enemy_zombie.p_moveSpeed += (0.2 * _roundIndex);
 		obj_enemy_zombie._CHASETIME += (2 * _roundIndex * room_speed);
 		obj_enemy_zombie._scattertime -= (0.5 * _roundIndex * room_speed);
 	}
-	else //if (_roundIndex > 3)
-	{
+	else 
+	{	//if (_roundIndex > 3)
 		obj_enemy_zombie.p_moveSpeed += (0.2 * 3);
 		obj_enemy_zombie._CHASETIME += (2 * 3 * room_speed);
 		obj_enemy_zombie._scattertime -= (0.5 * 3 * room_speed);
 		if (_roundIndex > 4)
-		{	
-			obj_enemy_zombie._scattertime = 1;//no more scattering after round 5
+		{	//no more scattering after round 5
+			obj_enemy_zombie._scattertime = -1;
 		}
+	}
+	
+	//setting each enemy's waittime, so they enter the maze staggered
+	for (var i = 0; i < instance_number(obj_enemy_zombie); i++;)
+	{
+		var _enemy = instance_find(obj_enemy_zombie, i);
+		_enemy._waittime = (i * 3 * room_speed) + 1;
+		_enemy.alarm[3] = _enemy._waittime;
 	}
 	
 	_POWERPILLTIME -= _roundIndex * room_speed; //p_powerPacman() just returns if powerpilltime is zero or negative
 	_ELROYTIME -= _roundIndex * 10; //it's fine if elroytime is negative
 	
-	//setting up the special pill
-	//I love modifying constants lmao
-	switch(_roundIndex % 3) {
+	//modifying the special pill according to round#	//I love modifying constants lmao
+	switch (_roundIndex % 3) {
 		case 0:
 			obj_pill_special.sprite_index = spr_pill_special_bread;
 			obj_pill_special._VALUE = 500;
@@ -119,7 +128,7 @@ function p_powerPacman ()
 */
 function p_depowerPacman () 
 {
-	if instance_exists(obj_player)
+	if (instance_exists(obj_player))
 		obj_player.p_isPowered = false;
 		
 	with (obj_enemy_zombie) 
