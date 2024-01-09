@@ -44,6 +44,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_scattertime","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"7 * room_speed","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_VALUE","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"300","varType":1,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"p_isAlive","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"True","varType":3,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_scattertarget","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":4,},
   ],
   "solid": false,
   "spriteId": {

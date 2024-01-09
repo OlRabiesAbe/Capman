@@ -13,8 +13,7 @@ if (p_chase && !p_scared)
 } 
 else 
 {											//dont target the player: scatter logic
-	var _randomTarget = instance_find(obj_enemy_target, irandom(instance_number(obj_enemy_target) - 1));
-	_targetCoords = [_randomTarget.x, _randomTarget.y];
+	_targetCoords = [_scattertarget.x, _scattertarget.y];
 }
 
 //generating pathing decision arrays

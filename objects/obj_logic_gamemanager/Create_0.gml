@@ -33,6 +33,7 @@ function p_setRound (_roundIndex)
 		var _enemy = instance_find(obj_enemy_zombie, i);
 		_enemy._waittime = (i * 4 * room_speed) + 1;
 		_enemy.alarm[3] = _enemy._waittime;
+		_enemy._scattertarget = instance_find(obj_enemy_target, irandom(instance_number(obj_enemy_target) - 1));
 	}
 	
 	_POWERPILLTIME -= _roundIndex / 2 * room_speed; //p_powerPacman() just returns if powerpilltime is zero or negative
