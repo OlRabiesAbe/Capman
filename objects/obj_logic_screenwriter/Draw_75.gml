@@ -1,5 +1,7 @@
 /// @description Draw all needed screen text
 
+draw_set_font(font_alagard);
+
 //score counter
 _drawScore();
 
