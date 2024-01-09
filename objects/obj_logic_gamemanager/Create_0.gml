@@ -31,7 +31,7 @@ function p_setRound (_roundIndex)
 	for (var i = 0; i < instance_number(obj_enemy_zombie); i++;)
 	{
 		var _enemy = instance_find(obj_enemy_zombie, i);
-		_enemy._waittime = (i * 3 * room_speed) + 1;
+		_enemy._waittime = (i * 4 * room_speed) + 1;
 		_enemy.alarm[3] = _enemy._waittime;
 	}
 	
@@ -56,7 +56,6 @@ function p_setRound (_roundIndex)
 			obj_pill_special._LIFESPAN = 8;
 			break;
 	}
-	//obj_logic_screenwriter.p_drawDebugText("round# is " + string(_roundIndex));
 }
 
 /*	Restart level after player death
