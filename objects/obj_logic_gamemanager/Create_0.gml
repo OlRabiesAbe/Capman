@@ -33,6 +33,7 @@ function p_setRound (_roundIndex)
 		var _enemy = instance_find(obj_enemy_zombie, i);
 		_enemy._waittime = (i * 4 * room_speed) + 1;
 		_enemy.alarm[3] = _enemy._waittime;
+		//set enemy scatter target to a random obj_enemy_target
 		_enemy._scattertarget = instance_find(obj_enemy_target, irandom(instance_number(obj_enemy_target) - 1));
 	}
 	
