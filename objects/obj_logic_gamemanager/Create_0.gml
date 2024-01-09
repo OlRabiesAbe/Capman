@@ -27,9 +27,9 @@ function p_setRound (_roundIndex)
 		}
 	}
 	
-	//setting each enemy's waittime, so they enter the maze staggered
 	for (var i = 0; i < instance_number(obj_enemy_zombie); i++;)
 	{
+		//setting each enemy's waittime, so they enter the maze staggered
 		var _enemy = instance_find(obj_enemy_zombie, i);
 		_enemy._waittime = (i * 4 * room_speed) + 1;
 		_enemy.alarm[3] = _enemy._waittime;
