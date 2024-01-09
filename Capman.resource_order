@@ -171,6 +171,7 @@
     {"name":"sInpGamepadButtonY","order":7,"path":"sprites/sInpGamepadButtonY/sInpGamepadButtonY.yy",},
     {"name":"convertList","order":4,"path":"scripts/convertList/convertList.yy",},
     {"name":"spr_capman_lit_0","order":4,"path":"sprites/spr_capman_lit_0/spr_capman_lit_0.yy",},
+    {"name":"font_basic","order":1,"path":"fonts/font_basic/font_basic.yy",},
     {"name":"spr_enemy_zombie_lit","order":1,"path":"sprites/spr_enemy_zombie_lit/spr_enemy_zombie_lit.yy",},
     {"name":"snd_spark01","order":10,"path":"sounds/snd_spark01/snd_spark01.yy",},
     {"name":"obj_enemy_zombie_ambusher","order":10,"path":"objects/obj_enemy_zombie_ambusher/obj_enemy_zombie_ambusher.yy",},

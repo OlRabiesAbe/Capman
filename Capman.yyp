@@ -217,6 +217,7 @@
     {"id":{"name":"sInpGamepadButtonY","path":"sprites/sInpGamepadButtonY/sInpGamepadButtonY.yy",},},
     {"id":{"name":"convertList","path":"scripts/convertList/convertList.yy",},},
     {"id":{"name":"spr_capman_lit_0","path":"sprites/spr_capman_lit_0/spr_capman_lit_0.yy",},},
+    {"id":{"name":"font_basic","path":"fonts/font_basic/font_basic.yy",},},
     {"id":{"name":"spr_enemy_zombie_lit","path":"sprites/spr_enemy_zombie_lit/spr_enemy_zombie_lit.yy",},},
     {"id":{"name":"snd_spark01","path":"sounds/snd_spark01/snd_spark01.yy",},},
     {"id":{"name":"obj_enemy_zombie_ambusher","path":"objects/obj_enemy_zombie_ambusher/obj_enemy_zombie_ambusher.yy",},},
