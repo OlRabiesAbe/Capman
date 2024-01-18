@@ -23,7 +23,7 @@ function p_setRound (_roundIndex)
 		obj_enemy_zombie._scattertime -= (0.5 * 3 * room_speed);
 		if (_roundIndex > 4)
 		{	//no more scattering after round 5
-			obj_enemy_zombie._scattertime = -1;
+			obj_enemy_zombie._scattertime = 1;
 		}
 	}
 	
