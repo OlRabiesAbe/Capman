@@ -117,6 +117,7 @@ function p_reset ()
 	var _playerStart = instance_find(obj_player_start, 0);
 	x = _playerStart.x;
 	y = _playerStart.y;
+	image_alpha = 1;
 }
 
 //_direction Getter
