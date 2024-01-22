@@ -140,6 +140,7 @@
     {"name":"obj_logic_supermanager","order":2,"path":"objects/obj_logic_supermanager/obj_logic_supermanager.yy",},
     {"name":"spr_ts_stone","order":2,"path":"sprites/spr_ts_stone/spr_ts_stone.yy",},
     {"name":"keyCheck","order":8,"path":"scripts/keyCheck/keyCheck.yy",},
+    {"name":"snd_enemy_elroy","order":11,"path":"sounds/snd_enemy_elroy/snd_enemy_elroy.yy",},
     {"name":"gpCheck","order":4,"path":"scripts/gpCheck/gpCheck.yy",},
     {"name":"gotoPage","order":2,"path":"scripts/gotoPage/gotoPage.yy",},
     {"name":"sInpGamepadStart","order":13,"path":"sprites/sInpGamepadStart/sInpGamepadStart.yy",},

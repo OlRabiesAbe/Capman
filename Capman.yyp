@@ -182,6 +182,7 @@
     {"id":{"name":"obj_logic_supermanager","path":"objects/obj_logic_supermanager/obj_logic_supermanager.yy",},},
     {"id":{"name":"spr_ts_stone","path":"sprites/spr_ts_stone/spr_ts_stone.yy",},},
     {"id":{"name":"keyCheck","path":"scripts/keyCheck/keyCheck.yy",},},
+    {"id":{"name":"snd_enemy_elroy","path":"sounds/snd_enemy_elroy/snd_enemy_elroy.yy",},},
     {"id":{"name":"gpCheck","path":"scripts/gpCheck/gpCheck.yy",},},
     {"id":{"name":"snButtonPress","path":"sounds/snButtonPress/snButtonPress.yy",},},
     {"id":{"name":"spr_enemy_zombie_avoider_left","path":"sprites/spr_enemy_zombie_avoider_left/spr_enemy_zombie_avoider_left.yy",},},
