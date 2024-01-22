@@ -33,6 +33,20 @@ function p_toggleEnemyFearSound(_toggle)
 	}
 }
 
+/*	Activate enemy elroy sound
+ *	TODO: Adjust pitch or volume based on enemy distance to player
+ */
+function p_activateEnemyElroySound()
+{
+	if obj_logic_gamemanager.p_getGameplayMode() 
+	{
+		if !audio_is_playing(snd_enemy_elroy)
+		{
+			audio_play_sound(snd_enemy_elroy, 7, true, global.settings.audio_sounds);
+		}
+	}
+}
+
 //Play a thud sound
 function p_playThud()
 {

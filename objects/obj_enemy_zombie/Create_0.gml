@@ -169,6 +169,7 @@ function p_becomeElroy()
 	{
 		p_moveSpeed *= 1.25
 		p_elroy = true;
+		obj_logic_soundplayer.p_activateEnemyElroySound();
 	}
 }
 
