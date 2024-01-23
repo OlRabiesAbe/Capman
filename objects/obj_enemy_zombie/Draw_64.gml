@@ -1,4 +1,5 @@
 /// @description If D is held down, draw debug text
+
 if keyboard_check(ord("D"))
 {
 	var _image_alpha_stored = image_alpha;
