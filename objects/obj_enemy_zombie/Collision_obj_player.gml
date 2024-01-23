@@ -22,5 +22,5 @@ if p_scared && p_isAlive
 	y = -16;
 	
 	//start Re-Alive sequence in 5 seconds
-	alarm[4] = 5 * room_speed;
+	alarm[4] = _waittime;
 }
