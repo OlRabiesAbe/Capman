@@ -14,6 +14,9 @@ function _initializeGameplayLogicStructs()
 	if !instance_exists(obj_logic_screenwriter)
 		instance_create_layer(0, 0, "Logic", obj_logic_screenwriter);
 		
+	// !instance_exists(obj_logic_scanlinedrawer)
+	//	instance_create_layer(0, 0, "Logic", obj_logic_scanlinedrawer);
+		
 	if !instance_exists(obj_logic_soundplayer)
 		instance_create_layer(0, 0, "Logic", obj_logic_soundplayer);
 		
