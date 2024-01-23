@@ -1,4 +1,4 @@
-/// @description Scanline generation
+/// @description UNUSED Scanline generation
 
 //if (!surface_exists(_crtSurface))
 if (_crtSurface == -1)

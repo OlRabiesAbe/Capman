@@ -1,4 +1,4 @@
-/// @description 
+/// @description UNUSED
 
 //disable application drawing
 application_surface_draw_enable(false);
