@@ -27,12 +27,14 @@ function p_setRound (_roundIndex)
 		}
 	}
 	
+	//assigning stuff that will be unique for each enemy instance.
 	for (var i = 0; i < instance_number(obj_enemy_zombie); i++;)
 	{
-		//setting each enemy's waittime, so they enter the maze staggered
+		//assigning a waittime to each enemy. waittime is how long they have to wait til they can enter the maze
 		var _enemy = instance_find(obj_enemy_zombie, i);
 		_enemy._waittime = (i * 4 * room_speed) + 1;
 		_enemy.alarm[3] = _enemy._waittime;
+		
 		//set enemy scatter target to a random obj_enemy_target
 		_enemy._scattertarget = instance_find(obj_enemy_target, irandom(instance_number(obj_enemy_target) - 1));
 	}
@@ -89,13 +91,16 @@ function p_restartLevel ()
 		{
 			alarm[i] = -1;
 		}
+		
 		//go invisible
 		image_alpha = 0;
+		
 		//tele to OOB waiting room
 		x = -16; 
 		y = -16;
-		//start Re-Alive sequence in 5 seconds
-		alarm[4] = irandom(6) * room_speed 
+		
+		//start Re-Alive sequence in waittime + 1 second
+		alarm[4] = _waittime + room_speed;
 	}
 }
 
