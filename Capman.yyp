@@ -144,6 +144,7 @@
     {"id":{"name":"spr_textbox_win","path":"sprites/spr_textbox_win/spr_textbox_win.yy",},},
     {"id":{"name":"spr_enemy_zombie_ambusher_up","path":"sprites/spr_enemy_zombie_ambusher_up/spr_enemy_zombie_ambusher_up.yy",},},
     {"id":{"name":"loadStringFromFile","path":"scripts/loadStringFromFile/loadStringFromFile.yy",},},
+    {"id":{"name":"font_neocastel","path":"fonts/font_neocastel/font_neocastel.yy",},},
     {"id":{"name":"shd_crt","path":"shaders/shd_crt/shd_crt.yy",},},
     {"id":{"name":"saveStringToFile","path":"scripts/saveStringToFile/saveStringToFile.yy",},},
     {"id":{"name":"obj_logic_gamemanager","path":"objects/obj_logic_gamemanager/obj_logic_gamemanager.yy",},},

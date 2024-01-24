@@ -112,6 +112,7 @@
     {"name":"pauseGame","order":5,"path":"scripts/pauseGame/pauseGame.yy",},
     {"name":"spr_enemy_zombie_ambusher_up","order":2,"path":"sprites/spr_enemy_zombie_ambusher_up/spr_enemy_zombie_ambusher_up.yy",},
     {"name":"loadStringFromFile","order":1,"path":"scripts/loadStringFromFile/loadStringFromFile.yy",},
+    {"name":"font_neocastel","order":2,"path":"fonts/font_neocastel/font_neocastel.yy",},
     {"name":"saveStringToFile","order":2,"path":"scripts/saveStringToFile/saveStringToFile.yy",},
     {"name":"spr_bone01","order":1,"path":"sprites/spr_bone01/spr_bone01.yy",},
     {"name":"snPause","order":5,"path":"sounds/snPause/snPause.yy",},
