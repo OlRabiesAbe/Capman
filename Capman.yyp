@@ -153,6 +153,7 @@
     {"id":{"name":"spr_wall_small_collision","path":"sprites/spr_wall_small_collision/spr_wall_small_collision.yy",},},
     {"id":{"name":"loadFromJson","path":"scripts/loadFromJson/loadFromJson.yy",},},
     {"id":{"name":"Shift","path":"scripts/Shift/Shift.yy",},},
+    {"id":{"name":"spr_scanlines_anim","path":"sprites/spr_scanlines_anim/spr_scanlines_anim.yy",},},
     {"id":{"name":"spr_enemy_target","path":"sprites/spr_enemy_target/spr_enemy_target.yy",},},
     {"id":{"name":"obj_enemy_zombie_avoider","path":"objects/obj_enemy_zombie_avoider/obj_enemy_zombie_avoider.yy",},},
     {"id":{"name":"spr_enemy_zombie_avoider_right","path":"sprites/spr_enemy_zombie_avoider_right/spr_enemy_zombie_avoider_right.yy",},},

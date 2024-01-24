@@ -118,6 +118,7 @@
     {"name":"snMenuMove","order":2,"path":"sounds/snMenuMove/snMenuMove.yy",},
     {"name":"spr_wall_small_collision","order":4,"path":"sprites/spr_wall_small_collision/spr_wall_small_collision.yy",},
     {"name":"Shift","order":5,"path":"scripts/Shift/Shift.yy",},
+    {"name":"spr_scanlines_anim","order":4,"path":"sprites/spr_scanlines_anim/spr_scanlines_anim.yy",},
     {"name":"spr_enemy_target","order":5,"path":"sprites/spr_enemy_target/spr_enemy_target.yy",},
     {"name":"obj_enemy_zombie_avoider","order":12,"path":"objects/obj_enemy_zombie_avoider/obj_enemy_zombie_avoider.yy",},
     {"name":"spr_enemy_zombie_avoider_right","order":1,"path":"sprites/spr_enemy_zombie_avoider_right/spr_enemy_zombie_avoider_right.yy",},
