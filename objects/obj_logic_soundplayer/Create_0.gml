@@ -36,7 +36,7 @@ function p_toggleEnemyFearSound(_toggle)
 /*	Activate enemy elroy sound
  *	TODO: Adjust pitch or volume based on enemy distance to player
  */
-function p_activateEnemyElroySound()
+function p_activateEnemyElroySound(_enemy)
 {
 	if obj_logic_gamemanager.p_getGameplayMode() 
 	{
@@ -45,6 +45,10 @@ function p_activateEnemyElroySound()
 			audio_play_sound(snd_enemy_elroy, 7, true, global.settings.audio_sounds);
 		}
 	}
+	//save enemy to var
+	_elroyedEnemyPnt = _enemy;
+	//begin updating snd_enemy_elroy
+	alarm[0] = 1;
 }
 
 //Play a thud sound
