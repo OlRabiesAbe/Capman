@@ -175,11 +175,16 @@ function p_toggleScared(_bool)
 	}
 }
 
+/*	Become Speed McElroy.
+ *	Increases movepseed and becomes very aggresive.
+ */
 function p_becomeElroy() 
 {
 	if !p_elroy 
 	{
-		p_moveSpeed *= 1.25
+		p_moveSpeed *= 1.25;
+		_scattertime = -1; //enable perma chase
+		p_chase = true;
 		p_elroy = true;
 		obj_logic_soundplayer.p_activateEnemyElroySound(self);
 	}

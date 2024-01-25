@@ -153,25 +153,43 @@ function p_toggleScared(_bool)
 	{
 		p_moveSpeed *= 2;
 		p_scared = false;
+		
+		if (p_elroy) //reactive the elroy sound on unfeared if you're elroy
+		{
+			obj_logic_soundplayer.p_activateEnemyElroySound(self);
+		}
+		
 		// below line intended to help with issue#1
 		p_snapToGrid();
 	} 
+	
 	else if (_bool && !p_scared) //become scared
 	{
 		p_moveSpeed /= 2;
 		p_scared = true;
+		
+		if (p_elroy) //deactive elroy sound on feared if you're the elroy
+		{
+			obj_logic_soundplayer.p_deactivateEnemyElroySound();
+		}
 	}
 }
 
+/*	Become Speed McElroy.
+ *	Increases movepseed and becomes very aggresive.
+ */
 function p_becomeElroy() 
 {
 	if !p_elroy 
 	{
-		p_moveSpeed *= 1.25
+		p_moveSpeed *= 1.25;
+		_scattertime = -1; //enable perma chase
+		p_chase = true;
 		p_elroy = true;
-		obj_logic_soundplayer.p_activateEnemyElroySound();
+		obj_logic_soundplayer.p_activateEnemyElroySound(self);
 	}
 }
+
 
 /*	parsing movearray-index to directional-string
  *	@param: int between 0 and 3 inclusive
