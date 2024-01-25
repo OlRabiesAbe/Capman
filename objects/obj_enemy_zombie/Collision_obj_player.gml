@@ -5,6 +5,10 @@ if p_scared && p_isAlive
 	p_isAlive = false;
 	
 	obj_logic_soundplayer.p_playThud(2);
+	if (p_elroy) //deactive elroy sound on death if you're the elroy
+	{
+		obj_logic_soundplayer.p_deactivateEnemyElroySound()
+	}
 	
 	obj_logic_gamemanager.p_incrementRoundScore(_VALUE);
 	

@@ -34,7 +34,7 @@ function p_toggleEnemyFearSound(_toggle)
 }
 
 /*	Activate enemy elroy sound
- *	TODO: Adjust pitch or volume based on enemy distance to player
+ *	Adjusts pitch & volume based on enemy distance to player via alarm[0]
  */
 function p_activateEnemyElroySound(_enemy)
 {
@@ -49,6 +49,12 @@ function p_activateEnemyElroySound(_enemy)
 	_elroyedEnemyPnt = _enemy;
 	//begin updating snd_enemy_elroy
 	alarm[0] = 1;
+}
+//Deactivate elroy sound, for enemy fear / death / player death
+function p_deactivateEnemyElroySound()
+{
+	audio_stop_sound(snd_enemy_elroy);
+	alarm[0] = -1;
 }
 
 //Play a thud sound

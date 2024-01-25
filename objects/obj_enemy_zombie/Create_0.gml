@@ -153,13 +153,25 @@ function p_toggleScared(_bool)
 	{
 		p_moveSpeed *= 2;
 		p_scared = false;
+		
+		if (p_elroy) //reactive the elroy sound on unfeared if you're elroy
+		{
+			obj_logic_soundplayer.p_activateEnemyElroySound(self);
+		}
+		
 		// below line intended to help with issue#1
 		p_snapToGrid();
 	} 
+	
 	else if (_bool && !p_scared) //become scared
 	{
 		p_moveSpeed /= 2;
 		p_scared = true;
+		
+		if (p_elroy) //deactive elroy sound on feared if you're the elroy
+		{
+			obj_logic_soundplayer.p_deactivateEnemyElroySound();
+		}
 	}
 }
 

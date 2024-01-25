@@ -10,3 +10,7 @@ alarm_set(5, room_speed);
 p_toggleScared(false);
 
 obj_logic_soundplayer.p_playEnemyFootsteps();
+if (p_elroy) //reactive the elroy sound on rebirth if you're elroy
+{
+	obj_logic_soundplayer.p_activateEnemyElroySound(self);
+}
