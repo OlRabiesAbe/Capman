@@ -10,21 +10,28 @@
 function p_setRound (_roundIndex)
 {
 	//modifying enemy vars according to round#
-	if (_roundIndex <= 3) 
+	if (_roundIndex <= 4) 
 	{
 		obj_enemy_zombie.p_moveSpeed += (0.2 * _roundIndex);
 		obj_enemy_zombie._CHASETIME += (2 * _roundIndex * room_speed);
 		obj_enemy_zombie._scattertime -= (0.5 * _roundIndex * room_speed);
 	}
-	else 
-	{	//if (_roundIndex > 3)
-		obj_enemy_zombie.p_moveSpeed += (0.2 * 3);
+	else if (_roundIndex > 4)
+	{
+		obj_enemy_zombie.p_moveSpeed += (0.1 * _roundIndex);
 		obj_enemy_zombie._CHASETIME += (2 * 3 * room_speed);
-		obj_enemy_zombie._scattertime -= (0.5 * 3 * room_speed);
-		if (_roundIndex > 4)
-		{	//no more scattering after round 5
-			obj_enemy_zombie._scattertime = 1;
-		}
+		obj_enemy_zombie._scattertime -= (_roundIndex * room_speed);
+	}
+	
+	//high moveSpeeds breaks shit
+	if (obj_enemy_zombie.p_moveSpeed > 3.5)
+	{
+		obj_enemy_zombie.p_moveSpeed = 3.5;
+	}
+	//zero or negative scattering breaks shit
+	if (obj_enemy_zombie._scattertime <= 0)
+	{	
+		obj_enemy_zombie._scattertime = 1;
 	}
 	
 	//assigning stuff that will be unique for each enemy instance.
