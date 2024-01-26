@@ -179,7 +179,6 @@
     {"name":"spr_enemy_zombie_lit","order":1,"path":"sprites/spr_enemy_zombie_lit/spr_enemy_zombie_lit.yy",},
     {"name":"snd_spark01","order":10,"path":"sounds/snd_spark01/snd_spark01.yy",},
     {"name":"obj_enemy_zombie_ambusher","order":10,"path":"objects/obj_enemy_zombie_ambusher/obj_enemy_zombie_ambusher.yy",},
-    {"name":"spr_scanlines","order":3,"path":"sprites/spr_scanlines/spr_scanlines.yy",},
     {"name":"obj_enemy_target","order":1,"path":"objects/obj_enemy_target/obj_enemy_target.yy",},
     {"name":"getlen","order":8,"path":"scripts/getlen/getlen.yy",},
     {"name":"snd_thud","order":5,"path":"sounds/snd_thud/snd_thud.yy",},
