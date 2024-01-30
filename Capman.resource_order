@@ -138,6 +138,7 @@
     {"name":"sInpGamepadButtonX","order":6,"path":"sprites/sInpGamepadButtonX/sInpGamepadButtonX.yy",},
     {"name":"MenuElement","order":3,"path":"scripts/MenuElement/MenuElement.yy",},
     {"name":"room_forest_00","order":3,"path":"rooms/room_forest_00/room_forest_00.yy",},
+    {"name":"spr_titlecard","order":5,"path":"sprites/spr_titlecard/spr_titlecard.yy",},
     {"name":"snd_shock","order":8,"path":"sounds/snd_shock/snd_shock.yy",},
     {"name":"snd_enemy_fear","order":7,"path":"sounds/snd_enemy_fear/snd_enemy_fear.yy",},
     {"name":"obj_logic_supermanager","order":2,"path":"objects/obj_logic_supermanager/obj_logic_supermanager.yy",},

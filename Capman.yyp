@@ -180,6 +180,7 @@
     {"id":{"name":"MenuElement","path":"scripts/MenuElement/MenuElement.yy",},},
     {"id":{"name":"spr_enemy_zombie_ambusher_left","path":"sprites/spr_enemy_zombie_ambusher_left/spr_enemy_zombie_ambusher_left.yy",},},
     {"id":{"name":"room_forest_00","path":"rooms/room_forest_00/room_forest_00.yy",},},
+    {"id":{"name":"spr_titlecard","path":"sprites/spr_titlecard/spr_titlecard.yy",},},
     {"id":{"name":"snd_shock","path":"sounds/snd_shock/snd_shock.yy",},},
     {"id":{"name":"snd_enemy_fear","path":"sounds/snd_enemy_fear/snd_enemy_fear.yy",},},
     {"id":{"name":"sInpArrowKey","path":"sprites/sInpArrowKey/sInpArrowKey.yy",},},

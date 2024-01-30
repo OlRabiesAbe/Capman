@@ -105,7 +105,7 @@ Milan Varady
 			// The menu's position
 			menu_pos: {
 				x:	0,		// Whole menu's x offset from the middle
-				y:	auto	// (A) Whole menu's y position (if set to auto menu will be in the middle)
+				y:	400	// (A) Whole menu's y position (if set to auto menu will be in the middle)
 			}
 		}
 	};
