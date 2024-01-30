@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_titlecard",
-  "bbox_bottom": 191,
+  "bbox_bottom": 167,
   "bbox_left": 8,
   "bbox_right": 489,
-  "bbox_top": 31,
+  "bbox_top": 78,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b2e73589-1096-4cc6-b935-fc2bf8ad50cd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fe7efbe1-f4bd-44fa-ac47-491ea587105b",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 300,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9d988540-e70b-4ae1-ace1-cc9157419a59","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c91ef37c-374b-48af-b0b1-e3e84686d8ec","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b2e73589-1096-4cc6-b935-fc2bf8ad50cd","path":"sprites/spr_titlecard/spr_titlecard.yy",},},},"Disabled":false,"id":"c58140ba-3535-452c-9207-55c0c0e484cb","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fe7efbe1-f4bd-44fa-ac47-491ea587105b","path":"sprites/spr_titlecard/spr_titlecard.yy",},},},"Disabled":false,"id":"47ff548c-0f00-40a7-a661-68afc912aa3e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
