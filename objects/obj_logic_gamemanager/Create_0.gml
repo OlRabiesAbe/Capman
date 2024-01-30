@@ -174,7 +174,7 @@ function p_getTimerSeconds()
 {
 	return _ROOMTIMER - ceil(_clock / 60);
 }
-//_clock Getter, raw seconds
+//_clock Getter, game time in seconds
 function p_getGameTimeSeconds() 
 {
 	return ceil(_clock / 60);
