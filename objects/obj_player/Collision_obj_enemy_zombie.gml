@@ -1,6 +1,6 @@
 /// @description touched by enemy logic
 
-if (p_isAlive && !p_isPowered)
+if (p_isAlive && !other.p_scared)
 {
 	// the ghost needs to be almost right on top of the player to kill it,
 	// so we have this extra check to make sure of that.
@@ -11,4 +11,4 @@ if (p_isAlive && !p_isPowered)
 		//go invisible, REPLACE WITH ANIM
 		image_alpha = 0;
 	}
-} 
+}
