@@ -109,10 +109,11 @@ function _moveInDirection (_dir)
 	}
 	
 	if (p_scared) _applyScaredVFX();
+	if (p_elroy) _applyElroyVFX();
 }
 
 /*	Runs whenever _moveInDirection() is called && p_scared.
- *	needa change the sprite to the scared one if pacman is powerpilled.
+ *	Change the sprite to the scared one if pacman is powerpilled.
  *	obj_logic_gamemanager.alarm[0] handles deactivating pacman's power,
  *	so we check its value here to figure out what sprite we should use.
  *	@uses: obj_logic_gamemanager.alarm[0]

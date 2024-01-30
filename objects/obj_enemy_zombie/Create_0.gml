@@ -109,10 +109,11 @@ function _moveInDirection (_dir)
 	}
 	
 	if (p_scared) _applyScaredVFX();
+	else if (p_elroy) _applyElroyVFX();
 }
 
 /*	Runs whenever _moveInDirection() is called && p_scared.
- *	needa change the sprite to the scared one if pacman is powerpilled.
+ *	Change the sprite to the scared one if pacman is powerpilled.
  *	obj_logic_gamemanager.alarm[0] handles deactivating pacman's power,
  *	so we check its value here to figure out what sprite we should use.
  *	@uses: obj_logic_gamemanager.alarm[0]
@@ -138,6 +139,16 @@ function _applyScaredVFX()
 		if (obj_logic_gamemanager.alarm[0] % room_speed == room_speed - 1)
 			obj_logic_particlemanager.p_genBoneParticle(x, y);
 	}
+}
+
+/*	Runs whenever _moveInDirection() is called && !p_scared && p_elroy.
+ *	Calls particlemanager to generate smoke particles on this xy.
+ *	Does so every other step by checking gamemanager's clock.
+ */
+function _applyElroyVFX()
+{
+	if (obj_logic_gamemanager.p_getGameTimeSteps() % 2 == 0)
+		obj_logic_particlemanager.p_genElroySmokeParticle(x, y);
 }
 
 /*	Toggle this inst's scared behavior
