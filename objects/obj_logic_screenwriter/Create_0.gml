@@ -50,7 +50,7 @@ function _drawLives()
 	else 
 	{
 		for (var i = 0; i < obj_logic_supermanager.p_getLives(); i++)
-			_str += " O";
+			_str += " |";
 	}
 	
 	draw_text_transformed(16, room_height-40, _str, 1/10, 1/10, 0);
