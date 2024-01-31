@@ -29,7 +29,7 @@ part_type_speed(_particleSmoke, 0.1, 0.5, -0.5, 0);
 part_type_direction(_particleSmoke, 70, 110, 0, 1);
 part_type_gravity(_particleSmoke, 0.5, 90);
 part_type_colour1(_particleSmoke, #212528);
-part_type_life(_particleSmoke, room_speed, room_speed*1.5);
+part_type_life(_particleSmoke, room_speed/2, room_speed/1.5);
 
 
 ///=====FUNCTIONS
