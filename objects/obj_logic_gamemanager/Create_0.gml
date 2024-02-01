@@ -120,17 +120,13 @@ function p_powerPacman ()
 {
 	if (_POWERPILLTIME > 0) //round might progress to a point powerpilltime is negative
 	{
-		/*if pacman is already powered but ate a second power pill,
-			we dont need to do any of this shit. just restart the timer.*/
-		if (!obj_player.p_isPowered) 
-		{
+		obj_logic_soundplayer.p_toggleEnemyFearSound(true);
+		
+		if (instance_exists(obj_player))
 			obj_player.p_isPowered = true;
 	
-			with (obj_enemy_zombie) 
-				p_toggleScared(true);
-			
-			obj_logic_soundplayer.p_toggleEnemyFearSound(true)
-		}
+		with (obj_enemy_zombie) 
+			p_toggleScared(true);
 	
 		alarm[0] = _POWERPILLTIME;
 	}
@@ -141,13 +137,13 @@ function p_powerPacman ()
 */
 function p_depowerPacman () 
 {
+	obj_logic_soundplayer.p_toggleEnemyFearSound(false)
+	
 	if (instance_exists(obj_player))
 		obj_player.p_isPowered = false;
 		
 	with (obj_enemy_zombie) 
 		p_toggleScared(false);
-		
-	obj_logic_soundplayer.p_toggleEnemyFearSound(false)
 	
 	alarm[0] = -1;
 }
