@@ -20,15 +20,20 @@ function p_toggleEnemyFearSound(_toggle)
 {
 	if obj_logic_gamemanager.p_getGameplayMode() 
 	{
-		if _toggle
+		if _toggle //turn on fear sound
 		{
-			audio_play_sound(snd_enemy_fear, 8, true, global.settings.audio_sounds);
+			if !audio_is_playing(snd_enemy_fear)
+			{
+				audio_play_sound(snd_enemy_fear, 8, true, global.settings.audio_sounds);
+			}
+			 //pausing walk04 (rather than stopping it) prevents p_playEnemyFootsteps() from starting it again.
 			audio_pause_sound(snd_enemy_walk04);
 		} 
-		else 
+		else //turn off fear sound
 		{
 			audio_stop_sound(snd_enemy_fear);
-			audio_resume_sound(snd_enemy_walk04);
+			audio_stop_sound(snd_enemy_walk04); //figure i should just start it up from scratch. might prevent future probs
+			p_playEnemyFootsteps();
 		}
 	}
 }
