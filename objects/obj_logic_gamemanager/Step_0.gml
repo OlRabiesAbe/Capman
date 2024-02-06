@@ -20,7 +20,7 @@ if ( (!instance_exists(obj_pill) && _gameplayMode)
 	obj_logic_supermanager.p_updateStatsOnRoundEnd();
 } 
 //player pressed space on the score screen, so call alarm[1]
-//to set gameIsWon true, so we advance to next round/level
+//to set gameIsWon to true, so supermanager knows to advance to next round/level
 else if (!_gameplayMode && keyboard_check(vk_space)) 
 {					
 	if (alarm[1] == -1) 
