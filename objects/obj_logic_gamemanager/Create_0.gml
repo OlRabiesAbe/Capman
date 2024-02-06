@@ -1,6 +1,5 @@
 /// @description Functions
 
-
 //=====ROOM MANAGEMENT=====
 //==========================
 /*	Adjust game variables based on the round number.
