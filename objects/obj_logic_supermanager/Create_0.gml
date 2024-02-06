@@ -1,5 +1,9 @@
 /// @description Functions
 
+
+
+
+
 /*	These two functions add logic structs to a room to set
  *	it up for gameplay or a cutscene.
  */
@@ -28,7 +32,7 @@ function _initializeGameplayLogicStructs()
 
 /*	Advance to the next level or next round depending on _roundIndex
  */
-function p_advanceLevel() 
+function _advanceLevel() 
 {
 	 //goto next room if we hit the _ROUNDMAX
 	 //the first if handles advancing out of a room. kinda Not used in current build.
