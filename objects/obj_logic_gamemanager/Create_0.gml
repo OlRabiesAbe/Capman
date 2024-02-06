@@ -18,7 +18,7 @@ function p_setRound (_roundIndex)
 	}
 	else if (_roundIndex > 4)
 	{
-		obj_enemy_zombie.p_moveSpeed += (0.1 * _roundIndex);
+		obj_enemy_zombie.p_moveSpeed += (0.15 * _roundIndex);
 		obj_enemy_zombie._CHASETIME += (2 * 3 * room_speed);
 		obj_enemy_zombie._scattertime -= (_roundIndex * room_speed);
 	}
