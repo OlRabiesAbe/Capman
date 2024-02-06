@@ -9,5 +9,5 @@ if _lives1upCounter >= 10000
 
 if obj_logic_gamemanager.p_getGameWon()
 {
-	p_advanceLevel();
+	_advanceLevel();
 }
