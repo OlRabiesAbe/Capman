@@ -153,6 +153,7 @@ function p_depowerPacman ()
 
 //=====VAR GETTERS & SETTERS=====
 //==========================
+{
 //_score Getter
 function p_getRoundScore() 
 {
@@ -194,4 +195,5 @@ function p_getGameOver()
 function p_getGameplayMode() 
 {
 	return _gameplayMode;
+}
 }

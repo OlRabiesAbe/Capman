@@ -127,6 +127,7 @@ function p_updateStatsOnRoundEnd()
 
 //=====VAR GETTERS & SETTERS=====
 //==========================
+{
 //_totalScore getter
 function p_getTotalScore()
 {
@@ -168,4 +169,5 @@ function p_decrementLives()
 function p_getLives1up() 
 {
 	return _lives1upCounter;
+}
 }
