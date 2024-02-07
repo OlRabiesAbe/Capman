@@ -11,10 +11,8 @@
 _levelLoadAr = [0x00_0, 0x00_1, 0x00_2, 0x00_3, 0x00_4, 0x00_5, 0x00_6, 0x00_8, 0x00_A, 0x00_C, -100];
 
 
-/*	These two functions add logic structs to a room to set
- *	it up for gameplay or a cutscene.
- */
- /*	Add to room and initialize various objects neccessary for gameplay
+
+/*	Add to room and initialize various objects neccessary for gameplay
   */
 function _initializeGameplayLogicStructs() 
 {
@@ -24,9 +22,6 @@ function _initializeGameplayLogicStructs()
 	
 	if !instance_exists(obj_logic_screenwriter)
 		instance_create_layer(0, 0, "Logic", obj_logic_screenwriter);
-		
-	// !instance_exists(obj_logic_scanlinedrawer)
-	//	instance_create_layer(0, 0, "Logic", obj_logic_scanlinedrawer);
 		
 	if !instance_exists(obj_logic_soundplayer)
 		instance_create_layer(0, 0, "Logic", obj_logic_soundplayer);
