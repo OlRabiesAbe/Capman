@@ -11,7 +11,6 @@
 _levelLoadAr = [0x00_0, 0x00_1, 0x00_2, 0x00_3, 0x00_4, 0x00_5, 0x00_6, 0x00_8, 0x00_A, 0x00_C, -100];
 
 
-
 /*	Add to room and initialize various objects neccessary for gameplay
   */
 function _initializeGameplayLogicStructs() 

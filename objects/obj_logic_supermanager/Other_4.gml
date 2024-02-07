@@ -5,3 +5,6 @@ _roundScore = 0;
 
 _initializeGameplayLogicStructs();
 
+
+instance_deactivate_layer("Instances_1");
+layer_set_visible("Tiles_1", false);
