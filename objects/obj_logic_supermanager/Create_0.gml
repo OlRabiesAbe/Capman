@@ -2,13 +2,13 @@
 
 /*	The _levelLoadAr is a list of hex numbers that represent the level progression in the game
  *	Format: 0xAB_C; A is Level #,
- *	B is a modifier for that Level (like new enemies or small layout changes,
+ *	B is a modifier for that Level (like new enemies or small layout changes),
  *	and C is Round #.
  *	For instance 0x11_3 is round 3 of level 1, with modifier 1 applied to the level.
  *	Rounds can only go up to 15 due to limitations of hex and this numbering system.
  *	Negative decimal values indicate cutscenes. For instance -100 is the end-of-game cutscene.
  */
-_levelLoadAr = [0x01_0, 0x01_1, 0x00_2, 0x00_3, 0x00_4, 0x00_5, 0x00_6, 0x00_8, 0x00_A, 0x00_C, -100];
+_levelLoadAr = [0x01_0, 0x01_1, 0x00_2, 0x00_3, 0x00_4, 0x01_5, 0x01_8, 0x02_2, 0x02_4, 0x00_C, -100];
 
 
 /*	Add to room and initialize various objects neccessary for gameplay
