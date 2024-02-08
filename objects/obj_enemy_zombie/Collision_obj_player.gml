@@ -5,9 +5,16 @@ if p_scared && p_isAlive
 	p_isAlive = false;
 	
 	obj_logic_soundplayer.p_playThud(2);
+	
 	if (p_elroy) //deactive elroy sound on death if you're the elroy
 	{
+		p_moveSpeed /= 1.25;
+		_scattertime = 7 * room_speed; //enable perma chase
+		p_chase = false;
+		p_elroy = false;
 		obj_logic_soundplayer.p_deactivateEnemyElroySound()
+		
+		obj_logic_gamemanager.p_restartElroyTimer();
 	}
 	
 	obj_logic_gamemanager.p_incrementRoundScore(_VALUE);

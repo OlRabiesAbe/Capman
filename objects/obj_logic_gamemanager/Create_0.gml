@@ -45,8 +45,10 @@ function p_setRound (_roundIndex)
 		_enemy._scattertarget = instance_find(obj_enemy_target, irandom(instance_number(obj_enemy_target) - 1));
 	}
 	
-	_POWERPILLTIME -= _roundIndex / 2 * room_speed; //p_powerPacman() just returns if powerpilltime is zero or negative
-	_ELROYTIME -= _roundIndex * 10; //it's fine if elroytime is negative
+	_powerpillTime -= _roundIndex / 2 * room_speed; //p_powerPacman() just returns if powerpilltime is zero or negative,
+													//it's fine if powerpilltime is negative.
+	_elroyTime -= _roundIndex * 10 * room_speed; //it's fine if elroytime is negative.
+													//elroytime is zero by roundindex five.
 	
 	//modifying the special pill according to round#	//I love modifying constants lmao
 	switch (_roundIndex % 3) {
@@ -117,7 +119,7 @@ function p_restartLevel ()
 */
 function p_powerPacman () 
 {
-	if (_POWERPILLTIME > 0) //round might progress to a point powerpilltime is negative
+	if (_powerpillTime > 0) //round might progress to a point powerpilltime is negative
 	{
 		obj_logic_soundplayer.p_toggleEnemyFearSound(true);
 		
@@ -127,7 +129,7 @@ function p_powerPacman ()
 		with (obj_enemy_zombie) 
 			p_toggleScared(true);
 	
-		alarm[0] = _POWERPILLTIME;
+		alarm[0] = _powerpillTime;
 	}
 }
 
@@ -147,6 +149,14 @@ function p_depowerPacman ()
 	alarm[0] = -1;
 }
 
+/*	In the event that an elroyed enemy gets eaten,
+ *	 we need to restart the elroy timer. We do this by
+ *	simply increasing _elroyTime.
+ */
+function p_restartElroyTimer()
+{
+	_elroyTime = _clock + (10 * room_speed);
+}
 
 
 
@@ -165,7 +175,7 @@ function p_incrementRoundScore(_value)
 	obj_logic_supermanager.p_incrementRoundScore(_value);
 }
 
-//_clock Getter, round timer in seconds
+//_clock Getter, round timer(countdown) in seconds
 function p_getTimerSeconds() 
 {
 	return _ROOMTIMER - ceil(_clock / 60);
@@ -175,7 +185,7 @@ function p_getGameTimeSeconds()
 {
 	return ceil(_clock / 60);
 }
-//_clock Getter, raw 
+//_clock Getter, game time in steps
 function p_getGameTimeSteps() 
 {
 	return _clock;

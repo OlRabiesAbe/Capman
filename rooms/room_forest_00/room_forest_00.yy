@@ -833,8 +833,8 @@
 0,48,49,0,0,48,49,-177,-2147483648,5,0,14,15,14,15,-39,-2147483648,5,0,30,31,30,31,-42,-2147483648,2,14,15,-42,-2147483648,2,30,31,-180,-2147483648,1,45,-4,46,5,47,128,129,130,
 131,-34,-2147483648,1,125,-4,126,5,127,144,145,146,147,-34,-2147483648,2,32,33,-42,-2147483648,2,48,49,-232,-2147483648,4,128,129,130,131,-40,-2147483648,4,144,145,146,147,-324,-2147483648,2,32,33,-42,-2147483648,
 2,48,49,-42,-2147483648,2,43,44,-42,-2147483648,2,75,76,-42,-2147483648,6,32,33,-2147483648,-2147483648,32,33,-6,-2147483648,2,32,33,-30,-2147483648,8,48,49,-2147483648,-2147483648,48,49,0,0,-4,-2147483648,2,48,49,-29,
--2147483648,-6,78,7,79,14,15,14,15,-2147483648,78,-3,46,-28,-2147483648,-7,94,5,30,31,30,31,77,-5,94,-27,-2147483648,-8,94,-3,-2147483648,1,93,-5,94,-150,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"ts_stone","path":"tilesets/ts_stone/ts_stone.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-          ],"properties":[],"userdefinedDepth":false,"visible":true,},
+-2147483648,-6,78,7,79,14,15,14,15,-2147483648,78,-3,46,-28,-2147483648,-7,94,5,30,31,30,31,77,-5,94,-27,-2147483648,-8,94,-3,-2147483648,1,93,-5,94,-150,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"ts_stone","path":"tilesets/ts_stone/ts_stone.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
+          ],"properties":[],"userdefinedDepth":false,"visible":false,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"PlayerLevel","depth":1600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
         {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"HUD_Tiles","depth":1700,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":48,"SerialiseWidth":44,"TileCompressedData":[

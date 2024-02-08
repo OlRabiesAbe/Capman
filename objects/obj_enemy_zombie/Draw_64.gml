@@ -1,4 +1,4 @@
-/// @description If D is held down, draw debug text
+/// @description DEBUG If D is held down, draw debug text
 
 if keyboard_check(ord("D"))
 {

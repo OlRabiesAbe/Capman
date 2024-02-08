@@ -4,12 +4,14 @@
 if (_gameplayMode) 
 	_clock++;
 
-// Speeds up chaser zombies after clock hits _ELROYTIME
-if (p_getGameTimeSeconds() > _ELROYTIME) 
+
+// Elroys chaser zombies after clock hits _elroyTime
+if (_clock > _elroyTime) 
 {
 	with (obj_enemy_zombie_chaser)
 		p_becomeElroy();
 }
+
 
 //round is won, so set gameplayMode to false
 if ( (!instance_exists(obj_pill) && _gameplayMode) 
@@ -26,6 +28,7 @@ else if (!_gameplayMode && keyboard_check(vk_space))
 	if (alarm[1] == -1) 
 		alarm[1] = 2 * room_speed;
 }
+
 
 //player is dead, so call alarm[2] to reset room
 if (!obj_player.p_isAlive) 
