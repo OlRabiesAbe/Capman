@@ -15,6 +15,7 @@
     {"name":"System scripts","order":5,"path":"folders/Menu/System scripts.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
+    {"name":"obj_logic_supermanager_scripts","order":5,"path":"folders/Objects/Game Logic/obj_logic_supermanager_scripts.yy",},
     {"name":"Game Stuff","order":2,"path":"folders/Objects/Game Stuff.yy",},
     {"name":"Col. and Pathing","order":8,"path":"folders/Objects/Game Stuff/Col. and Pathing.yy",},
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
@@ -41,7 +42,6 @@
     {"name":"special pills","order":3,"path":"folders/Sprites/pill/special pills.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"obj_logic_supermanager_scripts","order":5,"path":"folders/Objects/Game Logic/obj_logic_supermanager_scripts.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_light_green","order":13,"path":"sprites/spr_light_green/spr_light_green.yy",},

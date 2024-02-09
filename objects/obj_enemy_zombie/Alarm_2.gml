@@ -9,5 +9,5 @@ else if (!p_chase)
 {
 	p_chase = true;
 	_scattertime -= 1.5 * room_speed;
-	alarm_set(2, _CHASETIME);
+	alarm_set(2, _chasetime);
 }

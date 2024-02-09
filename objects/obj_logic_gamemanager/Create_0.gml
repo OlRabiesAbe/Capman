@@ -12,13 +12,13 @@ function p_setRound (_roundIndex)
 	if (_roundIndex <= 4) 
 	{
 		obj_enemy_zombie.p_moveSpeed += (0.2 * _roundIndex);
-		obj_enemy_zombie._CHASETIME += (2 * _roundIndex * room_speed);
+		obj_enemy_zombie._chasetime += (2 * _roundIndex * room_speed);
 		obj_enemy_zombie._scattertime -= (0.5 * _roundIndex * room_speed);
 	}
 	else if (_roundIndex > 4)
 	{
 		obj_enemy_zombie.p_moveSpeed += (0.15 * _roundIndex);
-		obj_enemy_zombie._CHASETIME += (2 * 3 * room_speed);
+		obj_enemy_zombie._chasetime += (2 * 3 * room_speed);
 		obj_enemy_zombie._scattertime -= (_roundIndex * room_speed);
 	}
 	
@@ -54,18 +54,18 @@ function p_setRound (_roundIndex)
 	switch (_roundIndex % 3) {
 		case 0:
 			obj_pill_special.sprite_index = spr_pill_special_bread;
-			obj_pill_special._VALUE = 500;
-			obj_pill_special._LIFESPAN = 15;
+			obj_pill_special._value = 500;
+			obj_pill_special._lifespan = 15;
 			break;
 		case 1:
 			obj_pill_special.sprite_index = spr_pill_special_carrot;
-			obj_pill_special._VALUE = 1000;
-			obj_pill_special._LIFESPAN = 11;
+			obj_pill_special._value = 1000;
+			obj_pill_special._lifespan = 11;
 			break;
 		case 2: default:
 			obj_pill_special.sprite_index = spr_pill_special_leek;
-			obj_pill_special._VALUE = 1500;
-			obj_pill_special._LIFESPAN = 8;
+			obj_pill_special._value = 1500;
+			obj_pill_special._lifespan = 8;
 			break;
 	}
 }

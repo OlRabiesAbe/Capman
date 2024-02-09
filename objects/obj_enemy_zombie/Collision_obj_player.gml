@@ -17,7 +17,7 @@ if p_scared && p_isAlive
 		obj_logic_gamemanager.p_restartElroyTimer();
 	}
 	
-	obj_logic_gamemanager.p_incrementRoundScore(_VALUE);
+	obj_logic_gamemanager.p_incrementRoundScore(_value);
 	
 	//disable all other logic
 	for (var i = 0; i < 12; i++) 
