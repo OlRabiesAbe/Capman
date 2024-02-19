@@ -8,12 +8,12 @@
  *	Rounds can only go up to 15 due to limitations of hex and this numbering system.
  *	Negative decimal values indicate cutscenes. For instance -100 is the end-of-game cutscene.
  */
-_levelLoadAr = [0x01_0, 0x01_1, 0x00_2, 0x00_3, 0x00_4, 0x01_5, 0x01_8, 0x02_2, 0x02_4, 0x00_C, -100];
+_levelLoadAr = [0x01_0, 0x01_1, 0x00_2, 0x00_3, 0x00_4, 0x01_5, 0x01_8, 0x02_2, 0x02_4, 0x00_C, -0xFF_F];
 
 
 /*	Add to room and initialize various objects neccessary for gameplay
   */
-function _initializeGameplayLogicStructs() 
+function _initializeGameplayLogicObjs() 
 {
 	
 	if !instance_exists(obj_logic_gamemanager)
@@ -31,6 +31,15 @@ function _initializeGameplayLogicStructs()
 	obj_logic_gamemanager.p_setRound(_roundIndex);
 }
 
+function _initializeCutsceneLogicObjs()
+{
+	if !instance_exists(obj_logic_cutscenemanager)
+		instance_create_layer(0, 0, "Logic", obj_logic_cutscenemanager);
+		
+	//give cutscene manager the round code, which can be a cutscene
+	obj_logic_cutscenemanager._setCutscene(_roundIndex); 
+}
+
 
 /*	Advance to the next level or next round depending on _roundIndex
  */
@@ -39,6 +48,7 @@ function _advanceLevel()
 	var _levelLoadStruct = _parseLevelLoadHex(_levelLoadAr[_levelLoadIndex]);
 	_levelLoadIndex++;
 	
+	_roomIndex = _levelLoadStruct.roomIndex;
 	_roundIndex = _levelLoadStruct.round;
 	_modifierIndex = _levelLoadStruct.modifier;
 	
@@ -61,49 +71,38 @@ function _parseLevelLoadHex(_hex)
 		throw ("obj_logic_supermanager._parseLevelLoadHex(): LEVELLOAD HEX OOB");
 	}
 	
-	//case: _hex is negative; its a cutscene
-	//no cutscenes implemented yet
-	if (_hex < 0)
+	//assemble then return _levelLoadStruct.
+	//needs values for room, modifier, & round; from _hex digits 100s 10s and 1s respectively
+	var _levelLoadStruct = {};
+	
+	switch( floor(_hex / 0x100) )
 	{
-		switch(_hex)
-		{
-			case -100:
-				_levelLoadStruct.room = room_mainmenu;
-				break;
-			default:
-				throw ("obj_logic_supermanager._parseLevelLoadHex(): INVALID ROOM NUMBER");
-				break;
-		}
-		_levelLoadStruct.modifier = -1;
-		_levelLoadStruct.round = -1;
+		case 0x0:
+			_levelLoadStruct.room = room_forest_00;
+			break;
+		case 0x1:
+			_levelLoadStruct.room = room_catacombs_00;
+			break;
+		case 0x2:
+			_levelLoadStruct.room = room_city_00;
+			break;
+		case -0xF: //negative means cutscenes
+			_levelLoadStruct.room = room_mainmenu;
+			break;
+		case -0xD:
+			_levelLoadStruct.room = room_cutscene;
+			break;
+		default:
+			throw ("obj_logic_supermanager._parseLevelLoadHex(): INVALID ROOM NUMBER");
+			break;
 	}
-	else 
-	{
-		//case: default. _hex is positive. assemble then return _levelLoadStruct.
-		//needs values for room, modifier, & round; from _hex digits 100s 10s and 1s respectively
-		var _levelLoadStruct = {};
 	
-		switch( floor(_hex div 0x100) )
-		{
-			case 0x0:
-				_levelLoadStruct.room = room_forest_00;
-				break;
-			case 0x1:
-				_levelLoadStruct.room = room_catacombs_00;
-				break;
-			case 0x2:
-				_levelLoadStruct.room = room_city_00;
-				break;
-			default:
-				throw ("obj_logic_supermanager._parseLevelLoadHex(): INVALID ROOM NUMBER");
-				break;
-		}
+	_levelLoadStruct.roomIndex = floor(_hex / 0x100);
+	//modifier of zero means no mods
+	_levelLoadStruct.modifier = floor((abs(_hex) mod 0x100) / 0x10);
 	
-		//modifier of zero means no mods
-		_levelLoadStruct.modifier = (_hex div 0x10) mod 0x10;
+	_levelLoadStruct.round = abs(_hex) mod 0x10;
 	
-		_levelLoadStruct.round = _hex mod 0x10;
-	}
 	
 	return _levelLoadStruct;
 }
