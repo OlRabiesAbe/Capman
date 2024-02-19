@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_cutscene_01",
-  "bbox_bottom": 199,
+  "bbox_bottom": 399,
   "bbox_left": 0,
-  "bbox_right": 299,
+  "bbox_right": 599,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e6cce9bc-200d-4003-8624-b56f19f73f20",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5f827627-789f-4eaa-ba07-205d7337b19b",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 200,
+  "height": 400,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a1f699a1-0226-4613-bbfe-505af0a405a3","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6f3cb162-aa98-4e7c-8992-55ab9db985d0","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e6cce9bc-200d-4003-8624-b56f19f73f20","path":"sprites/spr_cutscene_01/spr_cutscene_01.yy",},},},"Disabled":false,"id":"c70556a1-f455-4a9c-9849-8aab75009a1b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5f827627-789f-4eaa-ba07-205d7337b19b","path":"sprites/spr_cutscene_01/spr_cutscene_01.yy",},},},"Disabled":false,"id":"2b286bbc-3597-4420-92dc-64d9bc80919c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 300,
+  "width": 600,
 }
